@@ -115,27 +115,50 @@ export const reportData: ReportData = {
   },
   sites: {
     gloria: {
-      name: 'Gloria',
-      trendChart: { src: '/images/Gloria Weekly Chart - Wk49.png' },
-      safety: { status: 'Good', details: 'No incidents reported.' },
-      weeklyAverage: { value: 77.8, target: 80 },
-      serviceCompliance: { status: 'Issues', details: 'HD at 50%, RT at 33%, UV Emulsion at 0%.' },
-      availability: [
-        { label: 'DT', percentage: 73.63, target: 80 },
-        { label: 'FL', percentage: 64.87, target: 80 },
-        { label: 'HD', percentage: 94.41, target: 90 },
-        { label: 'RT', percentage: 95.09, target: 90 },
-        { label: 'SR', percentage: 59.98, target: 80 },
-      ],
-      breakdowns: [
-        { category: 'DT', details: 'DT0106 - Equipment/Operational Delays/No Operator' },
-        { category: 'FL', details: 'FL0081 - /Equipment/Breakdown Mechanical' },
-      ],
+        name: 'Gloria',
+        trendChart: { src: '/images/Gloria Weekly Fleet Availability Chart - Week 51.png' },
+        safety: { status: 'Good', details: 'All clear' },
+        weeklyAverage: { value: 72, target: 85 },
+        serviceCompliance: { status: 'Good', details: 'No issues reported' },
+        availability: [
+            { label: 'HD', percentage: 98 },
+            { label: 'RT', percentage: 82 },
+            { label: 'SR', percentage: 33 },
+            { label: 'DT Diesel', percentage: 100 },
+            { label: 'FL Diesel', percentage: 48 },
+        ],
+        breakdowns: [
+            { category: 'FL0081', details: 'Oil leak transmission' },
+            { category: 'FL0083', details: 'Aircon' },
+            { category: 'DT0105', details: 'Yoke' },
+            { category: 'SR0040', details: 'Tail frame' },
+            { category: 'SR0037', details: 'Tail frame' },
+        ],
+    },
+    n2: {
+        name: 'Nchwaning 2',
+        trendChart: { 
+            src: '/images/Nchwaning2 Weekly Fleet Availability Chart - Week 51.png',
+            comment: 'Weekly trend for N2 fleet availability.'
+        },
+        safety: { status: 'Good', details: 'No incidents reported.' },
+        weeklyAverage: { value: 85, target: 85 },
+        serviceCompliance: { status: 'Good', details: 'All services completed.' },
+        availability: [
+            { label: 'HD', percentage: 90, target: 85 },
+            { label: 'RT', percentage: 88, target: 85 },
+            { label: 'SR', percentage: 85, target: 85 },
+            { label: 'DT', percentage: 82, target: 85 },
+            { label: 'FL', percentage: 80, target: 85 },
+        ],
+        breakdowns: [
+            { category: 'General', details: 'No major breakdowns reported.' },
+        ],
     },
     n3: {
         name: 'N3',
         trendChart: { 
-            src: '/images/N3 Weekly Fleet Availability Chart - Week 51.png',
+            src: '/images/Nchwaning3 Weekly Fleet Availability Chart - Week 51.png',
             comment: 'Weekly trend for N3 fleet availability, showing consistent performance around the target.'
         },
         safety: { status: 'Good', details: 'Clear' },
@@ -164,27 +187,6 @@ export const reportData: ReportData = {
             { category: 'Fl107', details: 'Hyd oil, from 08H58 until 10H00'},
             { category: 'Fl131', details: 'Propshaft, from 09H09 until 10H56.'}
         ]
-    },
-    gloria: {
-        name: 'Gloria',
-        trendChart: { src: '/images/Gloria Weekly Fleet Availability Chart - Week 51.png' },
-        safety: { status: 'Good', details: 'All clear' },
-        weeklyAverage: { value: 72, target: 85 },
-        serviceCompliance: { status: 'Good', details: 'No issues reported' },
-        availability: [
-            { label: 'HD', percentage: 98 },
-            { label: 'RT', percentage: 82 },
-            { label: 'SR', percentage: 33 },
-            { label: 'DT Diesel', percentage: 100 },
-            { label: 'FL Diesel', percentage: 48 },
-        ],
-        breakdowns: [
-            { category: 'FL0081', details: 'Oil leak transmission' },
-            { category: 'FL0083', details: 'Aircon' },
-            { category: 'DT0105', details: 'Yoke' },
-            { category: 'SR0040', details: 'Tail frame' },
-            { category: 'SR0037', details: 'Tail frame' },
-        ],
     },
   },
   bev: {

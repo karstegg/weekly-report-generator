@@ -1,0 +1,39 @@
+@media print {
+  @page {
+    size: 960px 720px;
+    margin: 0;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  #print-container, #print-container * {
+    visibility: visible;
+  }
+
+  #print-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .page-container {
+    width: 960px;
+    height: 720px;
+    margin: 0;
+    page-break-after: always;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    overflow: hidden;
+  }
+
+  img {
+    display: block !important;
+    visibility: visible !important;
+  }
+}
