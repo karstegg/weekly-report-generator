@@ -1,0 +1,15 @@
+const { createServer } = require('vite');
+
+(async () => {
+  try {
+    const server = await createServer({
+      configFile: './vite.config.ts',
+      root: __dirname,
+    });
+    await server.listen();
+    console.log('Vite server started successfully!');
+    server.printUrls();
+  } catch (e) {
+    console.error('Failed to start Vite server:', e);
+  }
+})();
