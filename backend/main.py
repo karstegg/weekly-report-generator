@@ -1,11 +1,11 @@
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
 from datetime import date
-from typing import Dict
+from typing import Dict, Optional
 
 # Import components from our backend structure
 from . import models, daily_parser
-from .models import SessionLocal, init_db
+from .models import SessionLocal, init_db, DailyReport
 
 app = FastAPI(title="Daily Report Generator API")
 
@@ -34,8 +34,6 @@ async def ingest_daily_report(
     Endpoint to ingest a raw daily report, parse it, and save it to the database.
     For now, we accept a dictionary simulating the raw message parts.
     """
-    # In a real implementation, we'd fetch from WhatsApp MCP here.
-    # For now, we simulate receiving a raw message string.
     raw_message = report_data.get("message", "")
     report_date_str = report_data.get("date", date.today().isoformat())
     shift = report_data.get("shift", "Day")
@@ -44,10 +42,8 @@ async def ingest_daily_report(
     if not raw_message:
         raise HTTPException(status_code=400, detail="Message content is required.")
 
-    # 1. Parse the raw message
     parsed_data = daily_parser.parse_whatsapp_report(raw_message)
 
-    # 2. Create a new report record
     db_report = models.DailyReport(
         report_date=date.fromisoformat(report_date_str),
         shift=shift,
@@ -58,16 +54,25 @@ async def ingest_daily_report(
         equipment_availability=parsed_data.get("equipment_availability"),
         equipment_status=parsed_data.get("equipment_status"),
         infrastructure_status=parsed_data.get("infrastructure_status"),
-        # raw_message_id would come from the WhatsApp MCP message object
     )
 
-    # 3. Add to session and commit to DB
     db.add(db_report)
     db.commit()
     db.refresh(db_report)
 
     return {"status": "success", "report_id": db_report.id}
 
+@app.get("/reports/daily/latest", response_model=Optional[Dict])
+async def get_latest_daily_report(db: Session = Depends(get_db)):
+    """Fetches the most recent daily report from the database."""
+    latest_report = (
+        db.query(DailyReport)
+        .order_by(DailyReport.report_date.desc(), DailyReport.created_at.desc())
+        .first()
+    )
+    if not latest_report:
+        raise HTTPException(status_code=4.04, detail="No daily reports found.")
+    return latest_report
 
 @app.get("/")
 async def root():
