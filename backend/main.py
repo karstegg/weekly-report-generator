@@ -19,48 +19,15 @@ def get_db():
 
 @app.on_event("startup")
 async def startup_event():
-    """
-    On startup, initialize the database.
-    This will create the tables if they don't exist.
-    """
     init_db()
 
+# SIMPLIFIED ENDPOINT FOR DIAGNOSTICS
 @app.post("/whatsapp/ingest/")
-async def ingest_daily_report(
-    report_data: Dict, # In a real scenario, this would be the raw message
-    db: Session = Depends(get_db)
-):
-    """
-    Endpoint to ingest a raw daily report, parse it, and save it to the database.
-    For now, we accept a dictionary simulating the raw message parts.
-    """
-    raw_message = report_data.get("message", "")
-    report_date_str = report_data.get("date", date.today().isoformat())
-    shift = report_data.get("shift", "Day")
-    site = report_data.get("site", "Unknown")
-
-    if not raw_message:
-        raise HTTPException(status_code=400, detail="Message content is required.")
-
-    parsed_data = daily_parser.parse_whatsapp_report(raw_message)
-
-    db_report = models.DailyReport(
-        report_date=date.fromisoformat(report_date_str),
-        shift=shift,
-        site=site,
-        safety=parsed_data.get("safety"),
-        production_performance=parsed_data.get("production_performance"),
-        operational_metrics=parsed_data.get("operational_metrics"),
-        equipment_availability=parsed_data.get("equipment_availability"),
-        equipment_status=parsed_data.get("equipment_status"),
-        infrastructure_status=parsed_data.get("infrastructure_status"),
-    )
-
-    db.add(db_report)
-    db.commit()
-    db.refresh(db_report)
-
-    return {"status": "success", "report_id": db_report.id}
+async def ingest_daily_report(report_data: Dict):
+    """A simplified endpoint to test route registration."""
+    print(f"--- INGEST ENDPOINT HIT ---")
+    print(f"Received data: {report_data}")
+    return {"status": "success", "message": "Endpoint was reached successfully."}
 
 @app.get("/reports/daily/latest", response_model=Optional[Dict])
 async def get_latest_daily_report(db: Session = Depends(get_db)):
