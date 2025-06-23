@@ -71,7 +71,7 @@ async def get_latest_daily_report(db: Session = Depends(get_db)):
         .first()
     )
     if not latest_report:
-        raise HTTPException(status_code=4.04, detail="No daily reports found.")
+        raise HTTPException(status_code=404, detail="No daily reports found.")
     return latest_report
 
 @app.get("/")
