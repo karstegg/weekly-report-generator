@@ -1,78 +1,79 @@
-import React, { useState } from 'react';
-import { reportData } from './data/reportData';
-import TitleSlide from './components/slides/TitleSlide';
-import IndexSlide from './components/slides/IndexSlide';
-import HealSlide from './components/slides/HealSlide';
-import ShaftsWindersSlide from './components/slides/ShaftsWindersSlide';
-import SitePerformanceSlide from './components/slides/SitePerformanceSlide';
-import TrendChartSlide from './components/slides/TrendChartSlide';
-import BevPerformanceSlide from './components/slides/BevPerformanceSlide';
+import React, { useState, useEffect } from 'react';
+import { getLatestDailyReport, DailyReportData } from './services/api';
+
+// Import the new daily report components
+import SafetyReport from './components/daily/SafetyReport';
+import ProductionPerformance from './components/daily/ProductionPerformance';
+import OperationalMetrics from './components/daily/OperationalMetrics';
+import EquipmentAvailability from './components/daily/EquipmentAvailability';
+import EquipmentStatus from './components/daily/EquipmentStatus';
+import InfrastructureStatus from './components/daily/InfrastructureStatus';
 
 const App: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [reportData, setReportData] = useState<DailyReportData | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
 
-  const slides = [
-    <TitleSlide 
-      data={reportData.cover} 
-      weekNumber={reportData.weekNumber} 
-      dateRange={reportData.dateRange} 
-      footerSrc={reportData.footerSrc}
-    />,
-    <IndexSlide sites={reportData.sites} footerSrc={reportData.footerSrc} />,
-    <HealSlide data={reportData.heal} footerSrc={reportData.footerSrc} />,
-    <ShaftsWindersSlide data={reportData.shaftsAndWinders} footerSrc={reportData.footerSrc} />,
-    <TrendChartSlide 
-      title={`${reportData.sites.nchwaning3.name} Weekly Availability Trend`}
-      src={reportData.sites.nchwaning3.trendChart.src}
-      footerSrc={reportData.footerSrc}
-    />,
-    <SitePerformanceSlide data={reportData.sites.nchwaning3} footerSrc={reportData.footerSrc} />,
-    <TrendChartSlide 
-      title={`${reportData.sites.nchwaning2.name} Weekly Availability Trend`}
-      src={reportData.sites.nchwaning2.trendChart.src}
-      footerSrc={reportData.footerSrc}
-    />,
-    <SitePerformanceSlide data={reportData.sites.nchwaning2} footerSrc={reportData.footerSrc} />,
-    <TrendChartSlide 
-      title={`${reportData.sites.gloria.name} Weekly Availability Trend`}
-      src={reportData.sites.gloria.trendChart.src}
-      footerSrc={reportData.footerSrc}
-    />,
-    <SitePerformanceSlide data={reportData.sites.gloria} footerSrc={reportData.footerSrc} />,
-    <BevPerformanceSlide data={reportData.bev} footerSrc={reportData.footerSrc} />,
-  ];
+  useEffect(() => {
+    const fetchReport = async () => {
+      try {
+        setIsLoading(true);
+        const data = await getLatestDailyReport();
+        setReportData(data);
+        setError(null);
+      } catch (err) {
+        setError('Failed to fetch the latest report. Please try again later.');
+        console.error(err);
+      } finally {
+        setIsLoading(false);
+      }
+    };
 
-  const goToNextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
+    fetchReport();
+  }, []);
+
+  const handlePrint = () => {
+    window.print();
   };
 
-  const goToPrevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
+  if (isLoading) {
+    return <div className="flex items-center justify-center min-h-screen">Loading latest report...</div>;
+  }
+
+  if (error) {
+    return <div className="flex items-center justify-center min-h-screen text-red-500">{error}</div>;
+  }
+
+  if (!reportData) {
+    return <div className="flex items-center justify-center min-h-screen">No report data available.</div>;
+  }
 
   return (
-    <div className="font-sans bg-gray-50 p-4">
-      <div className="max-w-4xl mx-auto mb-4">
-        <div className="flex justify-between items-center">
-          <button 
-            onClick={goToPrevSlide} 
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors"
-          >
-            Previous
-          </button>
-          <div className="text-center text-gray-600">
-            Slide {currentSlide + 1} of {slides.length}
+    <div className="min-h-screen bg-gray-100 font-sans p-4 sm:p-8">
+      <div className="max-w-4xl mx-auto">
+        <header className="bg-white shadow-md rounded-lg p-4 mb-6 flex justify-between items-center">
+          <div>
+            <h1 className="text-3xl font-bold text-gray-800">Daily Production Report</h1>
+            <p className="text-gray-500">
+              {reportData.site} - {new Date(reportData.report_date).toLocaleDateString()} - {reportData.shift} Shift
+            </p>
           </div>
-          <button 
-            onClick={goToNextSlide} 
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors"
+          <button
+            onClick={handlePrint}
+            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors print:hidden"
           >
-            Next
+            Print to PDF
           </button>
-        </div>
-      </div>
-      <div className="w-full">
-        {slides[currentSlide]}
+        </header>
+
+        <main className="space-y-6">
+          <SafetyReport data={reportData.safety} />
+          <ProductionPerformance data={reportData.production_performance} />
+          <OperationalMetrics data={reportData.operational_metrics} />
+          <EquipmentAvailability data={reportData.equipment_availability} />
+          <EquipmentStatus data={reportData.equipment_status} />
+          <InfrastructureStatus data={reportData.infrastructure_status} />
+        </main>
       </div>
     </div>
   );
