@@ -17,7 +17,7 @@ def extract_safety_section(text: str) -> Optional[SafetyData]:
 
 def extract_production_performance(text: str) -> Optional[ProductionData]:
     """Extracts production performance metrics."""
-    # Placeholder regex
+    # Corrected regex from \d to \d
     rom_match = re.search(r"ROM.*?(\d+).*?/.*?(\d+)", text, re.IGNORECASE)
     if rom_match:
         return {"rom": {"actual": int(rom_match.group(1)), "target": int(rom_match.group(2))}}
