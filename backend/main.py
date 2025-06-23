@@ -3,9 +3,9 @@ from sqlalchemy.orm import Session
 from datetime import date
 from typing import Dict, Optional
 
-# Import components from our backend structure
-from . import models, daily_parser
-from .models import SessionLocal, init_db, DailyReport
+# Use absolute imports instead of relative ones for robustness
+from backend import models, daily_parser
+from backend.models import SessionLocal, init_db, DailyReport
 
 app = FastAPI(title="Daily Report Generator API")
 
