@@ -6,6 +6,7 @@ import Footer from '../shared/Footer';
 interface BevPerformanceSlideProps {
   data: ReportData['bev'];
   footerSrc: string;
+  weekNumber: number;
 }
 
 const slideStyle: React.CSSProperties = {
@@ -19,22 +20,26 @@ const slideStyle: React.CSSProperties = {
     backgroundColor: 'white'
 };
 
-const BevPerformanceSlide: React.FC<BevPerformanceSlideProps> = ({ data, footerSrc }) => {
+const BevPerformanceSlide: React.FC<BevPerformanceSlideProps> = ({ data, footerSrc, weekNumber }) => {
+  const isAvailabilityGood = data.availability.every(item => item.value >= item.target);
+  const isComplianceGood = data.serviceCompliance.every(item => item.value === 100);
   return (
     <div className="bg-white shadow-md rounded-lg" style={slideStyle}>
       <main className="flex-grow p-6 pb-32">
         <h2 className="text-4xl font-bold text-blue-800 mb-6 text-center">BEV Performance Overview (Nchwaning 3)</h2>
         <div className="grid grid-cols-2 gap-6 mb-6">
-          <div className="bg-green-50 border-green-200 rounded-lg p-4">
-            <div className="flex items-center mb-2"><Battery className="text-green-600 mr-2" size={24} /><h3 className="text-xl font-bold text-green-800">BEV Availability (Wk 50)</h3></div>
+          <div className={`rounded-lg p-4 ${isAvailabilityGood ? 'bg-green-50 border-green-200' : 'bg-orange-50 border-orange-200'}`}>
+            <div className={`flex items-center mb-2 ${isAvailabilityGood ? 'text-green-800' : 'text-orange-800'}`}>
+            <Battery className="mr-2" size={24} /><h3 className="text-xl font-bold">BEV Availability (Wk {weekNumber})</h3></div>
             <ul className="list-disc pl-5 text-lg mt-1">
               {data.availability.map((item, i) => (
                 <li key={i} className={`${item.value >= item.target ? 'text-green-700' : 'text-yellow-700'} font-semibold`}>{item.label}: {item.value}% ({item.value >= item.target ? 'Above' : 'Below'} Target)</li>
               ))}
             </ul>
           </div>
-          <div className="bg-yellow-50 border-yellow-200 rounded-lg p-4">
-            <div className="flex items-center mb-2"><Zap className="text-yellow-600 mr-2" size={24} /><h3 className="text-xl font-bold text-yellow-800">BEV Service Compliance</h3></div>
+          <div className={`rounded-lg p-4 ${isComplianceGood ? 'bg-green-50 border-green-200' : 'bg-yellow-50 border-yellow-200'}`}>
+            <div className={`flex items-center mb-2 ${isComplianceGood ? 'text-green-800' : 'text-yellow-800'}`}>
+            <Zap className="mr-2" size={24} /><h3 className="text-xl font-bold">BEV Service Compliance</h3></div>
             <ul className="list-disc pl-5 text-lg mt-1">
               {data.serviceCompliance.map((item, i) => (
                 <li key={i} className={`${item.value === 100 ? 'text-green-700' : 'text-yellow-700'} font-semibold`}>{item.label}: {item.value}%</li>
@@ -63,7 +68,9 @@ const BevPerformanceSlide: React.FC<BevPerformanceSlideProps> = ({ data, footerS
             <div>
               <h4 className="font-semibold text-yellow-800 mb-1">DT BEV Breakdowns:</h4>
               <ul className="list-disc pl-4 space-y-1">
-                {data.breakdowns.map((bd, i) => bd.details.map((d, j) => <li key={`${i}-${j}`}>{d}</li>))}
+                {data.breakdowns.map((bd, i) => (
+                  <li key={i}><span className="font-semibold">{bd.equipment}:</span> {bd.details.join(', ')}</li>
+                ))}
               </ul>
             </div>
             <div>

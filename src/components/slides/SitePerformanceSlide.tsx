@@ -26,12 +26,12 @@ const SitePerformanceSlide: React.FC<SitePerformanceSlideProps> = ({ data, foote
       <main className="flex-grow p-6 pb-32">
         <h2 className="text-4xl font-bold text-blue-800 mb-6 text-center">{data.name} Performance Overview</h2>
         <div className="grid grid-cols-3 gap-4 mb-6">
-          <div className={`bg-${data.safety.status === 'Good' ? 'green' : 'orange'}-100 border border-${data.safety.status === 'Good' ? 'green' : 'orange'}-200 rounded-lg p-4`}>
-            <div className={`flex items-center mb-1 text-${data.safety.status === 'Good' ? 'green' : 'orange'}-800`}>
+          <div className={`border rounded-lg p-4 ${data.safety.status === 'Good' ? 'bg-green-50 border-green-200' : 'bg-orange-100 border-orange-200'}`}>
+            <div className={`flex items-center mb-1 ${data.safety.status === 'Good' ? 'text-green-800' : 'text-orange-800'}`}>
               {data.safety.status === 'Good' ? <CheckCircle className="mr-2 flex-shrink-0" size={24} /> : <AlertTriangle className="mr-2 flex-shrink-0" size={24} />}
               <h3 className="text-xl font-semibold">Safety</h3>
             </div>
-            <p className={`text-lg text-${data.safety.status === 'Good' ? 'green' : 'orange'}-700 pl-8`}>{data.safety.details}</p>
+            <p className={`text-lg pl-8 ${data.safety.status === 'Good' ? 'text-green-700' : 'text-orange-700'}`}>{data.safety.details}</p>
           </div>
           <div className={`bg-${data.weeklyAverage.value >= data.weeklyAverage.target ? 'green' : data.weeklyAverage.value >= data.weeklyAverage.target - 2 ? 'yellow' : 'red'}-50 border-${data.weeklyAverage.value >= data.weeklyAverage.target ? 'green' : data.weeklyAverage.value >= data.weeklyAverage.target - 2 ? 'yellow' : 'red'}-200 rounded-lg p-4 text-center`}>
             <div className={`flex items-center justify-center mb-1 text-${data.weeklyAverage.value >= data.weeklyAverage.target ? 'green' : data.weeklyAverage.value >= data.weeklyAverage.target - 2 ? 'yellow' : 'red'}-700`}>
@@ -57,10 +57,17 @@ const SitePerformanceSlide: React.FC<SitePerformanceSlideProps> = ({ data, foote
         </div>
         <div>
           <h3 className="text-2xl font-bold mb-2 text-center">Key Breakdowns</h3>
-          <div className="grid grid-cols-2 gap-x-6 text-base">
+          <div className="grid grid-cols-2 gap-x-4 text-sm">
             {Array.isArray(data.breakdowns) && data.breakdowns.map((item: any, i: number) => (
-              <div key={i}>
-                <p><span className="font-semibold text-red-700">{item.category}:</span> {item.details}</p>
+              <div key={i} className="mb-1">
+                <h4 className="font-semibold text-red-700">{item.category}</h4>
+                {Array.isArray(item.details) ? (
+                  <ul className="list-disc pl-5">
+                    {item.details.map((detail: string, j: number) => <li key={j}>{detail}</li>)}
+                  </ul>
+                ) : (
+                  <p>{item.details}</p>
+                )}
               </div>
             ))}
           </div>

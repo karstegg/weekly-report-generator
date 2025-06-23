@@ -7,9 +7,12 @@ import ShaftsWindersSlide from './components/slides/ShaftsWindersSlide';
 import SitePerformanceSlide from './components/slides/SitePerformanceSlide';
 import TrendChartSlide from './components/slides/TrendChartSlide';
 import BevPerformanceSlide from './components/slides/BevPerformanceSlide';
+import PrintLayout from './components/shared/PrintLayout';
+import './print-styles.css';
 
 const App: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPrinting, setIsPrinting] = useState(false);
 
   const slides = [
     <TitleSlide 
@@ -39,11 +42,19 @@ const App: React.FC = () => {
       footerSrc={reportData.footerSrc}
     />,
     <SitePerformanceSlide data={reportData.sites.gloria} footerSrc={reportData.footerSrc} />,
-    <BevPerformanceSlide data={reportData.bev} footerSrc={reportData.footerSrc} />,
+    <BevPerformanceSlide data={reportData.bev} footerSrc={reportData.footerSrc} weekNumber={reportData.weekNumber} />,
   ];
 
   const goToNextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const handlePrint = () => {
+    setIsPrinting(true);
+    setTimeout(() => {
+      window.print();
+      setIsPrinting(false);
+    }, 100); // Allow time for render
   };
 
   const goToPrevSlide = () => {
@@ -51,11 +62,11 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="font-sans bg-gray-50 p-4">
-      <div className="max-w-4xl mx-auto mb-4">
-        <div className="flex justify-between items-center">
-          <button 
-            onClick={goToPrevSlide} 
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-8">
+      <div className="w-full max-w-screen-xl bg-white shadow-lg rounded-lg p-6">
+        <div className="flex justify-between items-center mb-4">
+          <button
+            onClick={goToPrevSlide}
             className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors"
           >
             Previous
@@ -63,16 +74,22 @@ const App: React.FC = () => {
           <div className="text-center text-gray-600">
             Slide {currentSlide + 1} of {slides.length}
           </div>
-          <button 
-            onClick={goToNextSlide} 
+          <button
+            onClick={goToNextSlide}
             className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors"
           >
             Next
           </button>
+          <button
+            onClick={handlePrint}
+            className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition-colors ml-4"
+          >
+            Print to PDF
+          </button>
         </div>
-      </div>
-      <div className="w-full">
-        {slides[currentSlide]}
+        <div className="w-full">
+          {isPrinting ? <PrintLayout /> : slides[currentSlide]}
+        </div>
       </div>
     </div>
   );
