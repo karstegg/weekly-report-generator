@@ -21,7 +21,7 @@ const EquipmentStatus: React.FC<EquipmentStatusProps> = ({ data }) => {
         <div className="lg:col-span-1">
           <h3 className="font-semibold text-lg text-gray-700 mb-2">Current Breakdowns</h3>
           <div className="bg-red-50 p-3 rounded-lg space-y-2">
-            {data.current_breakdowns?.map((bd, index) => (
+            {Array.isArray(data.current_breakdowns) && data.current_breakdowns.length > 0 ? data.current_breakdowns.map((bd, index) => (
               <div key={index} className="flex items-start">
                 <span className="font-bold text-red-700 mr-2">•</span>
                 <div>
@@ -29,7 +29,7 @@ const EquipmentStatus: React.FC<EquipmentStatusProps> = ({ data }) => {
                   <p className="text-red-600 text-sm">{bd.fault}</p>
                 </div>
               </div>
-            )) || <p className="text-gray-500">No breakdowns reported.</p>}
+            )) : <p className="text-gray-500">No breakdowns reported.</p>}
           </div>
         </div>
 
@@ -38,17 +38,17 @@ const EquipmentStatus: React.FC<EquipmentStatusProps> = ({ data }) => {
           <div>
             <h3 className="font-semibold text-lg text-gray-700 mb-2">Maintenance Activities</h3>
             <ul className="list-disc list-inside bg-blue-50 p-3 rounded-lg text-blue-700 space-y-1">
-              {data.maintenance_activities?.map((activity, index) => (
+              {Array.isArray(data.maintenance_activities) && data.maintenance_activities.length > 0 ? data.maintenance_activities.map((activity, index) => (
                 <li key={index}>{activity}</li>
-              )) || <p className="text-gray-500">No maintenance activities.</p>}
+              )) : <p className="text-gray-500">No maintenance activities.</p>}
             </ul>
           </div>
           <div>
             <h3 className="font-semibold text-lg text-gray-700 mb-2">Equipment Lockouts</h3>
             <ul className="list-disc list-inside bg-yellow-50 p-3 rounded-lg text-yellow-700 space-y-1">
-              {data.equipment_lockouts?.map((lockout, index) => (
+              {Array.isArray(data.equipment_lockouts) && data.equipment_lockouts.length > 0 ? data.equipment_lockouts.map((lockout, index) => (
                 <li key={index}>{lockout}</li>
-              )) || <p className="text-gray-500">No lockouts reported.</p>}
+              )) : <p className="text-gray-500">No lockouts reported.</p>}
             </ul>
           </div>
         </div>

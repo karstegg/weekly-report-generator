@@ -1,7 +1,8 @@
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
 from datetime import date
-from typing import Dict, Optional
+from typing import Dict, Optional, List
+from backend.schemas import DailyReportResponse
 
 # Use absolute imports instead of relative ones for robustness
 from backend import models, daily_parser
@@ -58,7 +59,7 @@ async def ingest_daily_report(
 
     return {"status": "success", "report_id": db_report.id}
 
-@app.get("/reports/daily/latest", response_model=Optional[Dict])
+@app.get("/reports/daily/latest", response_model=Optional[DailyReportResponse])
 async def get_latest_daily_report(db: Session = Depends(get_db)):
     """Fetches the most recent daily report from the database."""
     latest_report = (

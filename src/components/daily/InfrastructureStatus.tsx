@@ -22,11 +22,11 @@ const InfrastructureStatus: React.FC<InfrastructureStatusProps> = ({ data }) => 
         <div>
           <h3 className="font-semibold text-lg text-gray-700 mb-2">Plant Blockages</h3>
           <div className="bg-orange-50 p-3 rounded-lg space-y-2">
-            {data.plant_blockages?.map((blockage, index) => (
+            {Array.isArray(data.plant_blockages) && data.plant_blockages.length > 0 ? data.plant_blockages.map((blockage, index) => (
               <div key={index} className="text-orange-700">
                 <span className="font-semibold">{blockage.location}:</span> {blockage.duration}
               </div>
-            )) || <p className="text-gray-500">No blockages reported.</p>}
+            )) : <p className="text-gray-500">No blockages reported.</p>}
           </div>
         </div>
 
@@ -37,7 +37,7 @@ const InfrastructureStatus: React.FC<InfrastructureStatusProps> = ({ data }) => 
             {data.fire_alarms ? (
               <div>
                 <p className="text-red-700"><span className="font-bold">{data.fire_alarms.count}</span> alarms</p>
-                <p className="text-sm text-red-600">Locations: {data.fire_alarms.locations.join(', ')}</p>
+                <p className="text-sm text-red-600">Locations: {Array.isArray(data.fire_alarms.locations) ? data.fire_alarms.locations.join(', ') : 'N/A'}</p>
               </div>
             ) : <p className="text-gray-500">No fire alarms reported.</p>}
           </div>
@@ -53,9 +53,9 @@ const InfrastructureStatus: React.FC<InfrastructureStatusProps> = ({ data }) => 
         <div>
           <h3 className="font-semibold text-lg text-gray-700 mb-2">Chute/Crusher Issues</h3>
           <ul className="list-disc list-inside bg-gray-50 p-3 rounded-lg text-gray-700 space-y-1">
-            {data.chute_crusher_issues?.map((issue, index) => (
+            {Array.isArray(data.chute_crusher_issues) && data.chute_crusher_issues.length > 0 ? data.chute_crusher_issues.map((issue, index) => (
               <li key={index}>{issue}</li>
-            )) || <p className="text-gray-500">No issues reported.</p>}
+            )) : <p className="text-gray-500">No issues reported.</p>}
           </ul>
         </div>
       </div>
