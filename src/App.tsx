@@ -8,6 +8,7 @@ import OperationalMetrics from './components/daily/OperationalMetrics';
 import EquipmentAvailability from './components/daily/EquipmentAvailability';
 import EquipmentStatus from './components/daily/EquipmentStatus';
 import InfrastructureStatus from './components/daily/InfrastructureStatus';
+import ErrorBoundary from './components/common/ErrorBoundary';
 
 const App: React.FC = () => {
   const [reportData, setReportData] = useState<DailyReportData | null>(null);
@@ -66,14 +67,16 @@ const App: React.FC = () => {
           </button>
         </header>
 
-        <main className="space-y-6">
-          <SafetyReport data={reportData.safety} />
-          <ProductionPerformance data={reportData.production_performance} />
-          <OperationalMetrics data={reportData.operational_metrics} />
-          <EquipmentAvailability data={reportData.equipment_availability} />
-          <EquipmentStatus data={reportData.equipment_status} />
-          <InfrastructureStatus data={reportData.infrastructure_status} />
-        </main>
+        <ErrorBoundary>
+          <main className="space-y-6">
+            <SafetyReport data={reportData.safety} />
+            <ProductionPerformance data={reportData.production_performance} />
+            <OperationalMetrics data={reportData.operational_metrics} />
+            <EquipmentAvailability data={reportData.equipment_availability} />
+            <EquipmentStatus data={reportData.equipment_status} />
+            <InfrastructureStatus data={reportData.infrastructure_status} />
+          </main>
+        </ErrorBoundary>
       </div>
     </div>
   );
