@@ -1,59 +1,74 @@
 import React from 'react';
+import { EquipmentStatusData } from '../../data/reportData';
+import { Card, CardHeader, CardTitle, CardContent } from '../ui/card';
 
 interface EquipmentStatusProps {
-  data: {
-    current_breakdowns?: { equipment_id: string; fault: string }[];
-    maintenance_activities?: string[];
-    equipment_lockouts?: string[];
-  } | null;
+  data: EquipmentStatusData;
 }
 
+const mainFleetPrefixes = ['DT', 'FL', 'HD', 'RT', 'SR'];
+const supportEquipmentPrefixes = ['UV', 'DZ', 'GD', 'WK', 'MN', 'EM']; // Assuming WK=Workshop, MN=Manlift, EM=Emulsion
+
+const getEquipmentCategory = (equipmentId: string): 'Main Fleet' | 'Support Equipment' | 'Other' => {
+  if (mainFleetPrefixes.some(prefix => equipmentId.toUpperCase().startsWith(prefix))) {
+    return 'Main Fleet';
+  }
+  if (supportEquipmentPrefixes.some(prefix => equipmentId.toUpperCase().startsWith(prefix))) {
+    return 'Support Equipment';
+  }
+  return 'Other';
+};
+
+const BreakdownList: React.FC<{ breakdowns: any[], title: string }> = ({ breakdowns, title }) => {
+    if (breakdowns.length === 0) return null;
+    return (
+        <div className="mb-4">
+            <h4 className="font-semibold text-md mb-2 text-gray-800 border-b pb-1">{title}</h4>
+            <ul className="space-y-2 columns-1 sm:columns-2 lg:columns-3 xl:columns-4">
+                {breakdowns.map((breakdown, index) => (
+                    <li key={index} className="text-sm break-inside-avoid">
+                        <span className="font-semibold text-red-600">{breakdown.equipment_id}:</span>
+                        <span className="ml-2 text-gray-700">{breakdown.fault_description}</span>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
+};
+
 const EquipmentStatus: React.FC<EquipmentStatusProps> = ({ data }) => {
-  if (!data) {
-    return <div className="p-4 bg-gray-100 rounded-lg">Loading equipment status...</div>;
+  if (!data || !data.current_breakdowns || data.current_breakdowns.length === 0) {
+    return (
+        <Card>
+            <CardHeader>
+                <CardTitle>5. Current Breakdowns</CardTitle>
+            </CardHeader>
+            <CardContent>
+                <p className="text-sm text-gray-500">No breakdowns reported.</p>
+            </CardContent>
+        </Card>
+    );
   }
 
-  return (
-    <div className="p-6 bg-white rounded-lg shadow-md mt-6">
-      <h2 className="text-2xl font-bold text-gray-800 mb-4">5. Equipment Status & Breakdowns</h2>
-      <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Current Breakdowns */}
-        <div className="lg:col-span-1">
-          <h3 className="font-semibold text-lg text-gray-700 mb-2">Current Breakdowns</h3>
-          <div className="bg-red-50 p-3 rounded-lg space-y-2">
-            {Array.isArray(data.current_breakdowns) && data.current_breakdowns.length > 0 ? data.current_breakdowns.map((bd, index) => (
-              <div key={index} className="flex items-start">
-                <span className="font-bold text-red-700 mr-2">•</span>
-                <div>
-                  <span className="font-semibold text-red-800">{bd.equipment_id}:</span>
-                  <p className="text-red-600 text-sm">{bd.fault}</p>
-                </div>
-              </div>
-            )) : <p className="text-gray-500">No breakdowns reported.</p>}
-          </div>
-        </div>
+  const { current_breakdowns } = data;
 
-        {/* Maintenance & Lockouts */}
-        <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <h3 className="font-semibold text-lg text-gray-700 mb-2">Maintenance Activities</h3>
-            <ul className="list-disc list-inside bg-blue-50 p-3 rounded-lg text-blue-700 space-y-1">
-              {Array.isArray(data.maintenance_activities) && data.maintenance_activities.length > 0 ? data.maintenance_activities.map((activity, index) => (
-                <li key={index}>{activity}</li>
-              )) : <p className="text-gray-500">No maintenance activities.</p>}
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-semibold text-lg text-gray-700 mb-2">Equipment Lockouts</h3>
-            <ul className="list-disc list-inside bg-yellow-50 p-3 rounded-lg text-yellow-700 space-y-1">
-              {Array.isArray(data.equipment_lockouts) && data.equipment_lockouts.length > 0 ? data.equipment_lockouts.map((lockout, index) => (
-                <li key={index}>{lockout}</li>
-              )) : <p className="text-gray-500">No lockouts reported.</p>}
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+  const breakdownsByCat = {
+    'Main Fleet': current_breakdowns.filter(b => getEquipmentCategory(b.equipment_id) === 'Main Fleet'),
+    'Support Equipment': current_breakdowns.filter(b => getEquipmentCategory(b.equipment_id) === 'Support Equipment'),
+    'Other': current_breakdowns.filter(b => getEquipmentCategory(b.equipment_id) === 'Other'),
+  };
+
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>5. Current Breakdowns</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <BreakdownList breakdowns={breakdownsByCat['Main Fleet']} title="Main Fleet" />
+        <BreakdownList breakdowns={breakdownsByCat['Support Equipment']} title="Support Equipment" />
+        <BreakdownList breakdowns={breakdownsByCat['Other']} title="Other" />
+      </CardContent>
+    </Card>
   );
 };
 

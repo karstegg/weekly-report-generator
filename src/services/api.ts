@@ -6,19 +6,7 @@ const API_BASE_URL = '/api';
 
 // This interface defines the structure of the data we expect from the backend.
 // It should align with the data returned by the /reports/daily/latest endpoint.
-export interface DailyReportData {
-  id: number;
-  report_date: string;
-  shift: string;
-  site: string;
-  safety: any;
-  production_performance: any;
-  operational_metrics: any;
-  equipment_availability: any;
-  equipment_status: any;
-  infrastructure_status: any;
-  created_at: string;
-}
+import { DailyReportData } from '../data/reportData';
 
 /**
  * Fetches the latest daily report from the backend API.

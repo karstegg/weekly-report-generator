@@ -1,36 +1,70 @@
 import React from 'react';
+import { SafetyData } from '../../data/reportData';
+import { Card, CardHeader, CardTitle, CardContent } from '../ui/card';
 
-// Define the shape of the safety data prop
 interface SafetyReportProps {
-  data: {
-    status: string;
-    details?: string;
-  } | null;
+  data: SafetyData | null;
 }
 
 const SafetyReport: React.FC<SafetyReportProps> = ({ data }) => {
   if (!data) {
-    return <div className="p-4 bg-gray-100 rounded-lg">Loading safety data...</div>;
+    return (
+        <Card>
+            <CardContent className="p-4">Loading safety data...</CardContent>
+        </Card>
+    );
   }
 
-  const isClear = data.status?.toLowerCase() === 'clear';
+  if (!data.status) {
+      return (
+          <Card>
+              <CardContent className="p-4">Waiting for safety data...</CardContent>
+          </Card>
+      );
+  }
+
+  const isClear = data.status === 'Clear';
   const statusColor = isClear ? 'text-green-600' : 'text-red-600';
   const bgColor = isClear ? 'bg-green-100' : 'bg-red-100';
 
   return (
-    <div className="p-6 bg-white rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold text-gray-800 mb-4">1. Safety & Incidents</h2>
-      <div className={`flex items-center space-x-4 p-3 rounded-md ${bgColor}`}>
-        <span className="font-semibold text-lg">Status:</span>
-        <span className={`text-lg font-bold ${statusColor}`}>{data.status || 'Unknown'}</span>
-      </div>
-      {data.details && (
-        <div className="mt-4">
-          <h3 className="font-semibold text-md text-gray-700">Details:</h3>
-          <p className="text-gray-600 whitespace-pre-wrap bg-gray-50 p-2 rounded">{data.details}</p>
-        </div>
-      )}
-    </div>
+    <Card>
+        <CardHeader>
+            <CardTitle>1. Safety & Incidents</CardTitle>
+        </CardHeader>
+        <CardContent>
+            <div className={`flex items-center space-x-4 p-3 rounded-md ${bgColor}`}>
+                <span className="font-semibold text-lg">Status:</span>
+                <span className={`text-lg font-bold ${statusColor}`}>{data.status}</span>
+            </div>
+
+            {data.incidents && data.incidents.length > 0 && (
+                <div className="mt-4">
+                <h3 className="font-semibold text-md text-gray-700 mb-2">Incident Details:</h3>
+                <ul className="list-disc list-inside space-y-2">
+                    {data.incidents.map((incident, index) => (
+                    <li key={index} className="text-gray-600 bg-gray-50 p-2 rounded">
+                        <span className="font-semibold">{incident.reference}:</span> {incident.description}
+                    </li>
+                    ))}
+                </ul>
+                </div>
+            )}
+
+            {data.ldo_reports && data.ldo_reports.length > 0 && (
+                <div className="mt-4">
+                <h3 className="font-semibold text-md text-gray-700 mb-2">LDO Reports:</h3>
+                <ul className="list-disc list-inside space-y-2">
+                    {data.ldo_reports.map((report, index) => (
+                    <li key={index} className="text-gray-600 bg-gray-50 p-2 rounded">
+                        <span className="font-semibold">{report.reference}:</span> {report.description}
+                    </li>
+                    ))}
+                </ul>
+                </div>
+            )}
+        </CardContent>
+    </Card>
   );
 };
 

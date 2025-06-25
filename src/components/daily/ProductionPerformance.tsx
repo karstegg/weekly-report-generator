@@ -1,18 +1,15 @@
 import React from 'react';
+import { ProductionPerformanceData, AreaLoads, BlastPerformance } from '../../data/reportData';
+import { Card, CardHeader, CardTitle, CardContent } from '../ui/card';
+import { DataRow } from '../ui/data-display';
 
-// Define the shape of the production data prop
 interface ProductionPerformanceProps {
-  data: {
-    rom?: { actual: number; target: number };
-    product?: { actual: number; target: number };
-    decline?: { actual: number; target: number };
-    mtd?: { actual: number; target: number };
-  } | null;
+  data: ProductionPerformanceData | null;
 }
 
 // A helper component to render each performance metric row
-const MetricRow: React.FC<{ title: string; actual?: number; target?: number }> = ({ title, actual, target }) => {
-  if (actual === undefined || target === undefined) return null;
+const MetricRow: React.FC<{ title: string; actual?: number | null; target?: number | null }> = ({ title, actual, target }) => {
+  if (actual === undefined || target === undefined || actual === null || target === null) return null;
 
   const isAboveTarget = actual >= target;
   const performanceColor = isAboveTarget ? 'text-green-600' : 'text-red-600';
@@ -26,21 +23,74 @@ const MetricRow: React.FC<{ title: string; actual?: number; target?: number }> =
   );
 };
 
+const LoadsSection: React.FC<{ loads: AreaLoads | null }> = ({ loads }) => {
+    if (!loads) return null;
+    const totalLoads = (loads.stopping || 0) + (loads.development || 0) + (loads.rehab || 0);
+
+    return (
+        <div className="mt-6 border-t border-gray-200 pt-4">
+            <h4 className="font-semibold mb-2 text-gray-700">Loads</h4>
+            <DataRow>
+                <span>Total Loads</span>
+                <span>{totalLoads}</span>
+            </DataRow>
+            <p className="text-xs text-gray-500 mt-1">
+                (Stopping: {loads.stopping ?? 0}, Development: {loads.development ?? 0}, Rehab: {loads.rehab ?? 0})
+            </p>
+        </div>
+    );
+};
+
+const BlastPerformanceSection: React.FC<{ blast_performance: BlastPerformance | null }> = ({ blast_performance }) => {
+    if (!blast_performance) return null;
+
+    return (
+        <div className="mt-6 border-t border-gray-200 pt-4">
+            <h4 className="font-semibold mb-2 text-gray-700">Blast Performance</h4>
+            <DataRow>
+                <span>Planned</span>
+                <span>{blast_performance.planned ?? '?'}</span>
+            </DataRow>
+            <DataRow>
+                <span>Completed</span>
+                <span>{blast_performance.completed ?? '?'}</span>
+            </DataRow>
+            {blast_performance.issues && (
+                <div className="text-sm text-gray-600 mt-2">
+                    <p className="font-semibold">Issues:</p>
+                    <p>{blast_performance.issues}</p>
+                </div>
+            )}
+        </div>
+    );
+};
+
+
 const ProductionPerformance: React.FC<ProductionPerformanceProps> = ({ data }) => {
   if (!data) {
-    return <div className="p-4 bg-gray-100 rounded-lg">Loading production data...</div>;
+    return (
+        <Card>
+            <CardContent className="p-4">
+                Loading production data...
+            </CardContent>
+        </Card>
+    );
   }
 
   return (
-    <div className="p-6 bg-white rounded-lg shadow-md mt-6">
-      <h2 className="text-2xl font-bold text-gray-800 mb-4">2. Production Performance (Tonnes)</h2>
-      <div className="space-y-2">
-        <MetricRow title="ROM" actual={data.rom?.actual} target={data.rom?.target} />
-        <MetricRow title="Product" actual={data.product?.actual} target={data.product?.target} />
-        <MetricRow title="Decline" actual={data.decline?.actual} target={data.decline?.target} />
-        <MetricRow title="MTD" actual={data.mtd?.actual} target={data.mtd?.target} />
-      </div>
-    </div>
+    <Card>
+        <CardHeader>
+            <CardTitle>2. Production Performance</CardTitle>
+        </CardHeader>
+        <CardContent>
+            <div className="space-y-2">
+                <MetricRow title="ROM (Tonnes)" actual={data.rom_tons?.actual} target={data.rom_tons?.target} />
+                <MetricRow title="Product (Tonnes)" actual={data.product_tons?.actual} target={data.product_tons?.target} />
+            </div>
+            <LoadsSection loads={data.loads} />
+            <BlastPerformanceSection blast_performance={data.blast_performance} />
+        </CardContent>
+    </Card>
   );
 };
 

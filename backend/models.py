@@ -18,12 +18,12 @@ class DailyReport(Base):
     site = Column(String, nullable=False, index=True)
 
     # JSON fields to store the structured data from the parser
-    safety = Column(JSON, nullable=True)
-    production_performance = Column(JSON, nullable=True)
-    operational_metrics = Column(JSON, nullable=True)
-    equipment_availability = Column(JSON, nullable=True)
-    equipment_status = Column(JSON, nullable=True)
-    infrastructure_status = Column(JSON, nullable=True)
+    safety = Column(JSON, nullable=False)
+    production_performance = Column(JSON, nullable=False)
+    operational_metrics = Column(JSON, nullable=False)
+    equipment_availability = Column(JSON, nullable=False)
+    equipment_status = Column(JSON, nullable=False)
+    infrastructure_status = Column(JSON, nullable=False)
 
     raw_message_id = Column(String, unique=True, nullable=True)
     created_at = Column(DateTime, default=datetime.utcnow)
