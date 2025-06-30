@@ -20,17 +20,17 @@ const PrintLayout: React.FC = () => {
     <HealSlide data={reportData.heal} footerSrc={reportData.footerSrc} />,
     <ShaftsWindersSlide data={reportData.shaftsAndWinders} footerSrc={reportData.footerSrc} />,
     <TrendChartSlide 
-      title={`${reportData.sites.nchwaning3.name} Weekly Availability Trend`}
-      src={reportData.sites.nchwaning3.trendChart.src}
+      title={`${reportData.sites.n3.name} Weekly Availability Trend`}
+      src={reportData.sites.n3.trendChart.src}
       footerSrc={reportData.footerSrc}
     />,
-    <SitePerformanceSlide data={reportData.sites.nchwaning3} footerSrc={reportData.footerSrc} />,
+    <SitePerformanceSlide data={reportData.sites.n3} footerSrc={reportData.footerSrc} />,
     <TrendChartSlide 
-      title={`${reportData.sites.nchwaning2.name} Weekly Availability Trend`}
-      src={reportData.sites.nchwaning2.trendChart.src}
+      title={`${reportData.sites.n2.name} Weekly Availability Trend`}
+      src={reportData.sites.n2.trendChart.src}
       footerSrc={reportData.footerSrc}
     />,
-    <SitePerformanceSlide data={reportData.sites.nchwaning2} footerSrc={reportData.footerSrc} />,
+    <SitePerformanceSlide data={reportData.sites.n2} footerSrc={reportData.footerSrc} />,
     <TrendChartSlide 
       title={`${reportData.sites.gloria.name} Weekly Availability Trend`}
       src={reportData.sites.gloria.trendChart.src}
