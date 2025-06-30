@@ -35,7 +35,7 @@ The entire process is predicated on the user supplying the data for a given week
   * Performance metrics (e.g., weekly average availability, service compliance percentages).  
   * Key breakdown lists and reasons for performance deviations.  
   * Images for trend charts.  
-* **Process:** The application is a persistent React web app. The weekly workflow involves (1) updating the `src/data/reportData.ts` file with the new week's data, (2) reviewing the slides in the live web preview, and (3) using the built-in browser print functionality to export the final report as a PDF.
+* **Process:** The application is a persistent React web app. The weekly update process is managed by a coding assistant using a series of defined workflows. This involves (1) initializing a new weekly branch, (2) updating the `src/data/reportData.ts` file with the new week's data, (3) reviewing the slides in a live web preview, and (4) using the built-in browser print functionality to export the final report as a PDF.
 
 ### **2.2. Component-Based Template**
 

@@ -42,17 +42,20 @@ This will open the application in your default web browser, usually at `http://l
 
 ## How to Generate a New Weekly Report
 
-To update the report with new data for a different week, follow these steps:
+This project uses a workflow-driven process to ensure reports are generated consistently and efficiently. The process is managed by a coding assistant (like Cascade).
 
-1.  **Open the Data File:** Navigate to `src/data/reportData.ts`.
+### The 3-Step Workflow Process
 
-2.  **Edit the Content:** This file contains a single JavaScript object called `reportData`. Update the values within this object with the new week's information. This includes:
-    - `weekNumber` and `dateRange`.
-    - Highlights, lowlights, issues, and priorities in the `heal` section.
-    - Performance metrics for `shaftsAndWinders`.
-    - All data for each site in the `sites` object (Nchwaning 3, Nchwaning 2, Gloria), including trend chart image URLs and comments.
-    - BEV performance data.
+1.  **Onboard the Assistant (First time in a new session):**
+    - **Command:** `/onboard-assistant`
+    - **Purpose:** This loads all project context, documentation, and procedures into the assistant's memory. It's the essential first step for any new chat session to ensure a seamless handover.
 
-3.  **Save the File:** Once you have updated the data, save the `reportData.ts` file.
+2.  **Initialize the Weekly Report:**
+    - **Command:** `/initialize-report`
+    - **Purpose:** This prepares the repository for the new week. The assistant will ask for the week number and automatically create a new branch (e.g., `week-53`), ensuring a clean slate for the update.
 
-4.  **View the Updated Report:** The development server will automatically hot-reload, and your browser will display the report with the new data. No other code changes are necessary.
+3.  **Update the Report Data:**
+    - **Command:** `/weekly-report-update`
+    - **Purpose:** This is the main workflow for updating the report. The assistant will guide you through providing the new data, updating the `src/data/reportData.ts` file, and reviewing the changes in a live preview.
+
+This structured process minimizes manual errors and ensures every weekly report is consistent with the last.

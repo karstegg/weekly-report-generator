@@ -31,7 +31,10 @@ Before starting, review the following files to understand the project structure,
 
 1.  **Read `reportData.ts`:** Read the contents of `src/data/reportData.ts`.
 2.  **Update `reportData.ts`:** Replace the entire `reportData` object in the file with the new data provided by the user. Ensure the structure remains valid according to the `ReportData` interface.
-3.  **Restart Development Server:** Execute the command `npm run dev` to restart the Vite server and apply the data changes.
+
+3.  **Verify Data Keys:** Cross-reference the site keys (e.g., `n2`, `n3`, `gloria`) in the updated `reportData.ts` with the keys used in `App.tsx` and `PrintLayout.tsx` to ensure they match. This prevents runtime errors.
+
+4.  **Restart Development Server:** Execute the command `npm run dev` to restart the Vite server and apply the data changes.
 
 ### **Phase 4: Collaborative Review**
 
@@ -47,3 +50,10 @@ Before starting, review the following files to understand the project structure,
 1.  **Confirm Approval:** Ask the user for final approval on the visual state of the report.
 2.  **Trigger Print:** Once approved, use the "Print to PDF" functionality by setting the `isPrinting` state to `true` and calling `window.print()`.
 3.  **Create Summary:** Create a new Markdown summary file for the week (e.g., `Week_XX_Update_Summary.md`) detailing all changes made.
+
+### **Phase 6: Version Control**
+
+1.  **Create New Branch:** Create a new branch for the weekly report (e.g., `git checkout -b week-XX`).
+2.  **Stage Changes:** Add all modified and new files to the staging area (`git add .`).
+3.  **Commit Changes:** Commit the changes with a descriptive message (e.g., `git commit -m "feat(report): Complete data update and styling for Week XX"`).
+4.  **Push Branch:** Push the new branch to the remote repository (`git push origin week-XX`).
