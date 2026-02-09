@@ -56,6 +56,30 @@ npm run pptx      # Generate PowerPoint file → output/
 
 ## Weekly Update Procedure
 
+### Step 0: Data Preparation (before CSVs exist)
+When the user uploads **raw files** (Excel workbooks, PowerPoint HEAL pages, PDFs),
+run the data prep pipeline to generate clean CSVs:
+
+```bash
+python3 scripts/data-prep/prep_weekly_data.py <week_number>
+```
+
+This script:
+1. Extracts HEAL data from `.txt` files and `.pptx` PowerPoint files
+2. Parses site weekly availability CSVs (Gloria, N2, N3)
+3. Parses BEV unit-level availability and delays CSVs
+4. Parses S&W production CSV
+5. Parses utility section weekly availability CSV
+6. Extracts supplementary data from Excel workbooks (compliance, utility vehicles)
+7. Outputs `data-extract/extracted_data_weekXX.json` with all structured data
+
+The JSON output is used to update `reportData.ts`. If CSVs don't exist yet
+(user uploaded only Excel/PPTX), the extractors will report "NOT FOUND" for
+those sources — the user must provide either CSVs or raw files.
+
+**Python dependencies** (auto-installed by SessionStart hook):
+`pandas`, `openpyxl`, `python-pptx`
+
 ### Step 1: Initialize Report
 1. Ask the user for the new week number
 2. Create branch `week-XX`

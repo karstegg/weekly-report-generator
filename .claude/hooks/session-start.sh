@@ -14,6 +14,9 @@ if [ ! -d "node_modules" ] || [ ! -d "node_modules/react" ]; then
   npm install
 fi
 
+# Install Python data-prep dependencies
+pip3 install pandas openpyxl python-pptx --quiet 2>/dev/null || true
+
 # Verify the project compiles
 echo "Running build check..."
 npm run build
