@@ -229,6 +229,36 @@ Utility_Section_Weekly_Availability_Week{N}.csv
 
 ---
 
+## Subagent Orchestration (Parallel Data Extraction)
+
+When the user says **"update the report"** or **"extract all data"**, use parallel subagents to maximize speed. Each subagent reads CSVs independently and returns structured data for `reportData.ts`.
+
+### Parallel Extraction Pattern
+Launch these subagents simultaneously:
+
+| Subagent | CSVs to Parse | Updates To |
+|----------|--------------|------------|
+| **Site: N2 + Gloria** | `{Site}_Weekly_Availability_Week{N}.csv`, `{Site} Maintenance Compliance`, `{Site} Primary Equipment Daily Availabilities` | `sites.n2`, `sites.gloria` |
+| **Site: N3 + BEV** | `N3_Weekly_Availability`, `N3 BEV DTe/FLe Availability by Unit`, `N3 BEV DTe/FLe Delays` | `sites.n3`, `bev`, `bevDetail` |
+| **S&W** | `Shafts and Winders Production - Week{N}.csv` | `shaftsAndWinders.production` |
+| **Utility** | `Utility_Section_Weekly_Availability_Week{N}.csv` | `utilitySection`, `utilitySectionCurrentStatus` |
+
+After all subagents return, consolidate results into a single `reportData.ts` update.
+
+### Sequential Steps (after parallel extraction)
+1. Update `reportData.ts` with all consolidated data
+2. Run `npm run build` to verify no TypeScript errors
+3. Run `npm run lint` to check code quality
+4. Present summary to user for review
+
+### HEAL Data (Requires User Input)
+HEAL data cannot be auto-extracted from CSVs alone. After parallel extraction:
+1. Ask user for HEAL text (highlights, lowlights, emerging issues, priorities)
+2. Or parse provided text files/images in `data-extract/`
+3. Update `heal` and `shaftsAndWinders.heal` sections
+
+---
+
 ## Common Pitfalls to Avoid
 
 1. Including resolved breakdowns in current status (filter by end date)
