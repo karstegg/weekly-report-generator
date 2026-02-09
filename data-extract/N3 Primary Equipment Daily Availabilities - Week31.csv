@@ -1,0 +1,9 @@
+Equipment,Friday,Monday,Tuesday,Wednesday,Thursday,Average,Breakdowns - Comments
+HD,82.0%,86.0%,83.0%,66.0%,61.0%,75.6%,"FL112 Weld Bucket,FL108 Batt Temp"
+RT,89.0%,87.0%,73.0%,91.0%,87.0%,85.4%,"DT171 A Frame Failure,DT149 Changing Batt,Gears DT162 Strata"
+SR,88.0%,85.0%,82.0%,82.0%,87.0%,84.8%,percussion hose burst
+DT Diesel,76.0%,75.0%,80.0%,83.0%,79.0%,78.6%,pescussion hose and hydr oil leak
+FL Diesel,78.0%,100.0%,95.0%,98.0%,92.0%,92.6%,
+DT batteries,78.0%,77.0%,84.0%,62.0%,75.0%,75.2%,SR38 Engine Failure
+FL Batteries,79.0%,98.0%,99.0%,97.0%,100.0%,94.6%,Replaced o-rings on wheel motor
+Average,,,,,,83.8%,

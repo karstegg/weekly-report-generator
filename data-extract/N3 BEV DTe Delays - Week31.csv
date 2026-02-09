@@ -1,0 +1,58 @@
+DTe,DT0146,/Equipment/Operational Delays,NO MATERIAL TO HAUL.,11.58
+/Equipment/Operational Delays/Battery,2.30
+CHANGE BATTERY,2.80
+CHANGE BATTERY.,0.68
+Charging,3.32
+/Equipment/Operational Delays/Battery/Flat Battery,CHARGING BATTERY,1.73
+CHARGING BATTERY.,2
+DT0147,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,inverter error @ wshop,0.70
+invertor error,3.43
+/Equipment/Breakdown Electrical,starting @ wshop,1.07
+/Equipment/Breakdown Mechanical,powerless,0.67
+red stop light,1.22
+/Equipment/Operational Delays,NO MATERIAL TO HAUL.,11.57
+/Equipment/Operational Delays/Battery,0.30
+/Equipment/Operational Delays/Battery/Flat Battery,Charging,16.77
+CHARGING BATTERY.,15.87
+DT0149,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,engine cut off 54s30w r5,3.63
+/Equipment/Breakdown Electrical/Auto Electrical System - 24v/Traveling Lights,red stop light @ 54s r5,4.88
+/Equipment/Breakdown Electrical/Auto Electrical System - 24v/Wipers,0.97
+REPLACE WIPER BLADES@BATTERY BAY.,0.28
+wshop,1.75
+/Equipment/Breakdown Mechanical/Power Train/Gears,43n11w mw,26.28
+/Equipment/Operational Delays,NO MATERIAL TO HAUL.,11.53
+/Equipment/Operational Delays/Battery,2.10
+Battery not connecting@Batt Bay,0.83
+CHANGE BATTERY,0.32
+CHANGE BATTERY.,0.08
+CHANGING BATTERY.,5.90
+Charging,2.02
+/Equipment/Operational Delays/Battery/Flat Battery,Charging,3.60
+DT0150,/Equipment/Breakdown Electrical,invertor error @ old tip 3,3.37
+POWERLESS@BATTERY BAY,3.08
+/Equipment/Operational Delays,NO MATERIAL TO HAUL.,11.08
+/Equipment/Operational Delays/Battery,CHANG BATTERY,0.22
+CHANGE BATTERY,3.95
+Charging,0.40
+REPLACE BATTERY,0.05
+/Equipment/Operational Delays/Battery/Flat Battery,0.73
+Charging,1.17
+CHARGING BATTERY.,2.17
+DT0162,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown,@sat tip nr 1,6.53
+/Equipment/Breakdown Electrical/Auto Electrical System - 24v/Strata Breakdown,MACHINE NOT MOVING@110S/14W NW,8.43
+/Equipment/Operational Delays,Battery Charge,1.88
+NO MATERIAL TO HAUL.,12.60
+/Equipment/Operational Delays/Battery/Flat Battery,0.75
+CHARGE BATTERY.,1.88
+CHARGING BATTERY.NO EXTRA BATTERY.,1.30
+DT0163,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown,0.98
+/Equipment/Breakdown Electrical,NO CONTACT WITH MODULES@BATTERY BAY,1.55
+/Equipment/Breakdown Electrical/Auto Electrical System - 800v/Connectors,NO CONTACT TO MODULE@BATTERY BAY.,0.90
+/Equipment/Breakdown Fitter/Refills/Hydraulic Refill,0.45
+/Equipment/Operational Delays,NO MATERIAL TO HAUL.,11.05
+/Equipment/Operational Delays/Battery,CHANGE BATTERY,0.33
+CHANGE BATTERY.,0.28
+Charging,1.83
+/Equipment/Operational Delays/Battery/Flat Battery,CHARGE BATTERY,3.03
+CHARGE BATTERY.,1.08
+DT0171,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,A-Frame Failure,112.35

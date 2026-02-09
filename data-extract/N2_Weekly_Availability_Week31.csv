@@ -1,0 +1,9 @@
+Fleet,Weekly_Average,Target,Color,Status,Category
+Overall,82.31%,85%,red,Below Target,Fleet
+Load_and_Haul,80.57%,85%,yellow,Below Target,Activity
+Drill_and_Blast,85.33%,85%,green,At Target,Activity
+DT,70.56%,85%,red,Below Target,Equipment
+FL,89.37%,85%,green,Above Target,Equipment
+HD,78.54%,85%,yellow,Below Target,Equipment
+RT,92.43%,85%,green,Above Target,Equipment
+SR,86.55%,85%,green,Above Target,Equipment
