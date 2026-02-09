@@ -3,8 +3,10 @@ import { Battery } from 'lucide-react';
 import { ReportData } from '../../data/reportData';
 import Footer from '../shared/Footer';
 
+type BevDetailDt = NonNullable<ReportData['bevDetail']>['dt'];
+
 interface DtBevDetailSlideProps {
-  data: ReportData['bevDetail']['dt'];
+  data: BevDetailDt;
   footerSrc: string;
   weekNumber: number;
 }
@@ -20,7 +22,7 @@ const slideStyle: React.CSSProperties = {
   backgroundColor: 'white'
 };
 
-const DtBevDetailSlide: React.FC<DtBevDetailSlideProps> = ({ data, footerSrc, weekNumber }) => {
+const DtBevDetailSlide: React.FC<DtBevDetailSlideProps> = ({ data, footerSrc, weekNumber: _weekNumber }) => {
   return (
     <div className="bg-white shadow-md rounded-lg" style={slideStyle}>
       <main className="flex-grow p-6 pb-32 overflow-auto">

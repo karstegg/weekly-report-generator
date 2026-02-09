@@ -3,8 +3,10 @@ import { AlertTriangle } from 'lucide-react';
 import { ReportData } from '../../data/reportData';
 import Footer from '../shared/Footer';
 
+type CurrentStatusData = NonNullable<ReportData['utilitySectionCurrentStatus']>;
+
 interface UtilitySectionCurrentStatusSlideProps {
-  data: ReportData['utilitySectionCurrentStatus'];
+  data: CurrentStatusData;
   footerSrc: string;
 }
 

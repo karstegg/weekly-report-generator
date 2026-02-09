@@ -1,5 +1,5 @@
 import React from 'react';
-import { TrendingUp, TrendingDown, Clock, Wrench, CheckCircle, AlertTriangle, Bolt, Bot } from 'lucide-react';
+import { TrendingUp, TrendingDown, Clock, Wrench, CheckCircle, AlertTriangle, Bolt } from 'lucide-react';
 import { ReportData } from '../../data/reportData';
 import Footer from '../shared/Footer';
 

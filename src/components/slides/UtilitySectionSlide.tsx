@@ -3,8 +3,10 @@ import { CheckCircle, AlertTriangle } from 'lucide-react';
 import { ReportData } from '../../data/reportData';
 import Footer from '../shared/Footer';
 
+type UtilitySectionData = NonNullable<ReportData['utilitySection']>;
+
 interface UtilitySectionSlideProps {
-  data: ReportData['utilitySection'];
+  data: UtilitySectionData;
   footerSrc: string;
   weekNumber: number;
 }
