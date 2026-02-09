@@ -20,14 +20,21 @@ const slideStyle: React.CSSProperties = {
     backgroundColor: 'white'
 };
 
+type Breakdown = { equipment: string; details: string[] };
+
+function summarizeBreakdown(bd: Breakdown) {
+  const details = Array.isArray(bd.details) ? bd.details : [];
+  return { issues: details };
+}
+
 const BevPerformanceSlide: React.FC<BevPerformanceSlideProps> = ({ data, footerSrc, weekNumber }) => {
   const isAvailabilityGood = data.availability.every(item => item.value >= item.target);
   const isComplianceGood = data.serviceCompliance.every(item => item.value === 100);
   return (
     <div className="bg-white shadow-md rounded-lg" style={slideStyle}>
       <main className="flex-grow p-6 pb-32">
-        <h2 className="text-4xl font-bold text-blue-800 mb-6 text-center">BEV Performance Overview (Nchwaning 3)</h2>
-        <div className="grid grid-cols-2 gap-6 mb-6">
+        <h2 className="text-4xl font-bold text-blue-800 mb-4 text-center">{data.name}</h2>
+        <div className="grid grid-cols-2 gap-4 mb-4">
           <div className={`rounded-lg p-4 ${isAvailabilityGood ? 'bg-green-50 border-green-200' : 'bg-orange-50 border-orange-200'}`}>
             <div className={`flex items-center mb-2 ${isAvailabilityGood ? 'text-green-800' : 'text-orange-800'}`}>
             <Battery className="mr-2" size={24} /><h3 className="text-xl font-bold">BEV Availability (Wk {weekNumber})</h3></div>
@@ -42,14 +49,16 @@ const BevPerformanceSlide: React.FC<BevPerformanceSlideProps> = ({ data, footerS
             <Zap className="mr-2" size={24} /><h3 className="text-xl font-bold">BEV Service Compliance</h3></div>
             <ul className="list-disc pl-5 text-lg mt-1">
               {data.serviceCompliance.map((item, i) => (
-                <li key={i} className={`${item.value === 100 ? 'text-green-700' : 'text-yellow-700'} font-semibold`}>{item.label}: {item.value}%</li>
+                <li key={i} className={`${item.value === 100 || item.value === null ? 'text-green-700' : 'text-yellow-700'} font-semibold`}>
+                  {item.label}: {item.value === null ? 'None scheduled' : `${item.value}%`}
+                </li>
               ))}
             </ul>
           </div>
         </div>
-        <div className="mb-4">
-          <h3 className="text-2xl font-bold mb-3 text-center">BEV Availability by Equipment Type</h3>
-          <div className="space-y-4">
+        <div className="flex-grow overflow-hidden pr-2 text-sm mt-3">
+          <h3 className="text-xl font-bold mb-1 text-center">BEV Availability by Equipment Type</h3>
+          <div className="space-y-2">
             {data.availability.map((item, i) => (
               <div key={i}>
                 <div className="flex justify-between items-center mb-1 px-1"><span className="font-semibold text-lg">{item.label}</span><span className="text-base text-gray-500">Target: {item.target}%</span></div>
@@ -62,15 +71,23 @@ const BevPerformanceSlide: React.FC<BevPerformanceSlideProps> = ({ data, footerS
             ))}
           </div>
         </div>
-        <div className="flex-grow overflow-y-auto pr-2 text-sm">
-          <h3 className="text-xl font-bold mb-2 text-center">Key BEV & Battery Themes</h3>
+        <div className="flex-grow overflow-hidden pr-2 text-xs mt-3">
+          <h3 className="text-xl font-bold mb-1 text-center">Key BEV & Battery Themes</h3>
           <div className="grid grid-cols-2 gap-x-6">
             <div>
-              <h4 className="font-semibold text-yellow-800 mb-1">DT BEV Breakdowns:</h4>
-              <ul className="list-disc pl-4 space-y-1">
-                {data.breakdowns.map((bd, i) => (
-                  <li key={i}><span className="font-semibold">{bd.equipment}:</span> {bd.details.join(', ')}</li>
-                ))}
+              <h4 className="font-semibold text-yellow-800 mb-1">Key Breakdowns:</h4>
+              <ul className="space-y-2">
+                {data.breakdowns.map((bd, i) => {
+                  const s = summarizeBreakdown(bd);
+                  return (
+                    <li key={i}>
+                      <div className="font-semibold">{bd.equipment}</div>
+                      <ul className="list-disc pl-4 space-y-0.5">
+                        {s.issues.map((issue, j) => <li key={j}>{issue}</li>)}
+                      </ul>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
             <div>

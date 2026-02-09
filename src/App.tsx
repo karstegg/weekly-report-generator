@@ -7,6 +7,11 @@ import ShaftsWindersSlide from './components/slides/ShaftsWindersSlide';
 import SitePerformanceSlide from './components/slides/SitePerformanceSlide';
 import TrendChartSlide from './components/slides/TrendChartSlide';
 import BevPerformanceSlide from './components/slides/BevPerformanceSlide';
+import DtBevDetailSlide from './components/slides/DtBevDetailSlide';
+import FlBevDetailSlide from './components/slides/FlBevDetailSlide';
+import UtilitySectionSlide from './components/slides/UtilitySectionSlide';
+import UtilitySectionDetailSlide from './components/slides/UtilitySectionDetailSlide';
+import UtilitySectionCurrentStatusSlide from './components/slides/UtilitySectionCurrentStatusSlide';
 import PrintLayout from './components/shared/PrintLayout';
 import './print-styles.css';
 
@@ -43,6 +48,11 @@ const App: React.FC = () => {
     />,
     <SitePerformanceSlide data={reportData.sites.gloria} footerSrc={reportData.footerSrc} />,
     <BevPerformanceSlide data={reportData.bev} footerSrc={reportData.footerSrc} weekNumber={reportData.weekNumber} />,
+    <DtBevDetailSlide data={reportData.bevDetail!.dt} footerSrc={reportData.footerSrc} weekNumber={reportData.weekNumber} />,
+    <FlBevDetailSlide data={reportData.bevDetail!.fl} footerSrc={reportData.footerSrc} weekNumber={reportData.weekNumber} />,
+    <UtilitySectionSlide data={reportData.utilitySection!} footerSrc={reportData.footerSrc} weekNumber={reportData.weekNumber} />,
+    <UtilitySectionDetailSlide data={reportData.utilitySection!} footerSrc={reportData.footerSrc} weekNumber={reportData.weekNumber} />,
+    <UtilitySectionCurrentStatusSlide data={reportData.utilitySectionCurrentStatus!} footerSrc={reportData.footerSrc} />,
   ];
 
   const goToNextSlide = () => {

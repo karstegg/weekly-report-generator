@@ -7,6 +7,11 @@ import ShaftsWindersSlide from '../slides/ShaftsWindersSlide';
 import SitePerformanceSlide from '../slides/SitePerformanceSlide';
 import TrendChartSlide from '../slides/TrendChartSlide';
 import BevPerformanceSlide from '../slides/BevPerformanceSlide';
+import DtBevDetailSlide from '../slides/DtBevDetailSlide';
+import FlBevDetailSlide from '../slides/FlBevDetailSlide';
+import UtilitySectionSlide from '../slides/UtilitySectionSlide';
+import UtilitySectionDetailSlide from '../slides/UtilitySectionDetailSlide';
+import UtilitySectionCurrentStatusSlide from '../slides/UtilitySectionCurrentStatusSlide';
 
 const PrintLayout: React.FC = () => {
   const slides = [
@@ -38,6 +43,11 @@ const PrintLayout: React.FC = () => {
     />,
     <SitePerformanceSlide data={reportData.sites.gloria} footerSrc={reportData.footerSrc} />,
     <BevPerformanceSlide data={reportData.bev} footerSrc={reportData.footerSrc} weekNumber={reportData.weekNumber} />,
+    <DtBevDetailSlide data={reportData.bevDetail!.dt} footerSrc={reportData.footerSrc} weekNumber={reportData.weekNumber} />,
+    <FlBevDetailSlide data={reportData.bevDetail!.fl} footerSrc={reportData.footerSrc} weekNumber={reportData.weekNumber} />,
+    <UtilitySectionSlide data={reportData.utilitySection!} footerSrc={reportData.footerSrc} weekNumber={reportData.weekNumber} />,
+    <UtilitySectionDetailSlide data={reportData.utilitySection!} footerSrc={reportData.footerSrc} weekNumber={reportData.weekNumber} />,
+    <UtilitySectionCurrentStatusSlide data={reportData.utilitySectionCurrentStatus!} footerSrc={reportData.footerSrc} />,
   ];
 
   return (
