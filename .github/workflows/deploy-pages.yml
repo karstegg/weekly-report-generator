@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ['main', 'claude/setup-weekly-reports-n2I1u']
+    branches: ['main', 'claude/weekly-reports-automation-57vJ6']
   workflow_dispatch:
 
 permissions:
