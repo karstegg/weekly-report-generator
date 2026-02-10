@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Footer from '../shared/Footer';
+import { getImagePath } from '../../utils/imagePath';
 
 interface TrendChartSlideProps {
   title: string;
@@ -35,9 +36,9 @@ const TrendChartSlide: React.FC<TrendChartSlideProps> = ({ title, src, footerSrc
               </div>
             </div>
           ) : (
-            <img 
-              src={src} 
-              alt={title} 
+            <img
+              src={getImagePath(src)}
+              alt={title}
               className="w-full h-auto object-contain max-h-[550px]"
               onError={() => setImageError(true)}
             />
