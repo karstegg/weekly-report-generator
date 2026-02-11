@@ -34,3 +34,5 @@ __pycache__/
 
 # Generated reports
 output/
+# But allow PPTX files to be committed for download
+!output/*.pptx
