@@ -4,7 +4,8 @@
  * In production (GitHub Pages): /weekly-report-generator/images/foo.png
  */
 export function getImagePath(path: string): string {
-  const base = import.meta.env.BASE_URL;
+  // Hardcode base path for GitHub Pages
+  const base = '/weekly-report-generator/';
   // Remove leading slash from path if present to avoid double slashes
   const cleanPath = path.startsWith('/') ? path.slice(1) : path;
   return `${base}${cleanPath}`;
