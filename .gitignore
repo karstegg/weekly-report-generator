@@ -30,4 +30,7 @@ yarn-error.log*
 
 # Python
 __pycache__/
-*.pycoutput/
+*.pyc
+
+# Generated reports
+output/
