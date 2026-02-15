@@ -1,0 +1,256 @@
+{
+  "heal": {
+    "gloria_pptx": {
+      "highlights": [],
+      "lowlights": [],
+      "emerging_issues": [],
+      "priorities": []
+    },
+    "n2_text": "Highlights:\n\u2022\tThere is OEM coordinated effort to sort issues on UV137. Strata and ECS are working together \n\nLowlights:\n\u2022\tStill have 2/3 charging UVs operation which is impacting charging \n\u2022\tBarloworld site support is still an issue to attend DT121 which has been standing for more than 3 weeks\n\nEmerging Issues\n\u2022\tLack of necessary skills for OEM support team\n\u2022\tRequired Engine upgrade for UV108 to be compatible with CAS L9\n\nActions\n\u2022\tDrive actions on Engineers action tracker\n\u2022\tDiscuss availability contributing factors with the team. \n",
+    "n3_text": "Highlights:\n\u2022\tThere is OEM coordinated effort to sort issues on UV137. Strata and ECS are working together \n\nLowlights:\n\u2022\tStill have 2/3 charging UVs operation which is impacting charging \n\u2022\tBarloworld site support is still an issue to attend DT121 which has been standing for more than 3 weeks\n\nEmerging Issues\n\u2022\tLack of necessary skills for OEM support team\n\u2022\tRequired Engine upgrade for UV108 to be compatible with CAS L9\n\nActions\n\u2022\tDrive actions on Engineers action tracker\n\u2022\tDiscuss availability contributing factors with the team. \n"
+  },
+  "n3_engineering": {
+    "equipment_availability": {},
+    "safety": {
+      "minor_treatment_case": {
+        "ytd": 15,
+        "week": 0
+      },
+      "lost_time_injury": {
+        "ytd": 3,
+        "week": 0
+      },
+      "property_damage": {
+        "ytd": 54,
+        "week": 0
+      },
+      "incidents_reported": {
+        "ytd": 2,
+        "week": 0
+      }
+    },
+    "service_compliance": {},
+    "breakdowns": [],
+    "hydraulic_hoses": {
+      "DT": {
+        "abrasion": 0,
+        "fitting_damaged": 1,
+        "hose_burst": 0,
+        "hose_damaged": 0,
+        "service": 2,
+        "total": 3
+      },
+      "FL": {
+        "abrasion": 0,
+        "fitting_damaged": 0,
+        "hose_burst": 2,
+        "hose_damaged": 0,
+        "service": 0,
+        "total": 3
+      },
+      "HD": {
+        "abrasion": 88,
+        "fitting_damaged": 12,
+        "hose_burst": 0,
+        "hose_damaged": 7,
+        "service": 14,
+        "total": 123
+      },
+      "HH": {
+        "abrasion": 0,
+        "fitting_damaged": 0,
+        "hose_burst": 0,
+        "hose_damaged": 0,
+        "service": 0,
+        "total": 0
+      },
+      "LD": {
+        "abrasion": 1,
+        "fitting_damaged": 0,
+        "hose_burst": 0,
+        "hose_damaged": 0,
+        "service": 0,
+        "total": 1
+      },
+      "RT": {
+        "abrasion": 48,
+        "fitting_damaged": 14,
+        "hose_burst": 2,
+        "hose_damaged": 0,
+        "service": 6,
+        "total": 70
+      },
+      "SR": {
+        "abrasion": 9,
+        "fitting_damaged": 0,
+        "hose_burst": 0,
+        "hose_damaged": 0,
+        "service": 5,
+        "total": 14
+      },
+      "Grand Total": {
+        "abrasion": 146,
+        "fitting_damaged": 27,
+        "hose_burst": 4,
+        "hose_damaged": 7,
+        "service": 27,
+        "total": 214
+      }
+    },
+    "oil_consumption": {}
+  },
+  "nch2_weekly": {
+    "equipment_availability": {
+      "Maverick Dble Cab STD Load Bin": {
+        "total": 11,
+        "breakdown": 1,
+        "availability": 90.9090909090909
+      },
+      "Maverick Man Lift": {
+        "total": 4,
+        "breakdown": 1,
+        "availability": 75.0
+      },
+      "Liberator Roll On Roll Off": {
+        "total": 6,
+        "breakdown": 0,
+        "availability": 100
+      },
+      "Placer dumper": {
+        "total": 1,
+        "breakdown": 0,
+        "availability": 100
+      },
+      "Maverick king Cab c/w Crane": {
+        "total": 3,
+        "breakdown": 0,
+        "availability": 100
+      },
+      "Maverick Single cab Jam Pot": {
+        "total": 1,
+        "breakdown": 0,
+        "availability": 100
+      },
+      "Maverick 12 Man Trooper": {
+        "total": 3,
+        "breakdown": 0,
+        "availability": 100
+      },
+      "Scaler": {
+        "total": 8,
+        "breakdown": 0,
+        "availability": 100
+      },
+      "Toyota  landcuiser ambulance": {
+        "total": 1,
+        "breakdown": 0,
+        "availability": 100
+      },
+      "Maverick king Cab with no Crane": {
+        "total": 2,
+        "breakdown": 0,
+        "availability": 100
+      },
+      "Toyota landcruiser": {
+        "total": 36,
+        "breakdown": 2,
+        "availability": 94.44444444444444
+      }
+    },
+    "safety": {
+      "mtc": {
+        "ytd": 1,
+        "week": 0
+      },
+      "lti": {
+        "ytd": 0,
+        "week": 0
+      },
+      "pd": {
+        "ytd": 5,
+        "week": 0
+      },
+      "incidents": {
+        "ytd": 0,
+        "week": 0
+      }
+    },
+    "service_compliance": {
+      "DT": {
+        "planned": 4,
+        "actual": 4,
+        "compliance": 1,
+        "comment": null
+      },
+      "FL": {
+        "planned": 3,
+        "actual": 2,
+        "compliance": 0.6666666666666666,
+        "comment": "Due to loader availability and was rescheduled for next week"
+      },
+      "HD": {
+        "planned": 2,
+        "actual": 2,
+        "compliance": 1,
+        "comment": null
+      },
+      "RT": {
+        "planned": 4,
+        "actual": 4,
+        "compliance": 1,
+        "comment": null
+      },
+      "Support Equipment": {
+        "planned": 5,
+        "actual": 6,
+        "compliance": 1.2,
+        "comment": "EXCLUDE UV0053 :STILL OUT FOR LEVEL 9 UPGRADE"
+      },
+      "SR - Weekly Inspection ": {
+        "planned": 8,
+        "actual": 8,
+        "compliance": 1,
+        "comment": null
+      }
+    },
+    "production": {
+      "rom_plan_ytd": "ROM ",
+      "rom_actual_ytd": 998412,
+      "rom_plan_mtd": 895106,
+      "rom_actual_mtd": 60105,
+      "product_plan_ytd": "Product",
+      "product_actual_ytd": 916813,
+      "product_plan_mtd": 881752,
+      "product_actual_mtd": 52058
+    }
+  },
+  "gloria_engineering": {
+    "equipment_availability": {
+      "HD": 99.0,
+      "RT": 88.0,
+      "SR": 70.0,
+      "DT": 86.0
+    },
+    "safety": {
+      "mtc": {
+        "ytd": 2,
+        "week": null
+      },
+      "lti": {
+        "ytd": 1,
+        "week": null
+      },
+      "pd": {
+        "ytd": 6,
+        "week": null
+      }
+    },
+    "production": {
+      "rom_plan_ytd": 578982,
+      "rom_actual_ytd": 571307,
+      "product_plan_ytd": 534000,
+      "product_actual_ytd": 516113
+    },
+    "service_compliance": {}
+  }
+}

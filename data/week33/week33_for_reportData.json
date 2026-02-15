@@ -1,0 +1,200 @@
+{
+  "week33": {
+    "period": "06 Feb - 12 Feb 2026",
+    "weekNumber": 33,
+
+    "heal": {
+      "highlights": [
+        "There is OEM coordinated effort to sort issues on UV137. Strata and ECS are working together"
+      ],
+      "lowlights": [
+        "Still have 2/3 charging UVs operation which is impacting charging",
+        "Barloworld site support is still an issue to attend DT121 which has been standing for more than 3 weeks"
+      ],
+      "emergingIssues": [
+        "Lack of necessary skills for OEM support team",
+        "Required Engine upgrade for UV108 to be compatible with CAS L9"
+      ],
+      "priorities": [
+        "Drive actions on Engineers action tracker",
+        "Discuss availability contributing factors with the team"
+      ]
+    },
+
+    "n3": {
+      "equipmentAvailability": {
+        "HD": {
+          "daily": [90.0, 86.0, 89.0, 89.0, 92.0],
+          "average": 89.2,
+          "days": ["Friday", "Monday", "Tuesday", "Wednesday", "Thursday"]
+        },
+        "RT": {
+          "daily": [89.0, 95.0, 97.0, 88.0, 73.0],
+          "average": 88.4,
+          "days": ["Friday", "Monday", "Tuesday", "Wednesday", "Thursday"]
+        },
+        "SR": {
+          "daily": [91.0, 98.0, 97.0, 87.0, 89.0],
+          "average": 92.4,
+          "days": ["Friday", "Monday", "Tuesday", "Wednesday", "Thursday"]
+        },
+        "DT_Diesel": {
+          "daily": [85.0, 77.0, 75.0, 76.0, 74.0],
+          "average": 77.4,
+          "days": ["Friday", "Monday", "Tuesday", "Wednesday", "Thursday"]
+        },
+        "FL_Diesel": {
+          "daily": [58.0, 64.0, 59.0, 58.0, 63.0],
+          "average": 60.4,
+          "days": ["Friday", "Monday", "Tuesday", "Wednesday", "Thursday"]
+        },
+        "DT_BEV": {
+          "daily": [78.0, 78.0, 79.0, 85.0, 74.0],
+          "average": 78.8,
+          "days": ["Friday", "Monday", "Tuesday", "Wednesday", "Thursday"]
+        },
+        "FL_BEV": {
+          "daily": [83.0, 81.0, 90.0, 81.0, 94.0],
+          "average": 85.8,
+          "days": ["Friday", "Monday", "Tuesday", "Wednesday", "Thursday"]
+        }
+      },
+      "safety": {
+        "mtc": {"ytd": 15, "week": 0},
+        "lti": {"ytd": 3, "week": 0},
+        "pd": {"ytd": 54, "week": 0},
+        "incidents": {"ytd": 2, "week": 0}
+      },
+      "keyBreakdowns": [
+        {"equipment": "DT145", "issue": "Gears Faulty"},
+        {"equipment": "DT148", "issue": "Aircon issues"},
+        {"equipment": "DT171", "issue": "A Frame"},
+        {"equipment": "DT146", "issue": "Isolator faulty"},
+        {"equipment": "FL101", "issue": "Steering Problem"},
+        {"equipment": "FL103", "issue": "Equipment issue (details TBC)"}
+      ],
+      "hydraulicHoses": {
+        "DT": {"abrasion": 0, "fitting_damaged": 1, "hose_burst": 0, "hose_damaged": 0, "service": 2, "total": 3},
+        "FL": {"abrasion": 0, "fitting_damaged": 0, "hose_burst": 2, "hose_damaged": 0, "service": 0, "total": 3},
+        "HD": {"abrasion": 88, "fitting_damaged": 12, "hose_burst": 0, "hose_damaged": 7, "service": 14, "total": 123},
+        "RT": {"abrasion": 48, "fitting_damaged": 14, "hose_burst": 2, "hose_damaged": 0, "service": 6, "total": 70},
+        "SR": {"abrasion": 9, "fitting_damaged": 0, "hose_burst": 0, "hose_damaged": 0, "service": 5, "total": 14},
+        "LD": {"abrasion": 1, "fitting_damaged": 0, "hose_burst": 0, "hose_damaged": 0, "service": 0, "total": 1},
+        "total": {"abrasion": 146, "fitting_damaged": 27, "hose_burst": 4, "hose_damaged": 7, "service": 27, "total": 214}
+      }
+    },
+
+    "nch2": {
+      "production": {
+        "rom": {
+          "plan_ytd": 998412,
+          "actual_ytd": 895106,
+          "plan_mtd": 60105,
+          "actual_mtd": 52059,
+          "variance_mtd": -8046
+        },
+        "product": {
+          "plan_ytd": 916813,
+          "actual_ytd": 881752,
+          "plan_mtd": 52058,
+          "actual_mtd": 41635,
+          "variance_mtd": -10423
+        }
+      },
+      "safety": {
+        "mtc": {"ytd": 1, "week": 0},
+        "lti": {"ytd": 0, "week": 0},
+        "pd": {"ytd": 5, "week": 0},
+        "incidents": {"ytd": 0, "week": 0}
+      },
+      "serviceCompliance": {
+        "DT": {"planned": 4, "actual": 4, "compliance": 100, "target": 100, "comment": null},
+        "FL": {"planned": 3, "actual": 2, "compliance": 66.7, "target": 100, "comment": "Due to loader availability and was rescheduled for next week"},
+        "HD": {"planned": 2, "actual": 2, "compliance": 100, "target": 100, "comment": null},
+        "RT": {"planned": 4, "actual": 4, "compliance": 100, "target": 100, "comment": null},
+        "Support_Equipment": {"planned": 5, "actual": 6, "compliance": 120, "target": 100, "comment": "EXCLUDE UV0053: STILL OUT FOR LEVEL 9 UPGRADE"},
+        "SR_Weekly_Inspection": {"planned": 8, "actual": 8, "compliance": 100, "target": 100, "comment": null}
+      },
+      "supportEquipmentAvailability": {
+        "Maverick_Dble_Cab": {"total": 11, "breakdown": 1, "availability": 90.9},
+        "Maverick_Man_Lift": {"total": 4, "breakdown": 1, "availability": 75.0},
+        "Liberator_RORO": {"total": 6, "breakdown": 0, "availability": 100},
+        "Placer_Dumper": {"total": 1, "breakdown": 0, "availability": 100},
+        "Maverick_King_Cab_Crane": {"total": 3, "breakdown": 0, "availability": 100},
+        "Maverick_Single_Cab": {"total": 1, "breakdown": 0, "availability": 100},
+        "Maverick_12_Man_Trooper": {"total": 3, "breakdown": 0, "availability": 100},
+        "Scaler": {"total": 8, "breakdown": 0, "availability": 100},
+        "Toyota_Ambulance": {"total": 1, "breakdown": 0, "availability": 100},
+        "Maverick_King_Cab_No_Crane": {"total": 2, "breakdown": 0, "availability": 100},
+        "Toyota_Landcruiser": {"total": 36, "breakdown": 2, "availability": 94.4},
+        "overall": {"total": 76, "breakdown": 4, "availability": 94.7}
+      }
+    },
+
+    "gloria": {
+      "production": {
+        "rom": {
+          "plan_ytd": 578982,
+          "actual_ytd": 571307
+        },
+        "product": {
+          "plan_ytd": 534000,
+          "actual_ytd": 516113
+        }
+      },
+      "safety": {
+        "mtc": {"ytd": 2, "week": null},
+        "lti": {"ytd": 1, "week": null},
+        "pd": {"ytd": 6, "week": null}
+      },
+      "equipmentAvailability": {
+        "HD": 99.0,
+        "RT": 88.0,
+        "SR": 70.0,
+        "DT": 86.0,
+        "FL": "NOT_EXTRACTED_CHECK_MANUALLY"
+      }
+    },
+
+    "criticalIssues": [
+      {
+        "shaft": "N3",
+        "equipment": "DT121",
+        "issue": "Standing for more than 3 weeks - Barloworld site support issue",
+        "priority": "HIGH"
+      },
+      {
+        "shaft": "N3",
+        "equipment": "UV137",
+        "issue": "OEM coordinated effort underway (Strata and ECS working together)",
+        "priority": "MEDIUM"
+      },
+      {
+        "shaft": "N3",
+        "equipment": "UV108",
+        "issue": "Requires engine upgrade for CAS L9 compatibility",
+        "priority": "MEDIUM"
+      },
+      {
+        "shaft": "Nch2",
+        "equipment": "UV0053",
+        "issue": "Still out for Level 9 upgrade",
+        "priority": "MEDIUM"
+      },
+      {
+        "shaft": "N3",
+        "equipment": "Charging UVs",
+        "issue": "Only 1/3 operational, impacting charging operations",
+        "priority": "HIGH"
+      }
+    ],
+
+    "notes": [
+      "Zero safety incidents reported across all shafts this week",
+      "N3 FL Diesel availability at 60.4% - lowest of the week",
+      "N3 HD hydraulic hoses: 123 replacements (highest consumption)",
+      "Nch2 service compliance: FL at 66.7% due to availability issues",
+      "Gloria equipment showing strong availability (HD at 99%)"
+    ]
+  }
+}
