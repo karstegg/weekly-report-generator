@@ -26,7 +26,7 @@ const BevPerformanceSlide: React.FC<BevPerformanceSlideProps> = ({ data, footerS
         <h2 className="text-4xl font-bold text-blue-800 mb-6 text-center">BEV Performance Overview (Nchwaning 3)</h2>
         <div className="grid grid-cols-2 gap-6 mb-6">
           <div className="bg-green-50 border-green-200 rounded-lg p-4">
-            <div className="flex items-center mb-2"><Battery className="text-green-600 mr-2" size={24} /><h3 className="text-xl font-bold text-green-800">BEV Availability (Wk 50)</h3></div>
+            <div className="flex items-center mb-2"><Battery className="text-green-600 mr-2" size={24} /><h3 className="text-xl font-bold text-green-800">BEV Availability (Wk 33)</h3></div>
             <ul className="list-disc pl-5 text-lg mt-1">
               {data.availability.map((item, i) => (
                 <li key={i} className={`${item.value >= item.target ? 'text-green-700' : 'text-yellow-700'} font-semibold`}>{item.label}: {item.value}% ({item.value >= item.target ? 'Above' : 'Below'} Target)</li>
@@ -61,15 +61,22 @@ const BevPerformanceSlide: React.FC<BevPerformanceSlideProps> = ({ data, footerS
           <h3 className="text-xl font-bold mb-2 text-center">Key BEV & Battery Themes</h3>
           <div className="grid grid-cols-2 gap-x-6">
             <div>
-              <h4 className="font-semibold text-yellow-800 mb-1">DT BEV Breakdowns:</h4>
+              <h4 className="font-semibold text-yellow-800 mb-1">Performance Summary:</h4>
               <ul className="list-disc pl-4 space-y-1">
-                {data.breakdowns.map((bd, i) => bd.details.map((d, j) => <li key={`${i}-${j}`}>{d}</li>))}
+                <li>DT BEV at 78% - below target by 7%. Critical: DT0171 A-Frame failure (167 hrs).</li>
+                <li>FL BEV at 85% - meets target. Boilermaker work and Strata issues main constraints.</li>
+                <li>DT0172 has been commissioned and in production for DT0171 while repairs to A-Frame are effected.</li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-yellow-800 mb-1">Key Battery Themes:</h4>
+              <h4 className="font-semibold text-yellow-800 mb-1">Battery & Charger Status:</h4>
               <ul className="list-disc pl-4 space-y-1">
-                {data.batteryThemes.map((theme, i) => <li key={i}>{theme}</li>)}
+                <li>Battery VPY00076 isolation fault affecting FL0099. Isolators between contactors and VCB need replacement.</li>
+                <li>All chargers are operational despite Charger 2 Module 2 fault - module bypassed while other modules working.</li>
+                <li>B4 Batteries: 9 Working, 1 Breakdown | B5 Batteries: 11 Working, 1 Breakdown, 1 Underground (not commissioned)</li>
+                <li>Post 3, 6 and 7 cables replaced. Piet to put in an order for all other chargers.</li>
+                <li>Auxiliary motor spline grease TSNB not done. Only DT147 completed. Need to schedule machines to complete campaign. Grease on site.</li>
+                <li>VCA, VCB cables and discharge resistors - machines identified for replacement. Parts partially ordered, some orders in approval phase.</li>
               </ul>
             </div>
           </div>

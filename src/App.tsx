@@ -6,9 +6,12 @@ import HealSlide from './components/slides/HealSlide';
 import SitePerformanceSlide from './components/slides/SitePerformanceSlide';
 import TrendChartSlide from './components/slides/TrendChartSlide';
 import BevPerformanceSlide from './components/slides/BevPerformanceSlide';
+import BEVDTBreakdownSlide from './components/slides/BEVDTBreakdownSlide';
+import BEVFLBreakdownSlide from './components/slides/BEVFLBreakdownSlide';
 import UtilitySectionSlide from './components/slides/UtilitySectionSlide';
 import UtilitySectionDetailSlide from './components/slides/UtilitySectionDetailSlide';
 import UtilitySectionCurrentStatusSlide from './components/slides/UtilitySectionCurrentStatusSlide';
+import PrintLayout from './components/shared/PrintLayout';
 
 const App: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -41,6 +44,8 @@ const App: React.FC = () => {
     />,
     <SitePerformanceSlide data={reportData.sites.gloria} footerSrc={reportData.footerSrc} />,
     <BevPerformanceSlide data={reportData.bev} footerSrc={reportData.footerSrc} />,
+    <BEVDTBreakdownSlide footerSrc={reportData.footerSrc} weekNumber={reportData.weekNumber} />,
+    <BEVFLBreakdownSlide footerSrc={reportData.footerSrc} weekNumber={reportData.weekNumber} />,
     ...(reportData.utilitySection ? [
       <UtilitySectionSlide data={reportData.utilitySection} footerSrc={reportData.footerSrc} weekNumber={reportData.weekNumber} />,
       <UtilitySectionDetailSlide data={reportData.utilitySection} footerSrc={reportData.footerSrc} weekNumber={reportData.weekNumber} />,
@@ -58,31 +63,48 @@ const App: React.FC = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
+  const printToPDF = () => {
+    window.print();
+  };
+
   return (
-    <div className="font-sans bg-gray-50 p-4">
-      <div className="max-w-4xl mx-auto mb-4">
-        <div className="flex justify-between items-center">
-          <button 
-            onClick={goToPrevSlide} 
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors"
-          >
-            Previous
-          </button>
-          <div className="text-center text-gray-600">
-            Slide {currentSlide + 1} of {slides.length}
+    <>
+      <div className="font-sans bg-gray-50 p-4 screen-only">
+        <div className="max-w-4xl mx-auto mb-4">
+          <div className="flex justify-between items-center">
+            <button 
+              onClick={goToPrevSlide} 
+              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors"
+            >
+              Previous
+            </button>
+            <div className="flex items-center space-x-4">
+              <button 
+                onClick={printToPDF} 
+                className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition-colors"
+              >
+                Print PDF
+              </button>
+              <div className="text-center text-gray-600">
+                Slide {currentSlide + 1} of {slides.length}
+              </div>
+            </div>
+            <button 
+              onClick={goToNextSlide} 
+              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors"
+            >
+              Next
+            </button>
           </div>
-          <button 
-            onClick={goToNextSlide} 
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors"
-          >
-            Next
-          </button>
+        </div>
+        <div className="w-full">
+          {slides[currentSlide]}
         </div>
       </div>
-      <div className="w-full">
-        {slides[currentSlide]}
+      <div className="print-only">
+        <PrintLayout />
       </div>
-    </div>
+    </>
   );
 };
 

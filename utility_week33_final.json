@@ -1,0 +1,59 @@
+{
+  "utilitySection": {
+    "fleetStatus": {
+      "available": 74,
+      "unavailable": 0
+    },
+    "areaSummary": [
+      {
+        "area": "Utility Vehicles",
+        "department": "All Departments",
+        "total": 74,
+        "unavailable": 0
+      }
+    ],
+    "breakdowns": [],
+    "oemAssistanceRequired": 0,
+    "dailyTracking": [
+      {
+        "area": "Utility Vehicles",
+        "mon": {
+          "available": 74,
+          "total": 74,
+          "color": "green"
+        },
+        "tue": {
+          "available": 74,
+          "total": 74,
+          "color": "green"
+        },
+        "wed": {
+          "available": 74,
+          "total": 74,
+          "color": "green"
+        },
+        "thu": {
+          "available": 74,
+          "total": 74,
+          "color": "green"
+        },
+        "fri": {
+          "available": 74,
+          "total": 74,
+          "color": "green"
+        },
+        "weeklyAvg": 100.0
+      }
+    ]
+  },
+  "utilitySectionCurrentStatus": {
+    "totalUnavailable": 0,
+    "areaStatus": [
+      {
+        "area": "Utility Vehicles",
+        "unavailable": 0,
+        "details": []
+      }
+    ]
+  }
+}

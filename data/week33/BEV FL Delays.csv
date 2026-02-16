@@ -1,7 +1,28 @@
 ﻿Type,Machine_id,All Delays Levels,Comment,Hours
-FLe,FL0112,/Equipment/Breakdown Boilermaker,Weld Bucket@Boilers,139.95
-FLe,FL0108,/Equipment/Breakdown Electrical/Auto Electrical System - 800v/Battery Temperature High,"",7.78
-FLe,FL0113,/Equipment/Breakdown Mechanical,'@ w/shop - Trm oil leak,3.95
-FLe,FL0113,/Equipment/Breakdown Mechanical,Transmission Mounting Rubber@Batt Bay,3.57
-FLe,FL0099,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,No Module Contact@Batt Bay,1.08
-FLe,FL0108,/Equipment/Operational Delays,CHANGE BATTERY,0.28
+FLe,FL0108,/Equipment/Breakdown Boilermaker,Half Arrows @ boilershop,41.50
+FLe,FL0099,/Equipment/Breakdown Boilermaker,Half Arrows@Boilershop,31.45
+FLe,FL0113,/Equipment/Damages,WINDSCREEN CRACKED@BATTERY BAY.,15.42
+FLe,FL0107,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,Hydraulic Level sensor@107 13XCUT,12.30
+FLe,FL0098,/Equipment/Breakdown Electrical,"TCU Error @ sim2n,27w 7n",11.40
+FLe,FL0099,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/Petro Man,Tag box off (battery bay),8.03
+FLe,FL0098,/Equipment/Breakdown Mechanical,Transm Oil Press WL@22n5w S2N,7.42
+FLe,FL0112,/Equipment/Breakdown Electrical/Auto Electrical System - 24v/Strata Breakdown,GEN 2 COMMS ERROR@BATTERY BAY,6.52
+FLe,FL0112,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown,MACHINE CUT OUT DURING LOADING@14W/21  NW,5.13
+FLe,FL0112,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown,"strata system faulty @ mw,105n 18w",4.28
+FLe,FL0099,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,Not Starting at Boilershop,4.00
+FLe,FL0099,/Equipment/Breakdown Electrical,not starting @ boilershop,3.55
+FLe,FL0112,/Equipment/Breakdown Mechanical,battery guide bracket bolts broken @ battery bay,3.00
+FLe,FL0107,/Equipment/Breakdown Electrical/Auto Electrical System - 24v/24v Battery,battery not connecting @ battery bay,2.98
+FLe,FL0099,/Equipment/Breakdown Electrical/Auto Electrical System - 24v/24v Battery,not connecting @ boilershop,2.60
+FLe,FL0108,/Equipment/Breakdown Electrical,front and rear lights (green and red) not working @ battery bay,2.20
+FLe,FL0112,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown,"Strata system faulty @ swd,49s 74w",1.98
+FLe,FL0112,/Equipment/Breakdown Electrical/Auto Electrical System - 24v/Strata Breakdown,Comms Lost@104s MW,1.98
+FLe,FL0112,/Equipment/Breakdown Electrical/Auto Electrical System - 24v/Strata Breakdown,Comss error (battery bay),1.83
+FLe,FL0112,/Equipment/Breakdown Electrical/Auto Electrical System - 24v/Strata Breakdown,"Strata system faulty @ R5,41w 76s",1.18
+FLe,FL0113,/Equipment/Breakdown Mechanical,Greasing @ battery bay,1.07
+FLe,FL0113,/Equipment/Breakdown Mechanical,Oil Leak@Batt Bay,1.03
+FLe,FL0112,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown,strata system faulty @ battery bay,0.92
+FLe,FL0098,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,Engine Cut Off@(S2N) 22n5w,0.70
+FLe,FL0108,/Equipment/Breakdown Electrical,lights (red and green lights) @ battery bay,0.70
+FLe,FL0098,/Equipment/Breakdown Mechanical,battery cut off@ battery bay,0.53
+FLe,FL0099,/Equipment/Breakdown Electrical,RED STOP LAMP@BATTERY BAY,0.28

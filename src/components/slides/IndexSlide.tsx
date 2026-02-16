@@ -21,9 +21,9 @@ interface IndexSlideProps {
 const IndexSlide: React.FC<IndexSlideProps> = ({ sites, footerSrc }) => {
   const indexItems = [
     'Departmental Overview (HEAL)',
-    'Shafts & Winders Performance',
     ...Object.values(sites).map(site => `${site.name} Performance Overview`),
     'BEV Performance Overview',
+    'Utility Performance',
   ];
 
   return (

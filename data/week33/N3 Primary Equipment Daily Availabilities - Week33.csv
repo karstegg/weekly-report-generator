@@ -1,0 +1,9 @@
+Equipment,Friday,Monday,Tuesday,Wednesday,Thursday,Average,Breakdowns - Comments
+HD,90.0%,86.0%,89.0%,89.0%,92.0%,89.2%,
+RT,89.0%,95.0%,97.0%,88.0%,73.0%,88.4%,
+SR,91.0%,98.0%,97.0%,87.0%,89.0%,92.4%,
+DT Diesel,85.0%,77.0%,75.0%,76.0%,74.0%,77.4%,"DT145 Gears Faulty,DT148 Aircon/Mainswitch,"
+FL Diesel,58.0%,64.0%,59.0%,58.0%,63.0%,60.4%,"FL101 Steering Problem, FL103 not Starting, Aircon and Tagbox, FL90 Comms Error"
+DT batteries,78.0%,78.0%,79.0%,85.0%,74.0%,78.8%,"DT171 A Frame,DT146 Isoaltor faulty,DT149 Invertor Error,DT162 Batt Overheat"
+FL Batteries,83.0%,81.0%,90.0%,81.0%,94.0%,85.8%,
+Average,,,,,,81.8%,

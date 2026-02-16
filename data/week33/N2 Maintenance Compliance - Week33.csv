@@ -1,0 +1,8 @@
+Fleet,Planned,Actual,Compliance,Target,Compliance %,Reasons for Non-Compliance
+DT,4,4,1,1,100.0%,
+FL,3,2,0.66666666666666663,1,66.7%,20.16.10
+HD,2,2,1,1,100.0%,
+RT,4,4,1,1,100.0%,
+SR - Service Compliance,0,0,,1,,
+Support Equipment,5,6,1.2,1,1.2%,16.14.10
+SR - Weekly Inspection ,8,8,1,1,100.0%,

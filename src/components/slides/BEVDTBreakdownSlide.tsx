@@ -7,37 +7,44 @@ interface BEVDTBreakdownSlideProps {
   weekNumber: number;
 }
 
+const slideStyle: React.CSSProperties = {
+  width: '960px',
+  height: '720px',
+  margin: '0 auto 32px auto',
+  overflow: 'hidden',
+  position: 'relative',
+  display: 'flex',
+  flexDirection: 'column',
+  backgroundColor: 'white'
+};
+
 const BEVDTBreakdownSlide: React.FC<BEVDTBreakdownSlideProps> = ({ footerSrc, weekNumber }) => {
-  const dtAvailability = 76;
+  const dtAvailability = 78;
   const target = 85;
   const variance = dtAvailability - target;
 
   const unitAvailability = [
-    { unit: 'DT0146', availability: 100 },
-    { unit: 'DT0147', availability: 86.44 },
-    { unit: 'DT0149', availability: 72.41 },
-    { unit: 'DT0150', availability: 93.26 },
-    { unit: 'DT0162', availability: 77.8 },
-    { unit: 'DT0163', availability: 95.93 },
-    { unit: 'DT0171', availability: 3.99 },
+    { unit: 'DT0146', availability: 95.0 },
+    { unit: 'DT0147', availability: 99.0 },
+    { unit: 'DT0149', availability: 65.0 },
+    { unit: 'DT0162', availability: 95.5 },
+    { unit: 'DT0163', availability: 98.0 },
+    { unit: 'DT0171', availability: 0.0 },
   ];
 
   const breakdowns = [
-    { type: 'Mechanical', machine: 'DT0171', comment: 'A-Frame Failure', hours: 112.35 },
-    { type: 'Mechanical', machine: 'DT0149', comment: 'Gears - 43n11w mw', hours: 26.28 },
-    { type: 'Battery', machine: 'DT0147', comment: 'Flat Battery - Charging', hours: 16.77 },
-    { type: 'Battery', machine: 'DT0147', comment: 'Charging Battery', hours: 15.87 },
-    { type: 'Strata', machine: 'DT0162', comment: 'Machine not moving @ 110S/14W NW', hours: 8.43 },
-    { type: 'Strata', machine: 'DT0162', comment: '@ sat tip nr 1', hours: 6.53 },
-    { type: 'Electrical', machine: 'DT0149', comment: 'Red stop light @ S4s r5', hours: 4.88 },
-    { type: 'Auto Electrical', machine: 'DT0147', comment: 'Inverter error @ wshop', hours: 3.43 },
-    { type: 'Auto Electrical', machine: 'DT0149', comment: 'Engine cut off S4s30w r5', hours: 3.63 },
-    { type: 'Electrical', machine: 'DT0150', comment: 'Invertor error @ old tip 3', hours: 3.37 },
-    { type: 'Electrical', machine: 'DT0150', comment: 'Powerless @ Battery Bay', hours: 3.08 },
-    { type: 'Battery', machine: 'DT0149', comment: 'Changing Battery', hours: 5.9 },
-    { type: 'Battery', machine: 'DT0150', comment: 'Change Battery', hours: 3.95 },
-    { type: 'Battery', machine: 'DT0162', comment: 'Charging Battery - No extra battery', hours: 1.3 },
-    { type: 'Electrical', machine: 'DT0163', comment: 'No contact with modules @ Battery Bay', hours: 1.55 },
+    { type: 'Mechanical', machine: 'DT0171', comment: 'A frame@WS', hours: 167.22 },
+    { type: 'Electrical', machine: 'DT0149', comment: 'ISOLATION FAULTY @ BATTERY BAY', hours: 37.27 },
+    { type: 'Auto Electrical', machine: 'DT0149', comment: 'INVERTOR ERROR@13 CROSSS CUT NW', hours: 21.03 },
+    { type: 'Mechanical', machine: 'DT0162', comment: 'Battery Overheating @ swd,72w 45s', hours: 7.58 },
+    { type: 'Mechanical', machine: 'DT0146', comment: 'invertor faulty @ satelite tip', hours: 3.55 },
+    { type: 'Mechanical', machine: 'DT0146', comment: 'fan bracket loose @ battery bay', hours: 3.00 },
+    { type: 'Electrical', machine: 'DT0163', comment: 'insolation fault @ battery bay', hours: 2.28 },
+    { type: 'Battery', machine: 'DT0146', comment: 'Not connecting (battery bay)', hours: 1.82 },
+    { type: 'Electrical', machine: 'DT0147', comment: 'invertor isolator faulty @ battery bay', hours: 1.35 },
+    { type: 'Mechanical', machine: 'DT0163', comment: 'insolation fault @ satelite tip1', hours: 1.18 },
+    { type: 'Auto Electrical', machine: 'DT0149', comment: 'wiper @ battery bay', hours: 0.47 },
+    { type: 'Battery', machine: 'DT0147', comment: 'battery not connecting @ battery bay', hours: 0.35 },
   ];
 
   const getAvailabilityColor = (availability: number) => {
@@ -47,7 +54,8 @@ const BEVDTBreakdownSlide: React.FC<BEVDTBreakdownSlideProps> = ({ footerSrc, we
   };
 
   return (
-    <div className="h-screen w-screen bg-white flex flex-col p-12 relative overflow-hidden">
+    <div className="bg-white shadow-md rounded-lg" style={slideStyle}>
+      <main className="flex-grow p-6 pb-32 flex flex-col">
       <div className="flex-1 flex flex-col">
         <h1 className="text-5xl font-bold text-blue-900 mb-8">DT: AVAILABILITY & BREAKDOWNS</h1>
         
@@ -109,7 +117,7 @@ const BEVDTBreakdownSlide: React.FC<BEVDTBreakdownSlideProps> = ({ footerSrc, we
           </div>
         </div>
       </div>
-
+      </main>
       <Footer src={footerSrc} />
     </div>
   );

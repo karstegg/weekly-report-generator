@@ -1,0 +1,12 @@
+Fleet,Planned,Actual,Compliance,Target,Compliance %,Reasons for Non-Compliance
+FL(Diesel),,,,0.95,,
+DT(Diesel),2,2,1,0.95,100.0%,
+FL BEV,1,1,1,0.95,100.0%,
+DT BEV,3,2,0.66666666666666663,0.95,66.7%,DT0171 on breakdown
+HD,5,5,1,0.95,100.0%,
+RT,5,5,1,0.95,100.0%,
+SR,,,,0.95,,
+UV Emulsion Units,,,,0.95,,
+Support Equip. Diesel Foreman,,,,0.95,,
+Support Equip Utility Foreman,5,4,0.8,0.95,80.0%,
+BEV Batt ,5,5,1,0.95,100.0%,

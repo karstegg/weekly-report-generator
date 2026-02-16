@@ -1,0 +1,54 @@
+{
+  "n3": {
+    "weeklyAverage": 81.8,
+    "availability": {
+      "HD": 89.2,
+      "RT": 88.4,
+      "SR": 92.4,
+      "DT": 77.4,
+      "FL": 60.4,
+      "DT_BEV": 78.8,
+      "FL_BEV": 85.8
+    },
+    "breakdowns": {
+      "DT": [
+        "DT145: Gears Faulty",
+        "DT148: Aircon/Mainswitch"
+      ],
+      "FL": [
+        "FL101: Steering Problem",
+        "FL103: Not Starting, Aircon and Tagbox",
+        "FL90: Comms Error"
+      ],
+      "DT_BEV": [
+        "DT171: A Frame",
+        "DT146: Isolator faulty",
+        "DT149: Invertor Error",
+        "DT162: Batt Overheat"
+      ]
+    }
+  },
+  "n2": {
+    "availability": {
+      "HD": 85.8,
+      "RT": 85.0,
+      "SR": 96.0
+    },
+    "weeklyAverage": null,
+    "breakdowns": {
+      "DT": "UV108 updating the ECM (ECU) to interface with CAS L9. 137 is operating on L7 and the OEMs are still busy with trouble shooting on Level 9"
+    }
+  },
+  "gloria": {
+    "availability": {
+      "HD": 97.2,
+      "RT": 91.4,
+      "SR": 86.4
+    },
+    "weeklyAverage": 92.4,
+    "breakdowns": {
+      "DT": "DT0174 - FIRE SUPPRESSION; DT0152 - POWERLESS; DT0106 - GEARS",
+      "SR": "SR0040 - LEVEL 9 INSTALLATION"
+    }
+  }
+}

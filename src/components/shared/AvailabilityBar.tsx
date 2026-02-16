@@ -11,7 +11,7 @@ const AvailabilityBar: React.FC<Availability> = ({ label, percentage, target = 8
   if (roundedPercentage >= target) {
     barColor = 'bg-green-500';
     icon = <CheckCircle className="text-green-600" size={22} />;
-  } else if (roundedPercentage >= target - 10) {
+  } else if (roundedPercentage >= 80) {
     barColor = 'bg-yellow-500';
     textColor = 'text-black';
     icon = <AlertTriangle className="text-yellow-600" size={22} />;

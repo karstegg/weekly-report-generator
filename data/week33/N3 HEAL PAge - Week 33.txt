@@ -1,14 +1,16 @@
 Highlights:
-•	There is OEM coordinated effort to sort issues on UV137. Strata and ECS are working together 
+• DT0172 UG
+- Much improved performance on HD, RTs
+
 
 Lowlights:
-•	Still have 2/3 charging UVs operation which is impacting charging 
-•	Barloworld site support is still an issue to attend DT121 which has been standing for more than 3 weeks
+- Scaler SR30 running out of control incident	
+- Poor UV availabilities due to Strata, affecting blasting
+- Sat Tip 1 Tip 1 Rock breaker boom failure
 
 Emerging Issues
-•	Lack of necessary skills for OEM support team
-•	Required Engine upgrade for UV108 to be compatible with CAS L9
+- Roadway Conditions
 
 Actions
-•	Drive actions on Engineers action tracker
-•	Discuss availability contributing factors with the team. 
+- Commission DT0172 over the weekend (Strata)
+- Scaler SR3 investigation and actions

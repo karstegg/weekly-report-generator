@@ -1,14 +1,13 @@
 ﻿Type,Machine_id,All Delays Levels,Comment,Hours
-DTe,DT0171,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,Red Stop Lamp@Batt Bay,96.00
-DTe,DT0171,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,A-Frame Failure,72.00
-DTe,DT0162,/Equipment/Breakdown Electrical/Auto Electrical System - 24v/Strata Breakdown,'@ 97n 13w NW,10.63
-DTe,DT0149,/Equipment/Breakdown Electrical/Auto Electrical System - 24v/Wipers,"",10.38
-DTe,DT0149,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown,'@ battery bay,8.73
-DTe,DT0163,/Equipment/Breakdown Electrical/Auto Electrical System - 24v/Strata Breakdown,Strata -14w 111n MW,5.50
-DTe,DT0149,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,Reverse Alarm@Batt Bay,2.72
-DTe,DT0150,/Equipment/Operational Delays/No Consumables,ran out of diesel9s80w s2s,2.33
-DTe,DT0149,/Equipment/Breakdown Electrical/Auto Electrical System - 800v/Connectors,BATTERY NOT CONNECTING@BATTERY BAY.,2.25
-DTe,DT0147,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,Inverter Error@MW1 70n,1.83
-DTe,DT0147,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,Invertor Error@Batt Bay,1.48
-DTe,DT0149,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,mudule error,0.37
-DTe,DT0150,/Equipment/Breakdown Mechanical,Oil Leak@Batt Bay,0.32
+DTe,DT0171,/Equipment/Breakdown Mechanical,A frame@WS,167.22
+DTe,DT0149,/Equipment/Breakdown Electrical,ISOLATION FAULTY @ BATTERY BAY,37.27
+DTe,DT0149,/Equipment/Breakdown Electrical/Auto Electrical System - 800v,INVERTOR ERROR@13 CROSSS CUT NW,21.03
+DTe,DT0162,/Equipment/Breakdown Mechanical,"Battery Overheating @ swd,72w 45s",7.58
+DTe,DT0146,/Equipment/Breakdown Mechanical,invertor faulty @ satelite tip,3.55
+DTe,DT0146,/Equipment/Breakdown Mechanical,fan bracket loose @ battery bay,3.00
+DTe,DT0163,/Equipment/Breakdown Electrical,insolation fault @ battery bay,2.28
+DTe,DT0146,/Equipment/Breakdown Electrical/Auto Electrical System - 800v/800v Battery,Not connecting (battery bay),1.82
+DTe,DT0147,/Equipment/Breakdown Electrical,invertor isolator faulty @ battery bay,1.35
+DTe,DT0163,/Equipment/Breakdown Mechanical,insolation fault @ satelite tip1,1.18
+DTe,DT0149,/Equipment/Breakdown Electrical/Auto Electrical System - 24v/Wipers,wiper @ battery bay,0.47
+DTe,DT0147,/Equipment/Breakdown Electrical/Auto Electrical System - 24v/24v Battery,battery not connecting @ battery bay,0.35

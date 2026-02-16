@@ -15,7 +15,7 @@ Successfully integrated all Claude Skills documentation from work PC into Windsu
 
 ### Workflow Files (`.windsurf/workflows/`)
 
-Created 6 workflow files for data extraction:
+Created 9 workflow files for data extraction and setup:
 
 1. **`extract-bev.md`** - Extract BEV performance data from Power BI dataset
    - Outputs: 8 CSV files (DTe/FLe weekly, monthly, per-unit, delays)
@@ -39,6 +39,19 @@ Created 6 workflow files for data extraction:
 6. **`extract-epiroc-bev-report.md`** - Extract Epiroc BRMO BEV weekly report from PDF
    - Outputs: Structured markdown with daily exceptions, battery status, critical issues
    - Critical filtering: Only equipment with delays/breakdowns (excludes equipment with no issues)
+
+7. **`extract-utility-vehicles.md`** - Extract utility vehicle daily availability from N3 reports
+   - Outputs: Weekly availability summary with daily ratios and color coding
+   - For Slide 14: Utility Section Performance Overview
+
+8. **`extract-utility-breakdowns.md`** - Extract utility vehicle breakdown details from N3 reports
+   - Outputs: 2 CSV files (all breakdowns Mon-Fri, Friday current status)
+   - For Slides 15-16: Breakdown details and current status
+
+9. **`weekly-report-setup.md`** - Automate weekly report setup (Steps 1-5)
+   - Creates week folder, finds emails, downloads attachments
+   - Saves N2 email body for Claude parsing
+   - Time saved: 15-20 minutes per week
 
 ### Rule Files (`.windsurf/rules/`)
 
@@ -70,19 +83,24 @@ Created 3 rule files documenting protocols:
 
 ### Automated Data Extraction
 
-**6 Extraction Skills:**
+**8 Extraction Skills:**
 - BEV performance (8 CSV outputs)
 - Primary equipment availability (3 sites)
 - HEAL matrix from PowerPoint (3 sites)
 - Maintenance compliance (3 sites)
 - Shafts & Winders production (2 CSV outputs)
 - Epiroc BEV weekly report (1 markdown output)
+- Utility vehicles availability (1 CSV output)
+- Utility breakdowns (2 CSV outputs)
+
+**1 Setup Automation Skill:**
+- Weekly report setup (folder creation, email finding, attachment downloading)
 
 **Total Output Files per Week:**
-- 19 CSV files
+- 22 CSV files (19 + 3 utility)
 - 4 HEAL text files
 - 1 Epiroc markdown file
-- **24 files total**
+- **27 files total**
 
 ### Critical Protocols Documented
 
@@ -178,6 +196,21 @@ python "Claude Skills\extract-shafts-winders\extract_shafts_winders.py" --week=3
 **Extract Epiroc BEV Report:**
 ```powershell
 python "Claude Skills\extract-epiroc-bev-report\extract_epiroc_bev_report.py" --week=33
+```
+
+**Extract Utility Vehicles (Slide 14):**
+```powershell
+python "Claude Skills\extract-utility-vehicles\extract_utility_vehicles.py" 33
+```
+
+**Extract Utility Breakdowns (Slides 15-16):**
+```powershell
+python "Claude Skills\extract-utility-breakdowns\extract_utility_breakdowns.py" 33
+```
+
+**Weekly Report Setup (Steps 1-5 Automation):**
+```powershell
+python "Claude Skills\weekly-report-setup\weekly_report_setup.py" --week=33
 ```
 
 ### Accessing Workflows in Windsurf
