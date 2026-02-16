@@ -38,6 +38,25 @@ export interface ReportData {
     breakdowns: { equipment: string; details: string[] }[];
     batteryThemes: string[];
   };
+  utilitySection?: {
+    fleetStatus: { available: number; unavailable: number };
+    areaSummary: { area: string; department: string; total: number; unavailable: number }[];
+    breakdowns: { area: string; tmmNo: string; model: string; description: string; remarks: string }[];
+    oemAssistanceRequired: number;
+    dailyTracking: { 
+      area: string; 
+      mon: { available: number; total: number; color: string };
+      tue: { available: number; total: number; color: string };
+      wed: { available: number; total: number; color: string };
+      thu: { available: number; total: number; color: string };
+      fri: { available: number; total: number; color: string };
+      weeklyAvg: number;
+    }[];
+  };
+  utilitySectionCurrentStatus?: {
+    totalUnavailable: number;
+    areaStatus: { area: string; unavailable: number; details: { unit: string; reason: string }[] }[];
+  };
 }
 
 export interface SitePerformance {
@@ -62,7 +81,7 @@ export interface SitePerformance {
 
 export const reportData: ReportData = {
   weekNumber: 33,
-  dateRange: '06 Feb - 12 Feb 2026',
+  dateRange: '06 - 12 February 2026',
   cover: {
     images: [
       { src: '/images/AD30.png', alt: 'AD30 Dump Truck', className: 'absolute top-[42%] -translate-y-1/2 left-0 w-1/2 transform transition-transform hover:scale-105' },
@@ -75,18 +94,26 @@ export const reportData: ReportData = {
   heal: {
     highlights: [
         { site: 'General', text: 'OEM coordinated effort to sort issues on UV137. Strata and ECS are working together.' },
+        { site: 'Gloria', text: 'DT0184 & DT0185 COC completed and ready for production.' },
+        { site: 'Gloria', text: 'UV0105 Water truck level 9 completed. TMM availability improved to 92%.' },
     ],
     lowlights: [
         { site: 'Nchwaning 3', text: 'Still have 2/3 charging UVs operation which is impacting charging.' },
         { site: 'Nchwaning 3', text: 'Barloworld site support is still an issue to attend DT121 which has been standing for more than 3 weeks.' },
+        { site: 'Gloria', text: 'DT availability was booked incorrect. DT0174 waiting for Balows for level 9.' },
+        { site: 'Gloria', text: 'DT0152 not selecting gears - Nerospec inspection required.' },
     ],
     emergingIssues: [
         { site: 'General', text: 'Lack of necessary skills for OEM support team.' },
         { site: 'Nchwaning 3', text: 'Required Engine upgrade for UV108 to be compatible with CAS L9.' },
+        { site: 'Gloria', text: 'UV0068 Emulsion unit axle needs replacement - nothing available at store.' },
+        { site: 'Gloria', text: 'Mechanical Foreman off sick continuously. Surface compressor commissioning challenges.' },
     ],
     priorities: [
         { site: 'General', text: 'Drive actions on Engineers action tracker.' },
         { site: 'General', text: 'Discuss availability contributing factors with the team.' },
+        { site: 'Gloria', text: '74N tip liners to be repaired. CV0053 to do hot splice.' },
+        { site: 'Gloria', text: 'Conveyor Watch to submit splice condition report.' },
     ],
   },
   shaftsAndWinders: {
@@ -167,5 +194,30 @@ export const reportData: ReportData = {
         { equipment: 'UV Equipment', details: ['UV137: OEM coordinated effort (Strata & ECS)', 'UV108: Engine upgrade required for CAS L9'] },
     ],
     batteryThemes: ['OEM coordinated effort on UV137 with Strata and ECS working together.', 'Charging UV availability critical - only 2/3 operational.', 'UV108 requires engine upgrade for CAS L9 compatibility.'],
+  },
+  utilitySection: {
+    fleetStatus: { available: 74, unavailable: 0 },
+    areaSummary: [
+      { area: 'Utility Vehicles', department: 'All Departments', total: 74, unavailable: 0 },
+    ],
+    breakdowns: [],
+    oemAssistanceRequired: 0,
+    dailyTracking: [
+      { 
+        area: 'Utility Vehicles', 
+        mon: { available: 74, total: 74, color: 'green' }, 
+        tue: { available: 74, total: 74, color: 'green' }, 
+        wed: { available: 74, total: 74, color: 'green' }, 
+        thu: { available: 74, total: 74, color: 'green' }, 
+        fri: { available: 74, total: 74, color: 'green' }, 
+        weeklyAvg: 100.0 
+      },
+    ],
+  },
+  utilitySectionCurrentStatus: {
+    totalUnavailable: 0,
+    areaStatus: [
+      { area: 'Utility Vehicles', unavailable: 0, details: [] },
+    ],
   },
 };
