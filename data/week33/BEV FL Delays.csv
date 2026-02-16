@@ -1,0 +1,7 @@
+﻿Type,Machine_id,All Delays Levels,Comment,Hours
+FLe,FL0112,/Equipment/Breakdown Boilermaker,Weld Bucket@Boilers,139.95
+FLe,FL0108,/Equipment/Breakdown Electrical/Auto Electrical System - 800v/Battery Temperature High,"",7.78
+FLe,FL0113,/Equipment/Breakdown Mechanical,'@ w/shop - Trm oil leak,3.95
+FLe,FL0113,/Equipment/Breakdown Mechanical,Transmission Mounting Rubber@Batt Bay,3.57
+FLe,FL0099,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,No Module Contact@Batt Bay,1.08
+FLe,FL0108,/Equipment/Operational Delays,CHANGE BATTERY,0.28
