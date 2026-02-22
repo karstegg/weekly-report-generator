@@ -19,32 +19,25 @@ const slideStyle: React.CSSProperties = {
 };
 
 const BEVFLBreakdownSlide: React.FC<BEVFLBreakdownSlideProps> = ({ footerSrc, weekNumber }) => {
-  const flAvailability = 85;
+  const flAvailability = 90;
   const target = 85;
   const variance = flAvailability - target;
 
   const unitAvailability = [
-    { unit: 'FL0098', availability: 88.1 },
-    { unit: 'FL0099', availability: 70.4 },
-    { unit: 'FL0107', availability: 90.9 },
-    { unit: 'FL0108', availability: 73.7 },
-    { unit: 'FL0112', availability: 84.1 },
-    { unit: 'FL0113', availability: 89.6 },
+    { unit: 'FL0098', availability: 66.0 },
+    { unit: 'FL0099', availability: 100.0 },
+    { unit: 'FL0107', availability: 95.0 },
+    { unit: 'FL0108', availability: 84.0 },
+    { unit: 'FL0112', availability: 97.0 },
+    { unit: 'FL0113', availability: 96.0 },
   ];
 
   const breakdowns = [
-    { type: 'Boilermaker', machine: 'FL0099', comment: 'Half Arrows@Boilershop', hours: 31.45 },
-    { type: 'Boilermaker', machine: 'FL0108', comment: 'Half Arrows @ boilershop', hours: 41.50 },
-    { type: 'Strata', machine: 'FL0112', comment: 'GEN 2 COMMS ERROR@BATTERY BAY', hours: 6.52 },
-    { type: 'Strata', machine: 'FL0112', comment: 'MACHINE CUT OUT DURING LOADING@14W/21 NW', hours: 5.13 },
-    { type: 'Strata', machine: 'FL0112', comment: 'strata system faulty @ mw,105n 18w', hours: 4.28 },
-    { type: 'Damages', machine: 'FL0113', comment: 'WINDSCREEN CRACKED@BATTERY BAY', hours: 15.42 },
-    { type: 'Auto Electrical', machine: 'FL0107', comment: 'Hydraulic Level sensor@107 13XCUT', hours: 12.30 },
-    { type: 'Electrical', machine: 'FL0098', comment: 'TCU Error @ sim2n,27w 7n', hours: 11.40 },
-    { type: 'Auto Electrical', machine: 'FL0099', comment: 'Tag box off (battery bay)', hours: 8.03 },
-    { type: 'Mechanical', machine: 'FL0098', comment: 'Transm Oil Press WL@22n5w S2N', hours: 7.42 },
-    { type: 'Auto Electrical', machine: 'FL0099', comment: 'Not Starting at Boilershop', hours: 4.00 },
-    { type: 'Electrical', machine: 'FL0099', comment: 'not starting @ boilershop', hours: 3.55 },
+    { type: 'Mechanical', machine: 'FL0098', comment: 'Replace transmission mounting rubbers @ Workshop', hours: 47.45 },
+    { type: 'Boilermaker', machine: 'FL0108', comment: 'Half Arrows @ boilershop', hours: 19.42 },
+    { type: 'Mechanical', machine: 'FL0107', comment: 'Tyre @ Batt Bay', hours: 7.50 },
+    { type: 'Strata', machine: 'FL0112', comment: 'Comms Error @ 49s59w SWD', hours: 1.98 },
+    { type: 'Mechanical', machine: 'FL0113', comment: 'Oil Leak @ batt bay', hours: 1.25 },
   ];
 
   const getAvailabilityColor = (availability: number) => {

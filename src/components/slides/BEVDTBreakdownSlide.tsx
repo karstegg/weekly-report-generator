@@ -19,32 +19,30 @@ const slideStyle: React.CSSProperties = {
 };
 
 const BEVDTBreakdownSlide: React.FC<BEVDTBreakdownSlideProps> = ({ footerSrc, weekNumber }) => {
-  const dtAvailability = 78;
+  const dtAvailability = 68;
   const target = 85;
   const variance = dtAvailability - target;
 
   const unitAvailability = [
-    { unit: 'DT0146', availability: 95.0 },
-    { unit: 'DT0147', availability: 99.0 },
-    { unit: 'DT0149', availability: 65.0 },
-    { unit: 'DT0162', availability: 95.5 },
-    { unit: 'DT0163', availability: 98.0 },
+    { unit: 'DT0146', availability: 99.0 },
+    { unit: 'DT0147', availability: 51.0 },
+    { unit: 'DT0149', availability: 99.0 },
+    { unit: 'DT0150', availability: 97.0 },
+    { unit: 'DT0162', availability: 94.0 },
+    { unit: 'DT0163', availability: 62.0 },
     { unit: 'DT0171', availability: 0.0 },
+    { unit: 'DT0172', availability: 43.0 },
   ];
 
   const breakdowns = [
-    { type: 'Mechanical', machine: 'DT0171', comment: 'A frame@WS', hours: 167.22 },
-    { type: 'Electrical', machine: 'DT0149', comment: 'ISOLATION FAULTY @ BATTERY BAY', hours: 37.27 },
-    { type: 'Auto Electrical', machine: 'DT0149', comment: 'INVERTOR ERROR@13 CROSSS CUT NW', hours: 21.03 },
-    { type: 'Mechanical', machine: 'DT0162', comment: 'Battery Overheating @ swd,72w 45s', hours: 7.58 },
-    { type: 'Mechanical', machine: 'DT0146', comment: 'invertor faulty @ satelite tip', hours: 3.55 },
-    { type: 'Mechanical', machine: 'DT0146', comment: 'fan bracket loose @ battery bay', hours: 3.00 },
-    { type: 'Electrical', machine: 'DT0163', comment: 'insolation fault @ battery bay', hours: 2.28 },
-    { type: 'Battery', machine: 'DT0146', comment: 'Not connecting (battery bay)', hours: 1.82 },
-    { type: 'Electrical', machine: 'DT0147', comment: 'invertor isolator faulty @ battery bay', hours: 1.35 },
-    { type: 'Mechanical', machine: 'DT0163', comment: 'insolation fault @ satelite tip1', hours: 1.18 },
-    { type: 'Auto Electrical', machine: 'DT0149', comment: 'wiper @ battery bay', hours: 0.47 },
-    { type: 'Battery', machine: 'DT0147', comment: 'battery not connecting @ battery bay', hours: 0.35 },
+    { type: 'Mechanical', machine: 'DT0171', comment: 'A frame @ WS', hours: 112.60 },
+    { type: 'Electrical', machine: 'DT0172', comment: 'HVEL Fault @ Batt Bay', hours: 37.17 },
+    { type: 'Electrical', machine: 'DT0147', comment: 'Emergency stop @ tramming parking', hours: 31.18 },
+    { type: 'Electrical', machine: 'DT0163', comment: 'Red Stop Lamb @ Batt Bay', hours: 26.38 },
+    { type: 'Mechanical', machine: 'DT0162', comment: 'Tyre @ Batt Bay', hours: 3.95 },
+    { type: 'Electrical', machine: 'DT0150', comment: 'Invertor @ Batt Bay', hours: 2.27 },
+    { type: 'Mechanical', machine: 'DT0149', comment: 'Tyre @ Batt Bay', hours: 1.00 },
+    { type: 'Electrical', machine: 'DT0146', comment: 'Invertor @ Batt Bay', hours: 0.67 },
   ];
 
   const getAvailabilityColor = (availability: number) => {
