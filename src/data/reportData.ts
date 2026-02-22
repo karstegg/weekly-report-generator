@@ -96,6 +96,8 @@ export const reportData: ReportData = {
         { site: 'N2', text: 'The average TMM availability had improved for this week.' },
         { site: 'N2', text: 'All the emulsion UVs are back to production' },
         { site: 'N3', text: 'Scaler 49 and 51 delivered to site.' },
+        { site: 'GLA', text: 'Conveyor Watch submitted the splice condition report and is looking good only small damages need to be fixed' },
+        { site: 'GLA', text: 'Scaler audits on brakes after incident in NCHIII – all brakes were operational and good condition' },
     ],
     lowlights: [
         { site: 'N2', text: 'The UV 137 is switched back to Level 7 while the team is still trying to find a solution' },
@@ -103,11 +105,16 @@ export const reportData: ReportData = {
         { site: 'N3', text: 'SR0028 brakes failure, found on inspection' },
         { site: 'N3', text: 'Poor availabilities of DT, FL and HD through the week.' },
         { site: 'N3', text: 'Damage to decline conveyor require 9m splice' },
+        { site: 'GLA', text: 'Shift Foreman stopped the 74N plant due to non compliance' },
+        { site: 'GLA', text: 'DTs availability was 61%' },
+        { site: 'GLA', text: 'DT0106 on breakdown relating to Nerospec and still not fixed yet' },
     ],
     emergingIssues: [
         { site: 'N2', text: 'Electrical reticulation network is getting overloaded' },
         { site: 'N3', text: 'Spares for S2 and Scalers (engines)' },
         { site: 'N3', text: 'Roadway conditions' },
+        { site: 'GLA', text: 'UV 0068 Emulsion unit axle to be replace nothing available at the store' },
+        { site: 'GLA', text: 'Commission surface compressor – Challenge 4 inch from the compressor to 2-inch line in the shaft and keep tripping the compressor' },
     ],
     priorities: [
         { site: 'N2', text: 'Encourage team effort through VFL and action findings.' },
@@ -115,6 +122,9 @@ export const reportData: ReportData = {
         { site: 'N3', text: 'Roadway maintenance strategy' },
         { site: 'N3', text: 'DT0148 and DT0145 repair (Barlows)' },
         { site: 'N3', text: 'Appointment of GES and mech foreman' },
+        { site: 'GLA', text: '74N tip liners to be repairs' },
+        { site: 'GLA', text: 'CV0053 to do hot splice' },
+        { site: 'GLA', text: 'Remove axle from UV0128 to UV0068' },
     ],
   },
   shaftsAndWinders: {
