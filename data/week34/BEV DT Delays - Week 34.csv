@@ -1,0 +1,19 @@
+﻿Type,Machine_id,All Delays Levels,Comment,Hours
+DTe,DT0171,/Equipment/Breakdown Mechanical,A frame@WS,112.60
+DTe,DT0172,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,HVEL Fault@Batt Bay,37.17
+DTe,DT0147,/Equipment/Breakdown Electrical,Emergency stop @ tramming parking,31.18
+DTe,DT0163,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,Red Stop Lamb@Batt Bay,26.38
+DTe,DT0172,/Equipment/Breakdown Electrical/Auto Electrical System - 800v,BMS ERROR@BATTERY,12.52
+DTe,DT0147,/Equipment/Breakdown Mechanical/Hydraulic System,HYDRAULIC OIL LEAK@BATTERY BAY,11.18
+DTe,DT0163,/Equipment/Breakdown Electrical/Auto Electrical System - 24v/Air Conditioner,aircon faulty @ battery bay,10.07
+DTe,DT0162,/Equipment/Breakdown Electrical,inverter w/light @ battery bay,8.75
+DTe,DT0163,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,No Contactwith Module@SWD 50s,3.55
+DTe,DT0150,/Equipment/Breakdown Electrical/Auto Electrical System - 800v,BATTERY INSULATION FAULT@BATTERY BAY.,2.23
+DTe,DT0150,/Equipment/Breakdown Mechanical,insolation faulty @ battery bay,1.00
+DTe,DT0149,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,Batt Not connect@SAT Tip 1,0.95
+DTe,DT0163,/Equipment/Breakdown Electrical,Emergency light @ tramming parking,0.93
+DTe,DT0146,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,Isolation fault@Batt Bay,0.90
+DTe,DT0162,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,Red Lights not working@Batt Bay,0.57
+DTe,DT0146,/Equipment/Breakdown Electrical,Red stop lamp @ battery bay,0.53
+DTe,DT0147,/Equipment/Breakdown Electrical/Auto Electrical System - 800v,BATTERY NOT CONNECTING@BATTERY BAY.,0.22
+DTe,DT0149,/Equipment/Breakdown Electrical,battery cut off @ 35s near the battery bay,0.08

@@ -1,0 +1,8 @@
+﻿Type,Machine_id,All Delays Levels,Comment,Hours
+FLe,FL0098,/Equipment/Breakdown Mechanical,REPLACE TRANSMISSION MOUNTING RUBBERS@WORKSHOP,47.45
+FLe,FL0108,/Equipment/Breakdown Boilermaker,Half Arrows @ boilershop,19.42
+FLe,FL0112,/Equipment/Breakdown Electrical/Auto Electrical System - 24v/Strata Breakdown,Comms Error@49s59w SWD,1.98
+FLe,FL0113,/Equipment/Breakdown Mechanical,Oil Leak@batt bay,1.25
+FLe,FL0112,/Equipment/Breakdown Mechanical,Propshaft - Battery bay,1.12
+FLe,FL0108,/Equipment/Breakdown Electrical/Auto Electrical System - 24v/24v Battery,battery not connecting @ battery bay,0.75
+FLe,FL0112,/Equipment/Breakdown Electrical/Auto Electrical System - 800v/800v Battery,BATTERY CUTTING OFF @ S2N 10E,0.15
