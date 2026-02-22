@@ -139,7 +139,7 @@ export const reportData: ReportData = {
     nchwaning3: {
       name: 'Nchwaning 3',
       trendChart: { src: '/images/N3 Weekly availability chart.png', comment: '"SR0028 brakes failure incident. Poor DT, FL, HD availability. Decline conveyor damage requires 9m splice."' },
-      safety: { status: 'Concern', details: 'SR0028 brakes failure found on inspection - Dangerous Occurrence' },
+      safety: { status: 'Good', details: 'Zero incidents this week' },
       weeklyAverage: { value: 75.1, target: 85 },
       serviceCompliance: { status: 'Issues', details: 'SR at 60% (SR0030 Scraped, SR0035 Waiting for engine), Support Equip at 66.7%' },
       availability: [
