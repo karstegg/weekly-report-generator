@@ -169,7 +169,7 @@ export const reportData: ReportData = {
             { label: 'SR', percentage: 85.8, target: 85 },
         ],
         breakdowns: [
-            { category: 'Dump Trucks (83.0%)', details: 'DT121 - Technician busy on site' },
+            { category: 'Dump Trucks (83.0%)', details: 'DT121 - Park Brake (OEM on site)' },
         ],
     },
     gloria: {
