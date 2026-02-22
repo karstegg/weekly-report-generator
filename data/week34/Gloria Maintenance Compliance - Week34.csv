@@ -1,0 +1,8 @@
+Fleet,Planned,Actual,Compliance,Target,Compliance %,Reasons for Non-Compliance
+FL,1,0,0,0.95,0.0%,GD0008 ON BREAKDOWN
+DT,1,1,1,0.95,100.0%,DT0106
+HD,2,2,1,0.95,100.0%,HD0059; HD0066
+RT,3,2,0.66666666666666696,0.95,66.7%,Weekly Quality Service Report
+SR,2,1,0.5,0.95,50.0%,Mining
+UV Emulsion Units,,,#DIV/0!,0.95,#DIV/0!,
+Support Equipment,5,4,0.8,0.95,80.0%,Engineering

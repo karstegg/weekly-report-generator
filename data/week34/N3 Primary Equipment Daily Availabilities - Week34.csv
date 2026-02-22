@@ -1,0 +1,9 @@
+Equipment,Friday,Monday,Tuesday,Wednesday,Thursday,Average,Breakdowns - Comments
+HD,92.0%,81.0%,84.0%,67.0%,73.0%,79.4%,HD49 Water hose reel / Bosch Pump HD56 Brake Failed HD62 Bosch Pump
+RT,90.0%,77.0%,84.0%,93.0%,78.0%,84.4%,"RT55 Power Pack / RT48 Fitting / RT51 Carousel ,Cylinder"
+SR,82.0%,77.0%,84.0%,81.0%,66.0%,78.0%,SR35 Engine smoke / SR44 Brakes
+DT Diesel,73.0%,74.0%,71.0%,70.0%,77.0%,73.0%,"DT148 Aircon,mainswitch / DT145 Gears / DT154 Fail brake test"
+FL Diesel,64.0%,52.0%,46.0%,45.0%,60.0%,53.4%,"FL101 Steering / FL103 Aircon , Not starting ,Steering"
+DT batteries,70.0%,80.0%,83.0%,68.0%,70.0%,74.2%,"DT171 A Frame , E Stop / DT149 Isolation Faulty"
+FL Batteries,84.0%,63.0%,79.0%,100.0%,89.0%,83.0%,FL112 Comms / FL107 Sensor / FL108 Half Arrows FL98 Transmission
+Average,,,,,,75.1%,
