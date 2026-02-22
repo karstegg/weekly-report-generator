@@ -81,7 +81,7 @@ export interface SitePerformance {
 
 export const reportData: ReportData = {
   weekNumber: 34,
-  dateRange: '13 - 19 February 2026',
+  dateRange: '16 - 20 February 2026',
   cover: {
     images: [
       { src: '/images/AD30.png', alt: 'AD30 Dump Truck', className: 'absolute top-[42%] -translate-y-1/2 left-0 w-1/2 transform transition-transform hover:scale-105' },
