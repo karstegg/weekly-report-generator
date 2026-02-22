@@ -159,11 +159,14 @@ export const reportData: ReportData = {
         name: 'Nchwaning 2',
         trendChart: { src: '/images/N2 Weekly availability chart.png', comment: '"Zero safety incidents this week. TMM availability improved. All emulsion UVs back to production."' },
         safety: { status: 'Good', details: 'Zero incidents this week' },
-        weeklyAverage: { value: 85.6, target: 85 },
+        weeklyAverage: { value: 88.0, target: 85 },
         serviceCompliance: { status: 'Good', details: 'DT: 100%, FL: 100%, HD: 75%, RT: 100%, SR: 100%, Support: 100%' },
         availability: [
             { label: 'DT', percentage: 83.0, target: 85 },
             { label: 'FL', percentage: 88.2, target: 85 },
+            { label: 'HD', percentage: 91.8, target: 85 },
+            { label: 'RT', percentage: 91.0, target: 85 },
+            { label: 'SR', percentage: 85.8, target: 85 },
         ],
         breakdowns: [
             { category: 'Dump Trucks (83.0%)', details: 'DT121 - Technician busy on site' },
