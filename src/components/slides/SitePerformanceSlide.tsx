@@ -65,6 +65,11 @@ const SitePerformanceSlide: React.FC<SitePerformanceSlideProps> = ({ data, foote
             ))}
           </div>
         </div>
+        {data.footerNote && (
+          <div className="mt-4 bg-blue-50 border border-blue-200 rounded-lg p-3">
+            <p className="text-sm text-blue-800">{data.footerNote}</p>
+          </div>
+        )}
       </main>
       <Footer src={footerSrc} />
     </div>
