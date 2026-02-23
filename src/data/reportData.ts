@@ -104,9 +104,7 @@ export const reportData: ReportData = {
         { site: 'N2', text: 'Increased breakdowns on utility LDOs.' },
         { site: 'N3', text: 'SR0028 brakes failure, found on inspection' },
         { site: 'N3', text: 'Poor availabilities of DT, FL and HD through the week.' },
-        { site: 'N3', text: 'Damage to decline conveyor require 9m splice' },
         { site: 'GLA', text: 'Shift Foreman stopped the 74N plant due to non compliance' },
-        { site: 'GLA', text: 'DTs availability was 61%' },
         { site: 'GLA', text: 'DT0106 on breakdown relating to Nerospec and still not fixed yet' },
     ],
     emergingIssues: [
