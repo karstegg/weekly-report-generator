@@ -25,8 +25,8 @@ const SitePerformanceSlide: React.FC<SitePerformanceSlideProps> = ({ data, foote
     <div className="bg-white shadow-md rounded-lg" style={slideStyle}>
       <main className="flex-grow p-6 pb-24">
         <h2 className="text-4xl font-bold text-blue-800 mb-6 text-center">{data.name} Performance Overview</h2>
-        <div className="grid grid-cols-5 gap-4 mb-6">
-          <div className={`col-span-2 bg-${data.safety.status === 'Good' ? 'green' : 'red'}-100 border border-${data.safety.status === 'Good' ? 'green' : 'red'}-200 rounded-lg p-4`}>
+        <div className="grid grid-cols-3 gap-4 mb-6">
+          <div className={`bg-${data.safety.status === 'Good' ? 'green' : 'red'}-100 border border-${data.safety.status === 'Good' ? 'green' : 'red'}-200 rounded-lg p-4`}>
             <div className={`flex items-center mb-1 text-${data.safety.status === 'Good' ? 'green' : 'red'}-800`}>
               {data.safety.status === 'Good' ? <CheckCircle className="mr-2 flex-shrink-0" size={24} /> : <AlertTriangle className="mr-2 flex-shrink-0" size={24} />}
               <h3 className="text-xl font-semibold">Safety</h3>
@@ -41,7 +41,7 @@ const SitePerformanceSlide: React.FC<SitePerformanceSlideProps> = ({ data, foote
             <p className={`font-bold text-4xl text-${data.weeklyAverage.value >= data.weeklyAverage.target ? 'green' : data.weeklyAverage.value >= data.weeklyAverage.target - 10 ? 'yellow' : 'red'}-700`}>{data.weeklyAverage.value}%</p>
             <p className={`text-lg text-${data.weeklyAverage.value >= data.weeklyAverage.target ? 'green' : data.weeklyAverage.value >= data.weeklyAverage.target - 10 ? 'yellow' : 'red'}-500`}>(Target: {data.weeklyAverage.target}%)</p>
           </div>
-          <div className={`col-span-2 bg-${data.serviceCompliance.status === 'Good' ? 'green' : 'yellow'}-50 border-${data.serviceCompliance.status === 'Good' ? 'green' : 'yellow'}-200 rounded-lg p-4`}>
+          <div className={`bg-${data.serviceCompliance.status === 'Good' ? 'green' : 'yellow'}-50 border-${data.serviceCompliance.status === 'Good' ? 'green' : 'yellow'}-200 rounded-lg p-4`}>
             <div className={`flex items-center mb-1 text-${data.serviceCompliance.status === 'Good' ? 'green' : 'yellow'}-700`}>
               <Bolt className="mr-2 flex-shrink-0" size={24} />
               <h3 className="text-xl font-semibold">Compliance</h3>
