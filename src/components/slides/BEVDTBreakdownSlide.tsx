@@ -30,12 +30,10 @@ const BEVDTBreakdownSlide: React.FC<BEVDTBreakdownSlideProps> = ({ footerSrc, we
     { unit: 'DT0150', availability: 97.0 },
     { unit: 'DT0162', availability: 94.0 },
     { unit: 'DT0163', availability: 62.0 },
-    { unit: 'DT0171', availability: 0.0 },
     { unit: 'DT0172', availability: 43.0 },
   ];
 
   const breakdowns = [
-    { type: 'Mechanical', machine: 'DT0171', comment: 'A frame @ WS', hours: 112.60 },
     { type: 'Electrical', machine: 'DT0172', comment: 'HVEL Fault @ Batt Bay', hours: 37.17 },
     { type: 'Electrical', machine: 'DT0147', comment: 'Emergency stop @ tramming parking', hours: 31.18 },
     { type: 'Electrical', machine: 'DT0163', comment: 'Red Stop Lamb @ Batt Bay', hours: 26.38 },
