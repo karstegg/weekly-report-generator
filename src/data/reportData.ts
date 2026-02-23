@@ -207,7 +207,7 @@ export const reportData: ReportData = {
       'DT BEV at 78% - Critical: DT0172 HVIL fault, waiting new cables. DT0147 e-stop relays replaced (35hrs). DT0163 battery connection issues (14hrs).',
       'FL BEV at 90% - FL112 recurring Strata faults. FL0098 transmission rubbers (48hrs), FL0108 half arrows boilermaker (62hrs).',
       'Battery Status: 10 B4 batteries (2 breakdown), 13 B5 batteries (1 breakdown). TMS hyper care ongoing - coolant pump failures. New pumps arriving 07 March.',
-      'Charger Status: 8 chargers operational, 1 faulty module on Charger 2. Battery overheat issues: VPX00048, VPY00011, VPY00051.'
+      'Charger Status: 8 chargers operational, 1 faulty module on Charger 2. Post 3, 6, 7 cables replaced. Orders placed for remaining charger post cables. Battery overheat issues: VPX00048, VPY00011, VPY00051.'
     ],
   },
   utilitySection: {
