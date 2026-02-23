@@ -204,7 +204,7 @@ export const reportData: ReportData = {
         { equipment: 'FL BEV (90%)', details: ['FL0098: Replace transmission mounting rubbers @ Workshop (47.45 hrs)', 'FL0108: Half Arrows @ boilershop (19.42 hrs)', 'FL0112: Comms Error @ 49s59w SWD (1.98 hrs)', 'FL0113: Oil Leak @ batt bay (1.25 hrs)'] },
     ],
     batteryThemes: [
-      'DT BEV at 78% - Critical: DT0172 needs commissioning - HVIL cable issues.',
+      'DT BEV at 78% - Critical: DT0172 needs commissioning - HVIL cable issues. DT0147 emergency stop, DT0163 red stop lamp.',
       'FL BEV at 90% - FL112 recurring Strata faults. FL0098 transmission rubbers, FL0108 half arrows (boilermaker).',
       'Battery Status: 10 B4 batteries (2 breakdown), 13 B5 batteries (1 breakdown). TMS hyper care ongoing - coolant pump failures. New pumps arriving 07 March.',
       'Charger Status: 8 chargers operational, 1 faulty module on Charger 2. Battery overheat issues: VPX00048, VPY00011, VPY00051.'
