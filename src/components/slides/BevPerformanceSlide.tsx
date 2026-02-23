@@ -63,7 +63,7 @@ const BevPerformanceSlide: React.FC<BevPerformanceSlideProps> = ({ data, footerS
             <div>
               <h4 className="font-semibold text-yellow-800 mb-1">Performance Summary:</h4>
               <ul className="list-disc pl-4 space-y-1">
-                <li>DT BEV at 78% - below target by 7%. Critical: DT0172 needs commissioning - HVIL cable issues.</li>
+                <li>DT BEV at 78% - below target by 7%. Critical: DT0172 HVIL fault, DT0147 e-stop relays, DT0163 battery connection issues.</li>
                 <li>FL BEV at 90% - meets target. Boilermaker work and Strata issues main constraints.</li>
               </ul>
             </div>
