@@ -148,9 +148,9 @@ export const reportData: ReportData = {
           { label: 'SR', percentage: 81, target: 85 },
       ],
       breakdowns: [
-          { category: 'Dump Trucks (78%)', details: 'DT148: Crank seal, DT145: Gears, DT154: Fail brake test, DT171: A Frame/E Stop, DT149: Isolation Faulty' },
-          { category: 'Front Loaders (72%)', details: 'FL101: Steering, FL103: Aircon/Not starting/Steering, FL112: Comms, FL107: Sensor, FL108: Half Arrows, FL98: Transmission' },
-          { category: 'Haul Dump (79%)', details: 'HD49: Water hose reel/Bosch Pump, HD56: Brake Failed, HD62: Bosch Pump' },
+          { category: 'Dump Trucks (78%)', details: 'DT148: Aircon/Main switch (spares), DT145: Gears, DT164: Aircon, DT172: HVLI fault' },
+          { category: 'Front Loaders (72%)', details: 'FL101: Transmission, FL103: Not starting' },
+          { category: 'Hydraulic Drills (79%)', details: 'HD49: Auto, HD51: Hose, HD55: Window, HD61: Cable damage, HD62: Bosch pump, HD70: Service' },
       ],
     },
     nchwaning2: {
