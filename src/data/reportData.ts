@@ -202,7 +202,12 @@ export const reportData: ReportData = {
         { equipment: 'DT BEV', details: ['DT0171: A frame @ WS (112.60 hrs)', 'DT0172: HVEL Fault @ Batt Bay (37.17 hrs)', 'DT0147: Emergency stop @ tramming parking (31.18 hrs)', 'DT0163: Red Stop Lamb @ Batt Bay (26.38 hrs)'] },
         { equipment: 'FL BEV', details: ['FL0098: Replace transmission mounting rubbers @ Workshop (47.45 hrs)', 'FL0108: Half Arrows @ boilershop (19.42 hrs)', 'FL0112: Comms Error @ 49s59w SWD (1.98 hrs)', 'FL0113: Oil Leak @ batt bay (1.25 hrs)'] },
     ],
-    batteryThemes: ['DT BEV at 68% - below target by 17%. Critical: DT0171 A-frame failure (112.6 hrs).', 'FL BEV at 90% - exceeds target. Transmission work and boilermaker issues main constraints.', 'DT0172 HVEL faults and DT0147 emergency stop issues affecting availability.'],
+    batteryThemes: [
+      'DT BEV at 68% - Critical: DT0171 A-frame failed again (ongoing). DT0172 needs commissioning - HVIL cable issues.',
+      'FL BEV at 90% - FL112 recurring Strata faults. FL0098 transmission rubbers, FL0108 half arrows (boilermaker).',
+      'Battery Status: 10 B4 batteries (2 breakdown), 13 B5 batteries (1 breakdown). TMS hyper care ongoing - coolant pump failures. New pumps arriving 07 March.',
+      'Charger Status: 8 chargers operational, 1 faulty module on Charger 2. Battery overheat issues: VPX00048, VPY00011, VPY00051.'
+    ],
   },
   utilitySection: {
     fleetStatus: { available: 61, unavailable: 4 },
