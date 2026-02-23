@@ -243,15 +243,16 @@ export const reportData: ReportData = {
       { area: 'X Cut', mon: { available: 1, total: 1, color: 'green' }, tue: { available: 1, total: 1, color: 'green' }, wed: { available: 1, total: 1, color: 'green' }, thu: { available: 1, total: 1, color: 'green' }, fri: { available: 1, total: 1, color: 'green' }, weeklyAvg: 100.0 },
       { area: 'Utility TMM', mon: { available: 2, total: 2, color: 'green' }, tue: { available: 2, total: 2, color: 'green' }, wed: { available: 2, total: 2, color: 'green' }, thu: { available: 2, total: 2, color: 'green' }, fri: { available: 2, total: 2, color: 'green' }, weeklyAvg: 100.0 },
       { area: 'Other', mon: { available: 18, total: 18, color: 'green' }, tue: { available: 18, total: 18, color: 'green' }, wed: { available: 18, total: 18, color: 'green' }, thu: { available: 18, total: 18, color: 'green' }, fri: { available: 18, total: 18, color: 'green' }, weeklyAvg: 100.0 },
-      { area: 'TOTAL', mon: { available: 59, total: 66, color: 'green' }, tue: { available: 61, total: 66, color: 'green' }, wed: { available: 60, total: 66, color: 'green' }, thu: { available: 60, total: 66, color: 'green' }, fri: { available: 61, total: 65, color: 'green' }, weeklyAvg: 91.5 },
+      { area: 'TOTAL', mon: { available: 59, total: 66, color: 'green' }, tue: { available: 61, total: 66, color: 'green' }, wed: { available: 60, total: 66, color: 'green' }, thu: { available: 60, total: 66, color: 'green' }, fri: { available: 62, total: 66, color: 'green' }, weeklyAvg: 91.5 },
     ],
   },
   utilitySectionCurrentStatus: {
-    totalUnavailable: 3,
+    totalUnavailable: 4,
     areaStatus: [
-      { area: 'Boilermaker', unavailable: 1, details: [{ unit: 'LD0405', reason: 'Engine commission issue - No solution from Fermel (Deutz EMR4 upgrade to EMR5)' }] },
-      { area: 'Plant Fitter', unavailable: 1, details: [{ unit: 'LD0620', reason: 'Strata (Surface decline & No access to gate, locked)' }] },
-      { area: 'Logistics', unavailable: 1, details: [{ unit: 'UV0078', reason: 'Rear axle (Propshaft ordered 06 Oct 2025 - No stock at Fermel)' }] },
+      { area: 'BEV', unavailable: 1, details: [{ unit: 'LD0375', reason: 'Clutch / Missing shock (SOS - EOS)' }] },
+      { area: 'Boilermaker', unavailable: 1, details: [{ unit: 'LD0405', reason: 'Engine commission (No communication between engine and machine) - No solution from Fermel (Deutz EMR4 upgrade to EMR5)' }] },
+      { area: 'Main West', unavailable: 1, details: [{ unit: 'LD0520', reason: 'Front axle (SOS - EOS) - Waiting for parts' }] },
+      { area: 'Central', unavailable: 1, details: [{ unit: 'LD0572', reason: 'Not Starting, Emergency brake knob broken off, Ball joint (SOS - EOS) - Waiting for parts' }] },
     ],
   },
 };
