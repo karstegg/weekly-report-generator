@@ -150,7 +150,7 @@ export const reportData: ReportData = {
       breakdowns: [
           { category: 'Dump Trucks (78%)', details: 'DT148: Aircon/Main switch (spares), DT145: Gears, DT164: Aircon, DT172: HVLI fault' },
           { category: 'Front Loaders (72%)', details: 'FL101: Transmission, FL103: Not starting' },
-          { category: 'Hydraulic Drills (79%)', details: 'HD49: Auto, HD51: Hose, HD55: Window, HD61: Cable damage, HD62: Bosch pump, HD70: Service' },
+          { category: 'Hydraulic Drills (79%)', details: 'HD55: Window damage, HD49: Bosch pump, HD62: Bosch pump, HD61: Cable damage' },
       ],
       footerNote: 'HD and Scaler availability recovered well over the weekend. 2x New Scalers to be commissioned today. Focus is on getting OEM assistance for FL103, DT145 and DT148 to be resolved this week. FL101 transmission will be completed this week by Mech Workshop team.',
     },
