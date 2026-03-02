@@ -1,0 +1,11 @@
+﻿Type,Machine_id,All Delays Levels,Comment,Hours
+FLe,FL0098,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,Batt not connecting@S2N Wplace,44.15
+FLe,FL0108,/Equipment/Breakdown Mechanical,"Red stop light @ r5,67s  41w",11.72
+FLe,FL0098,/Equipment/Breakdown Electrical,WARNING SIGN ON - MODULE ERROR @ S2N 10E 20N (NEW LOCATION 10E 12N S2N) F204 FUSE,11.50
+FLe,FL0098,/Equipment/Breakdown Mechanical,Centre Bearing @ battery bay,6.18
+FLe,FL0107,/Equipment/Operational Delays,"operational delay, but machine is used as it is-cracked window",5.93
+FLe,FL0113,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown,strata system faulty @ mw road,3.73
+FLe,FL0113,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown,MACHINE NOT MOVING@15W/112S NW,3.13
+FLe,FL0113,/Equipment/Breakdown Boilermaker,repair bucket @ boilershop,1.50
+FLe,FL0098,/Equipment/Breakdown Mechanical,Seat not adjusting@ battery bay,0.87
+FLe,FL0113,/Equipment/Breakdown Mechanical,Oil leak@Batt Bay,0.78

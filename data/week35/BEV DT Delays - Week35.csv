@@ -1,0 +1,23 @@
+﻿Type,Machine_id,All Delays Levels,Comment,Hours
+DTe,DT0147,/Equipment/Breakdown Mechanical,invertor error @ battery bay,72.67
+DTe,DT0172,/Equipment/Breakdown Electrical/Auto Electrical System - 800v,HBIL FAULT NOT MOVING@13N STARIGHT NW,48.00
+DTe,DT0146,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown,COLLISION AVOIDANCE WARNING@BATTERY BAY,24.60
+DTe,DT0147,/Equipment/Breakdown Mechanical/Hydraulic System,HYDRAULIC OIL LEAK@BATTERY BAY,24.07
+DTe,DT0172,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,HVEL Fault@Batt Bay,24.00
+DTe,DT0163,/Equipment/Breakdown Tyre Bay,Tyre bay change rear tyre (tyre bay),14.17
+DTe,DT0150,/Equipment/Breakdown Electrical/Auto Electrical System - 800v/800v Battery,BATTERY INSULATION FAULT@31W/54S R5,11.25
+DTe,DT0163,/Equipment/Breakdown Tyre Bay/Chassis/Tyres,PUNCTURE @107S/13E NW,6.72
+DTe,DT0150,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown,COMMS ERROR@13W/112S NW,3.03
+DTe,DT0149,/Equipment/Breakdown Electrical,MACHINE POWERLESS@17N/12W MW (NEW LOCATION BATTERY BAY),2.63
+DTe,DT0162,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown,'@ OLD TIPS,2.00
+DTe,DT0162,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/STRATA Breakdown,"",1.63
+DTe,DT0172,/Equipment/Breakdown Electrical/Auto Electrical System - 24v/24v Battery,battery not connecting @ battery bay,1.28
+DTe,DT0150,/Equipment/Breakdown Electrical/Auto Electrical System - 800v/800v Battery,BATTERY INSULATION FAULT@16W/103S MW(13 TUNNEL),1.25
+DTe,DT0150,/Equipment/Breakdown Electrical,CHANGE COOLANT @ BATTERY BAY,0.67
+DTe,DT0172,/Equipment/Breakdown Electrical/Auto Electrical System - 24v/24v Battery,"battery not connecting @ swd,49s 74e",0.67
+DTe,DT0150,/Equipment/Breakdown Mechanical,"insolation faulty @ the mw tips,50s",0.58
+DTe,DT0146,/Equipment/Operational Delays/No Face Available/Waiting For Mining Activity,wait for loading space,0.48
+DTe,DT0162,/Equipment/Operational Delays/No Face Available/Waiting For Mining Activity,wait for loading space,0.40
+DTe,DT0163,/Equipment/Breakdown Mechanical/Hydraulic System,TOP UP OIL@BATTERY BAY.,0.38
+DTe,DT0163,/Equipment/Operational Delays/No Face Available/Waiting For Mining Activity,wait for loading space,0.38
+DTe,DT0150,/Equipment/Breakdown Tyre Bay/Chassis/Tyres,TYRE INFLATION.,0.35
