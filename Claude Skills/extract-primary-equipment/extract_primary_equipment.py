@@ -109,7 +109,7 @@ def find_sheet_and_range(zip_file, site):
 
     ranges = {
         'gloria': (45, 51),  # rows
-        'n2': (42, 48),
+        'n2': (41, 46),
         'n3': (43, 51)
     }
 

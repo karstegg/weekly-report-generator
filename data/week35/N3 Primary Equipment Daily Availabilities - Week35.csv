@@ -1,0 +1,9 @@
+Equipment,Friday,Monday,Tuesday,Wednesday,Thursday,Average,Breakdowns - Comments
+HD,81.0%,82.0%,80.0%,71.0%,72.0%,77.2%,"HD49-Propshaft, HD61 -ECM engine check, HD55 Door & Window damaged"
+RT,83.0%,90.0%,91.0%,89.0%,82.0%,87.0%,
+SR,87.0%,80.0%,76.0%,77.0%,78.0%,79.6%,"SR35-Engine smoke, SR24-Aircon, SR39 Brakes Faulty"
+DT Diesel,72.0%,69.0%,63.0%,76.0%,79.0%,71.8%,"DT148-Aircon/Mainswitch, DT154-Engine not starting, DT145-Grears, DT160 Strata,"
+FL Diesel,33.0%,32.0%,33.0%,33.0%,70.0%,40.2%,"FL101-Steering, FL103 Not Starting."
+DT batteries,61.0%,70.0%,87.0%,100.0%,88.0%,81.2%,"DT172-HVEL Fault, DT163 Red Stop Lamp, DT147-Hydr Oil Leak"
+FL Batteries,99.0%,81.0%,92.0%,89.0%,88.0%,89.8%,
+Average,,,,,,75.3%,

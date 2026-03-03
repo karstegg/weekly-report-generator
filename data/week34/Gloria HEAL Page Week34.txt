@@ -1,0 +1,19 @@
+Highlights
+• Conveyor Watch submitted the  splice condition report and is looking good only small damages need to be fixed
+• Scaler audits on brakes after incident in NCHIII – all brakes were operational and good condition
+
+Lowlights
+• Shift Foreman stopped the 74N plant due to non compliance
+• DTs availability was 61%
+• DT0106 on breakdown relating to Nerospec and still not fixed yet
+• DT0152 -  Powerless
+• DT0153 – No acceleration
+
+Emerging Issues
+• UV 0068 Emulsion unit axle to be replace nothing available at the store
+• Commission surface compressor – Challenge 4 inch from the compressor to 2-inch line in the shaft and keep tripping the compressor
+
+Priorities
+• 74N tip liners to be repairs
+• CV0053 to do hot splice
+• Remove axle from UV0128 to UV0068

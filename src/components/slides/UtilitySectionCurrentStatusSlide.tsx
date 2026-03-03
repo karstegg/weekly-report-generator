@@ -24,7 +24,7 @@ const UtilitySectionCurrentStatusSlide: React.FC<UtilitySectionCurrentStatusSlid
     <div className="bg-white shadow-md rounded-lg" style={slideStyle}>
       <main className="flex-grow p-6 pb-32 overflow-hidden">
         <h2 className="text-3xl font-bold text-blue-800 mb-2 text-center">UTILITY SECTION CURRENT STATUS</h2>
-        <h3 className="text-xl font-semibold text-gray-700 mb-4 text-center">Friday, 07 February 2026</h3>
+        <h3 className="text-xl font-semibold text-gray-700 mb-4 text-center">Friday, 27 February 2026</h3>
         
         <div className="mt-2">
           <h3 className="text-sm font-bold mb-1 bg-red-100 p-2 rounded flex items-center">

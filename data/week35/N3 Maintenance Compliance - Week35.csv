@@ -1,0 +1,12 @@
+Fleet,Planned,Actual,Compliance,Target,Compliance %,Reasons for Non-Compliance
+FL(Diesel),0,0,,0.95,,
+DT(Diesel),3,3,1,0.95,100.0%,
+FL BEV,2,2,1,0.95,100.0%,
+DT BEV,0,0,,0.95,,
+HD,5,5,1,0.95,100.0%,
+RT,5,5,1,0.95,100.0%,
+SR,4,4,1,0.95,100.0%,They couldn’t bring SR0044 in for service due to operators that was at training centre (Rescheduled)
+UV Emulsion Units,1,1,1,0.95,100.0%,
+Support Equip. Diesel Foreman,0,0,,0.95,,
+Support Equip Utility Foreman,6,6,1,0.95,100.0%,UV0082 was not brought in for service.(Rescheduled)
+BEV Batt ,5,5,1,0.95,100.0%,

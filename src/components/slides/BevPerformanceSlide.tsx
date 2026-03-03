@@ -63,19 +63,19 @@ const BevPerformanceSlide: React.FC<BevPerformanceSlideProps> = ({ data, footerS
             <div>
               <h4 className="font-semibold text-yellow-800 mb-1">Performance Summary:</h4>
               <ul className="list-disc pl-4 space-y-1">
-                <li>DT BEV at 78% - below target by 7%. Critical: DT0172 HVIL fault, DT0147 e-stop relays, DT0163 battery connection issues.</li>
-                <li>FL BEV at 90% - meets target. Boilermaker work and Strata issues main constraints.</li>
+                <li>DT BEV at 81% - below target by 4%. Critical: DT0147 hydraulic oil leak (94hrs) and HV cable fault. DT0163 tyre issues (26hrs).</li>
+                <li>FL BEV at 89% - above target by 4%. FL0098 TCU error and mechanical breakdowns (27hrs). FL0108 mechanical breakdown (12hrs). FL0113 Strata and boilermaker work (10hrs).</li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold text-yellow-800 mb-1">Battery & Charger Status:</h4>
               <ul className="list-disc pl-4 space-y-1">
-                <li>Battery VPY00076 isolation fault affecting FL0099. Isolators between contactors and VCB need replacement.</li>
-                <li>All chargers are operational despite Charger 2 Module 2 fault - module bypassed while other modules working.</li>
-                <li>B4 Batteries: 9 Working, 1 Breakdown | B5 Batteries: 11 Working, 1 Breakdown, 1 Underground (not commissioned)</li>
-                <li>Post 3, 6 and 7 cables replaced. Piet to put in an order for all other chargers.</li>
-                <li>Auxiliary motor spline grease TSNB not done. Only DT147 completed. Need to schedule machines to complete campaign. Grease on site.</li>
-                <li>VCA, VCB cables and discharge resistors - machines identified for replacement. Parts partially ordered, some orders in approval phase.</li>
+                <li>B4 Batteries: 9 Working, 1 Breakdown (VPY-00076 to be replaced by VPY-00034) | B5 Batteries: 11 Working, 1 Breakdown (VPX-00016 waiting for Scania), 1 on DT-171 (out of production)</li>
+                <li>All chargers operational. Charger 2 Module 2 faulty - other modules working. Charger 7 Module 4 switched on.</li>
+                <li>TMS hyper care underway. Coolant pump failures - new pumps ordered, arriving 07 March. Changing coolant and hoses on services.</li>
+                <li>Post 3, 6 and 7 cables replaced. Piet ordered the rest of the cables.</li>
+                <li>Auxiliary motor spline grease TSNB: Only DT147 completed. Need to schedule machines to complete campaign. Grease on site.</li>
+                <li>VCA, VCB cables and discharge resistors - parts ordered for identified machines. Update requested on machines where resistors and connectors were replaced.</li>
               </ul>
             </div>
           </div>

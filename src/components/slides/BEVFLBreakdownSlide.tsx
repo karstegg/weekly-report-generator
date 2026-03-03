@@ -19,25 +19,30 @@ const slideStyle: React.CSSProperties = {
 };
 
 const BEVFLBreakdownSlide: React.FC<BEVFLBreakdownSlideProps> = ({ footerSrc, weekNumber }) => {
-  const flAvailability = 90;
+  const flAvailability = 89;
   const target = 85;
   const variance = flAvailability - target;
 
   const unitAvailability = [
-    { unit: 'FL0098', availability: 66.0 },
+    { unit: 'FL0098', availability: 58.0 },
     { unit: 'FL0099', availability: 100.0 },
-    { unit: 'FL0107', availability: 95.0 },
+    { unit: 'FL0107', availability: 100.0 },
     { unit: 'FL0108', availability: 84.0 },
-    { unit: 'FL0112', availability: 97.0 },
-    { unit: 'FL0113', availability: 96.0 },
+    { unit: 'FL0112', availability: 100.0 },
+    { unit: 'FL0113', availability: 91.0 },
   ];
 
   const breakdowns = [
-    { type: 'Mechanical', machine: 'FL0098', comment: 'Replace transmission mounting rubbers @ Workshop', hours: 47.45 },
-    { type: 'Boilermaker', machine: 'FL0108', comment: 'Half Arrows @ boilershop', hours: 19.42 },
-    { type: 'Mechanical', machine: 'FL0107', comment: 'Tyre @ Batt Bay', hours: 7.50 },
-    { type: 'Strata', machine: 'FL0112', comment: 'Comms Error @ 49s59w SWD', hours: 1.98 },
-    { type: 'Mechanical', machine: 'FL0113', comment: 'Oil Leak @ batt bay', hours: 1.25 },
+    { type: 'Electrical', machine: 'FL0098', comment: 'Batt not connecting @ S2N Wplace', hours: 44.15 },
+    { type: 'Electrical', machine: 'FL0098', comment: 'Module error F204 fuse @ S2N', hours: 11.50 },
+    { type: 'Mechanical', machine: 'FL0098', comment: 'Centre bearing @ battery bay', hours: 6.18 },
+    { type: 'Mechanical', machine: 'FL0098', comment: 'Seat not adjusting @ battery bay', hours: 0.87 },
+    { type: 'Mechanical', machine: 'FL0108', comment: 'Red stop light @ R5 67S 41W', hours: 11.72 },
+    { type: 'Strata', machine: 'FL0113', comment: 'Strata system faulty @ MW road', hours: 3.73 },
+    { type: 'Strata', machine: 'FL0113', comment: 'Machine not moving @ 15W/112S NW', hours: 3.13 },
+    { type: 'Boilermaker', machine: 'FL0113', comment: 'Repair bucket @ boilershop', hours: 1.50 },
+    { type: 'Mechanical', machine: 'FL0113', comment: 'Oil leak @ Batt Bay', hours: 0.78 },
+    { type: 'Operational', machine: 'FL0107', comment: 'Cracked window - operational delay', hours: 5.93 },
   ];
 
   const getAvailabilityColor = (availability: number) => {

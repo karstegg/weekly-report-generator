@@ -19,28 +19,32 @@ const slideStyle: React.CSSProperties = {
 };
 
 const BEVDTBreakdownSlide: React.FC<BEVDTBreakdownSlideProps> = ({ footerSrc, weekNumber }) => {
-  const dtAvailability = 78;
+  const dtAvailability = 81;
   const target = 85;
   const variance = dtAvailability - target;
 
   const unitAvailability = [
-    { unit: 'DT0146', availability: 99.0 },
-    { unit: 'DT0147', availability: 51.0 },
-    { unit: 'DT0149', availability: 99.0 },
-    { unit: 'DT0150', availability: 97.0 },
-    { unit: 'DT0162', availability: 94.0 },
-    { unit: 'DT0163', availability: 62.0 },
-    { unit: 'DT0172', availability: 43.0 },
+    { unit: 'DT0146', availability: 85.0 },
+    { unit: 'DT0147', availability: 36.0 },
+    { unit: 'DT0149', availability: 97.0 },
+    { unit: 'DT0150', availability: 90.0 },
+    { unit: 'DT0162', availability: 97.0 },
+    { unit: 'DT0163', availability: 100.0 },
+    { unit: 'DT0172', availability: 55.0 },
   ];
 
   const breakdowns = [
-    { type: 'Electrical', machine: 'DT0172', comment: 'HVEL Fault @ Batt Bay', hours: 37.17 },
-    { type: 'Electrical', machine: 'DT0147', comment: 'Emergency stop @ tramming parking', hours: 31.18 },
-    { type: 'Electrical', machine: 'DT0163', comment: 'Red Stop Lamb @ Batt Bay', hours: 26.38 },
-    { type: 'Mechanical', machine: 'DT0162', comment: 'Tyre @ Batt Bay', hours: 3.95 },
-    { type: 'Electrical', machine: 'DT0150', comment: 'Invertor @ Batt Bay', hours: 2.27 },
-    { type: 'Mechanical', machine: 'DT0149', comment: 'Tyre @ Batt Bay', hours: 1.00 },
-    { type: 'Electrical', machine: 'DT0146', comment: 'Invertor @ Batt Bay', hours: 0.67 },
+    { type: 'Mechanical', machine: 'DT0147', comment: 'Inverter error and Hydraulic oil leak @ battery bay', hours: 96.74 },
+    { type: 'Electrical', machine: 'DT0172', comment: 'HVIL fault', hours: 72.00 },
+    { type: 'Strata', machine: 'DT0146', comment: 'Collision avoidance warning @ battery bay', hours: 24.60 },
+    { type: 'Tyre Bay', machine: 'DT0163', comment: 'Tyre bay change rear tyre', hours: 14.17 },
+    { type: 'Electrical', machine: 'DT0150', comment: 'Battery insulation fault @ 31W/54S R5', hours: 11.25 },
+    { type: 'Tyre Bay', machine: 'DT0163', comment: 'Puncture @ 107S/13E NW', hours: 6.72 },
+    { type: 'Strata', machine: 'DT0150', comment: 'Comms error @ 13W/112S NW', hours: 3.03 },
+    { type: 'Electrical', machine: 'DT0149', comment: 'Machine powerless @ 17N/12W MW', hours: 2.63 },
+    { type: 'Strata', machine: 'DT0162', comment: 'STRATA @ old tips', hours: 3.63 },
+    { type: 'Electrical', machine: 'DT0172', comment: 'Battery not connecting @ battery bay', hours: 1.95 },
+    { type: 'Electrical', machine: 'DT0150', comment: 'Battery insulation fault @ 16W/103S MW', hours: 1.25 },
   ];
 
   const getAvailabilityColor = (availability: number) => {
