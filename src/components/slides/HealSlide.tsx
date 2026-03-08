@@ -24,7 +24,7 @@ const HealSlide: React.FC<HealSlideProps> = ({ data, footerSrc }) => {
     <div className="bg-white shadow-md rounded-lg" style={slideStyle}>
       <main className="flex-grow p-6 pb-20 flex flex-col">
         <h2 className="text-4xl font-bold text-center text-blue-800 mb-2">DEPARTMENTAL OVERVIEW (HEAL)</h2>
-        <div className="grid grid-cols-2 gap-x-6 gap-y-3" style={{ display: 'grid', gridTemplateRows: '45% 55%', height: '100%' }}>
+        <div className="grid grid-cols-2 gap-x-6 gap-y-3" style={{ display: 'grid', gridTemplateRows: '50% 50%', height: '100%' }}>
           <div className="bg-green-50 border border-green-200 rounded-lg p-3 flex flex-col">
             <div className="flex items-center mb-2"><TrendingUp className="text-green-600 mr-2" size={24} /><h3 className="text-xl font-bold text-green-800">Highlights</h3></div>
             <ul className="space-y-2 text-sm overflow-y-auto">
