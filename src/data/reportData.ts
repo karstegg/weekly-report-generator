@@ -146,7 +146,7 @@ export const reportData: ReportData = {
           { category: 'Road Trucks (87%)', details: 'RT47 Radiator, RT51 Compressor' },
           { category: 'Scalers (78%)', details: 'SR35 Engine Smoke, SR26 Boom Cylinder Broken, SR51 Fire Supp, SR38 Boom Nuts Broken' },
       ],
-      footerNote: 'Combined DT availability (Diesel 72.6% + BEV 84.2%) = 78%. Combined FL (Diesel 65.2% + BEV 83.0%) = 74%. MTD Fleet Average: 82.57%',
+      footerNote: 'Combined DT availability (Diesel 72.6% + BEV 82.7%) = 78%. Combined FL (Diesel 65.2% + BEV 82.7%) = 74%. MTD Fleet Average: 82.57%',
     },
     nchwaning2: {
         name: 'Nchwaning 2',
@@ -188,7 +188,7 @@ export const reportData: ReportData = {
   },
   bev: {
     availability: [
-        { label: 'DT BEV', value: 84, target: 85 },
+        { label: 'DT BEV', value: 83, target: 85 },
         { label: 'FL BEV', value: 83, target: 85 },
     ],
     serviceCompliance: [
@@ -196,11 +196,11 @@ export const reportData: ReportData = {
         { label: 'FL BEV', value: 0 },
     ],
     breakdowns: [
-        { equipment: 'DT BEV (84%)', details: ['DT0147: Inverter error @ battery bay (24.38 hrs)', 'DT0149: No contact to modules (23.82 hrs)', 'DT0172: HVIL fault @ 13N (9.50 hrs)', 'DT0150: Battery insulation fault (21.01 hrs)'] },
+        { equipment: 'DT BEV (83%)', details: ['DT0147: Inverter error @ battery bay (24.38 hrs)', 'DT0149: No contact to modules (23.82 hrs)', 'DT0172: HVIL fault @ 13N (9.50 hrs)', 'DT0150: Battery insulation fault (21.01 hrs)'] },
         { equipment: 'FL BEV (83%)', details: ['FL0098: Red stop lamp & battery not connecting (28.97 hrs)', 'FL0112: Red stop lamp & oil leak (12.22 hrs)', 'FL0113: Battery not connecting (10.51 hrs)', 'FL0107: Gears faulty & battery issues (5.61 hrs)'] },
     ],
     batteryThemes: [
-      'DT BEV at 84% - DT0147 inverter error (24hrs), DT0149 no contact to modules (24hrs), DT0150 battery insulation fault (21hrs), DT0172 HVIL fault (10hrs).',
+      'DT BEV at 83% - DT0147 inverter error (24hrs), DT0149 no contact to modules (24hrs), DT0150 battery insulation fault (21hrs), DT0172 HVIL fault (10hrs).',
       'FL BEV at 83% - FL0098 red stop lamp and battery connection issues (29hrs), FL0112 red stop lamp and oil leak (12hrs), FL0113 battery not connecting (11hrs).',
       'Battery operational delays: Multiple units experiencing flat battery and charging delays - DT0146, DT0149, DT0150, DT0162, DT0163 all had battery change/charging delays.',
       'Technical issues: HVIL terminology correction - use HVIL (High Voltage Interlock Loop) not HBIL. Battery connection issues remain primary concern for FL fleet.'
