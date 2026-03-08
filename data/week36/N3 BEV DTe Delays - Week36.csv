@@ -1,0 +1,21 @@
+DTe,DT0146,/Equipment/Breakdown Electrical,Red stop lamp (battery bay),1.27
+/Equipment/Breakdown Electrical/Auto Electrical System - 24v/Air Conditioner,aircon faulty @ workshop,4.45
+/Equipment/Operational Delays/Battery/Flat Battery,CHARGE BATTERY.,1.78
+"Charging battery ,No one to change battery",2
+DT0147,/Equipment/Breakdown Mechanical,invertor error @ battery bay,24.38
+DT0149,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,No contact to modules (11e s2n),8.37
+/Equipment/Operational Delays/Battery/Flat Battery,No one to chaing battery,15.45
+DT0150,/Equipment/Breakdown Electrical/Auto Electrical System - 800v/800v Battery,BATTERY INSULATION FAULT@31W/54S R5,3.37
+/Equipment/Operational Delays/Battery,Changing Battery,7.42
+/Equipment/Operational Delays/Battery/Flat Battery,No one to change battery (battery bay),10.22
+DT0162,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,Articulation Bar@Batt Bay,0.07
+/Equipment/Operational Delays/Battery,Change battery,2.62
+CHANGE BATTERY.,0.43
+/Equipment/Operational Delays/Battery/Flat Battery,BATTERY CHARGE,0.80
+charging,2.67
+DT0163,/Equipment/Breakdown Mechanical,oil leak @ battery bay,4.97
+/Equipment/Operational Delays/Battery,Change battery,0.38
+CHANGE BATTERY.,0.87
+/Equipment/Operational Delays/Battery/Flat Battery,charging,1.45
+DT0172,/Equipment/Breakdown Electrical/Auto Electrical System - 800v,HBIL FAULT NOT MOVING@13N STARIGHT NW,9.50
+/Equipment/Operational Delays/Battery,CHANGE BATTERY.,0.30

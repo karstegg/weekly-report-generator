@@ -1,0 +1,8 @@
+Fleet,Planned,Actual,Compliance,Target,Compliance %,Reasons for Non-Compliance
+FL,2,2,1,0.95,100.0%,Sr0040
+DT,1,0,0,0.95,0.0%,02/03/2026
+HD,2,1,0.5,0.95,50.0%,Fl0093
+RT,3,2,0.66666666666666663,0.95,66.7%,no
+SR,1,1,1,0.95,100.0%,yes
+UV Emulsion Units,0,0,#DIV/0!,0.95,#DIV/0!,
+Support Equipment,4,4,1,0.95,100.0%,

@@ -1,0 +1,12 @@
+Fleet,Planned,Actual,Compliance,Target,Compliance %,Reasons for Non-Compliance
+FL(Diesel),1,1,1,0.95,100.0%,
+DT(Diesel),2,1,0.5,0.95,50.0%,DT0154: Will service tommorow
+FL BEV,0,0,,0.95,,
+DT BEV,1,1,1,0.95,100.0%,
+HD,5,5,1,0.95,100.0%,
+RT,5,5,1,0.95,100.0%,
+SR,5,3,0.6,0.95,60.0%,"SR0035 Busy installing a new engine, SR0038 Not in for serveice"
+UV Emulsion Units,0,0,,0.95,,
+Support Equip. Diesel Foreman,0,0,,0.95,,
+Support Equip Utility Foreman,4,4,1,0.95,100.0%,
+BEV Batt ,,,,0.95,,

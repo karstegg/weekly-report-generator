@@ -1,0 +1,24 @@
+FLe,FL0098,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,Batt not connecting@S2N 5w Wplace,11.70
+/Equipment/Breakdown Electrical,RED STOMP LAMP@NW,17.27
+FL0099,/Equipment/Breakdown Mechanical/Hydraulic System/Oil,HYD OIL LEAK (Battery bay),0.17
+FL0107,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v/Petro Man,Tag problem@Hyd Fit WS,0.37
+/Equipment/Breakdown Electrical/Auto Electrical System - 800v/800v Battery,Not connecting battery (battery bay),1.48
+/Equipment/Operational Delays/Battery,Change battery,0.37
+CHANGE BATTERY.,1.92
+charging,1.07
+/Equipment/Operational Delays/Battery/Flat Battery,CHARGE BATTERY.,2.40
+FL0108,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,Batt Not Connecting@Batt Bay,0.85
+Batt Not Connecting@Tramming PBay,1.78
+/Equipment/Breakdown Mechanical,Oil Leak@Batt Bay,0.52
+Replace Transmission Rubbers@Batt Bay,2.10
+FL0112,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,Battery guard loose@Batt Bay,0.28
+/Equipment/Breakdown Electrical,RED STOP LAMP@10E/20N S2N,5.07
+/Equipment/Breakdown Mechanical,oil leak @ battery bay,6.87
+/Equipment/Operational Delays/Battery,CHANGE BATTERY.,0.67
+FL0113,/Equipment/Breakdown Auto Electrical/Auto Electrical System - 24v,Batt not connect@Batt Bay,1.95
+Batt Not Connecting@NW 95s23w,1.25
+/Equipment/Breakdown Electrical/Auto Electrical System - 24v/24v Battery,battery not connecting @ battery bay,1.50
+/Equipment/Operational Delays/Battery,Change battery,1.62
+CHANGE BATTERY.,0.42
+/Equipment/Operational Delays/Battery/Flat Battery,charging,2.05
+Charging (battery bay),1.72

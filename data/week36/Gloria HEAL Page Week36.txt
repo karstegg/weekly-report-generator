@@ -1,0 +1,19 @@
+Highlights
+• Zennith serviced three compressors
+• Good improvement in CPS level 9
+
+Lowlights
+• Experiencing  CV0052 safe line breakdowns  resulting to remove guard limit switch and install locks
+• DTs availability was 79%
+• DT0174  -  Powelses
+• DT0152 -  Engine cut off
+• FLs availability was 77%
+• FL0119  -  No turbo available
+• FL0064 -  Overheating
+• Wrong  diverted actuator  delivered
+
+Emerging Issues
+
+Priorities
+• CV0088 and 51H Conveyor replacement
+• UV0129 axle to be delivered and replaced

@@ -1,0 +1,9 @@
+Equipment,Friday,Monday,Tuesday,Wednesday,Thursday,Average,Breakdowns - Comments
+HD,86.0%,83.0%,85.0%,93.0%,88.0%,87.0%,
+RT,73.0%,78.0%,78.0%,85.0%,89.0%,80.6%,"RT47 Radiator,RT51 Compressor"
+SR,79.0%,65.0%,80.0%,88.0%,82.0%,78.8%,"SR35 Engine Smoke, SR26 Boom Cylinder Broken, SR51 Fire Spp, SR38 Boom Nuts Broken"
+DT Diesel,82.0%,74.0%,73.0%,67.0%,67.0%,72.6%,"DT148 No Aircon/Mainswitch, DT131 Transmission Casing Cracked, DT118 Aircon"
+FL Diesel,54.0%,77.0%,66.0%,69.0%,60.0%,65.2%,"FL103 Starting Problem, FL101 Steering problem/Fire Supp/ Bucket Control"
+DT batteries,76.0%,78.0%,98.0%,71.0%,98.0%,84.2%,"DT147 Invertor Error, DT172 HBIL Fault, DT149 No Contact to Modules, 98"
+FL Batteries,95.0%,73.0%,83.0%,75.0%,89.0%,83.0%,"FL98 Red Stop Lamp/ Batt not connecting,FL107 Gears Faulty, FL112 Red Stop Lamp"
+Average,,,,,,78.8%,
