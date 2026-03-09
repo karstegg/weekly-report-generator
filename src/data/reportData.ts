@@ -166,7 +166,7 @@ export const reportData: ReportData = {
         ],
         breakdowns: [
             { category: 'Dump Trucks (80.73%)', details: 'Below 85% target - DT121 Ignition issues, DT122 OEM to attend. Performance impacted Wed-Thu with drops to 74-75%' },
-            { category: 'Haul Dumps (80.90%)', details: 'Below 85% target - HD68 Feed sling. Lowest performance on Friday at 88%' },
+            { category: 'Haul Dumps (80.90%)', details: 'Below 85% target - HD68 Feed sling. Lowest performance on Friday' },
         ],
     },
     gloria: {
@@ -192,7 +192,7 @@ export const reportData: ReportData = {
   bev: {
     availability: [
         { label: 'DT BEV', value: 83, target: 85 },
-        { label: 'FL BEV', value: 83, target: 85 },
+        { label: 'FL BEV', value: 87, target: 85 },
     ],
     serviceCompliance: [
         { label: 'DT BEV', value: 100 },
@@ -200,11 +200,11 @@ export const reportData: ReportData = {
     ],
     breakdowns: [
         { equipment: 'DT BEV (83%)', details: ['DT0147: Inverter error @ battery bay (24.38 hrs)', 'DT0149: No contact to modules (23.82 hrs)', 'DT0172: HVIL fault @ 13N (9.50 hrs)', 'DT0150: Battery insulation fault (21.01 hrs)'] },
-        { equipment: 'FL BEV (83%)', details: ['FL0098: Red stop lamp & battery not connecting (28.97 hrs)', 'FL0112: Red stop lamp & oil leak (12.22 hrs)', 'FL0113: Battery not connecting (10.51 hrs)', 'FL0107: Gears faulty & battery issues (5.61 hrs)'] },
+        { equipment: 'FL BEV (87%)', details: ['FL0098: Red stop lamp & battery not connecting (28.97 hrs)', 'FL0112: Red stop lamp & oil leak (12.89 hrs)', 'FL0113: Battery not connecting (10.51 hrs)', 'FL0107: Gears faulty & battery issues (7.61 hrs)'] },
     ],
     batteryThemes: [
       'DT BEV at 83% - DT0172 HVIL fault + TMS cable (2D21H), DT0149 traction motor overheats (20hrs), DT0150 E-stop issues (23hrs), DT0147 tyre bay (19hrs).',
-      'FL BEV at 83% - FL0098 CAN fault + battery issues (4D19H), FL0113 HVIL connector fault VPY83 (multiple), FL0112 hydraulic leak (ongoing), FL0107/FL0108 mechanical.',
+      'FL BEV at 87% - FL0098 red stop lamp + battery not connecting (29hrs), FL0112 red stop lamp + oil leak (13hrs), FL0113 battery not connecting (11hrs), FL0107 battery issues (8hrs).',
       'Battery overheating issues: VPY-00011 condenser cleaned, VPY-00051 cooling pump failed, VPY-00088 pump fuse trip. Charger DCDC campaign 95% complete.',
       'Critical: Job cards not being filled properly on Click View - limiting root cause analysis capability. Post 3, 6, 7 charging cables replaced.'
     ],
