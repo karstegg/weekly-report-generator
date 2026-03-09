@@ -93,25 +93,29 @@ export const reportData: ReportData = {
   footerSrc: '/images/Footer.png',
   heal: {
     highlights: [
-      { site: 'N3', text: 'Improved performance of Drill & Blast equipment' },
+      { site: 'N3', text: 'Successfully hosted the ARM leadership at the BEV workshops' },
       { site: 'N2', text: 'The average availability is above 85% for the week on all TMMs' },
       { site: 'N2', text: 'Commissioned a new load FL0122 for capital development' },
       { site: 'Gloria', text: 'Zennith serviced three compressors' },
       { site: 'Gloria', text: 'Good improvement in CPS level 9' },
     ],
     lowlights: [
-      { site: 'N3', text: 'LTI - Finger injury while moving a KSB pump' },
+      { site: 'N3', text: 'LTI Case – Index Finger fracture' },
+      { site: 'N3', text: 'Overall sustained machines availability' },
+      { site: 'N3', text: 'Overall work attendance below par' },
       { site: 'N2', text: 'Schematic diagram on SR46 is not as the actual circuit' },
       { site: 'Gloria', text: 'Experiencing CV0052 safe line breakdowns resulting to remove guard limit switch and install locks' },
       { site: 'Gloria', text: 'DTs availability was 79% - DT0174 Powelses, DT0152 Engine cut off' },
       { site: 'Gloria', text: 'FLs availability was 77% - FL0119 No turbo available, FL0064 Overheating' },
     ],
     emergingIssues: [
+      { site: 'N3', text: 'CAS L9: LD's and UV's impacting productivity (Reliability of system)' },
+      { site: 'N3', text: 'Water management and balancing of the system at mining areas' },
       { site: 'N2', text: 'OEM companies are not consistent in keeping PP360 compliant' },
       { site: 'N2', text: 'DT121 and 122 indicated possible fuel dilution on Perfect Filtration report' },
     ],
     priorities: [
-      { site: 'N3', text: 'GRC Audit' },
+      { site: 'N3', text: 'Complete GES and Forman's appointments' },
       { site: 'N2', text: 'Enforce compliance through action plans' },
       { site: 'N2', text: 'Align the team on factors affecting production' },
       { site: 'Gloria', text: 'CV0088 and 51H Conveyor replacement' },
