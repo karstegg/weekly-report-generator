@@ -5,6 +5,51 @@
 
 ---
 
+## Python Script Bugs Fixed (Claude Code)
+
+### 1. BEV Script - Identical Data Bug
+**Issue:** `extract_bev_data.py` was saving identical data to both DTe and FLe CSV files
+**Root Cause:** Script wasn't properly splitting data by column/row for DTe vs FLe
+**Fix Applied:** 
+- DTe files now use `{'columns': [0, 1, 2]}` for weekly/monthly availability
+- FLe files now use `{'columns': [0, 1, 3]}` for weekly/monthly availability
+- Per-unit availability uses `{'row_filter': 'DTe'}` and `{'row_filter': 'FLe'}`
+**Impact:** Week 36 BEV CSV files were corrected mid-session
+
+### 2. Utility Script - Wrong Sheet Bug
+**Issue:** `extract_utility_breakdowns.py` was reading `sheet1.xml` (oldest sheet) instead of active sheet
+**Root Cause:** Multi-sheet cumulative workbooks added in Week 36 - script defaulted to first sheet
+**Fix Applied:** Added `get_active_sheet_path()` function to read `xl/workbook.xml` and find active sheet
+**Impact:** Monday file (02-03-2026) initially extracted Week 35 data instead of Week 36
+
+### 3. Utility Script - Filename Pattern Bug
+**Issue:** Glob pattern didn't match new "Utility TMM Breakdown Report" filename format
+**Root Cause:** Week 36 changed from "Breakdown report - Utility Section" to "Utility TMM Breakdown Report"
+**Fix Applied:** Added fallback pattern: `sorted(utility_dir.glob('Utility TMM Breakdown Report *.xlsx'))`
+**Impact:** Script couldn't find Week 36 utility files until pattern updated
+
+---
+
+## Data Format Changes (Week 36)
+
+### Utility Files - New Structure
+**Changes:**
+- Files now multi-sheet cumulative workbooks (not single-sheet daily files)
+- New naming: "Utility TMM Breakdown Report DD-MM-YYYY.xlsx"
+- Files placed directly in `data/week36/` (not in subfolder)
+- Active sheet must be checked - older sheets contain previous weeks' data
+
+**Verification Required:**
+- Always check active sheet date matches filename date
+- Monday file anomaly: 02-03-2026 file contained Week 35 data on first sheet
+- Use `get_active_sheet_path()` to read correct sheet
+
+### BEV Data - Equipment Swap
+**Pattern:** DT0172 is temporary swap for DT0171 (out of production)
+**Impact:** DT0172 appears in Week 36 data but may not be permanent fleet member
+
+---
+
 ## Critical Data Corrections Made
 
 ### 1. BEV Availability Percentages
