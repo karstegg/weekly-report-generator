@@ -45,7 +45,7 @@ const BEVDTBreakdownSlide: React.FC<BEVDTBreakdownSlideProps> = ({ footerSrc, we
     { type: 'Electrical', machine: 'DT0150', comment: 'Battery insulation fault @ 31W/54S R5', hours: 3.37 },
     { type: 'Operational', machine: 'DT0162', comment: 'Change battery', hours: 2.62 },
     { type: 'Operational', machine: 'DT0146', comment: 'Charging battery, no one to change', hours: 2.00 },
-  ];}
+  ];
 
   const getAvailabilityColor = (availability: number) => {
     if (availability >= 85) return 'bg-blue-500';

@@ -43,7 +43,7 @@ const BEVFLBreakdownSlide: React.FC<BEVFLBreakdownSlideProps> = ({ footerSrc, we
     { type: 'Auto Electrical', machine: 'FL0113', comment: 'Batt not connect @ batt bay', hours: 1.95 },
     { type: 'Operational', machine: 'FL0107', comment: 'Change battery', hours: 1.92 },
     { type: 'Auto Electrical', machine: 'FL0108', comment: 'Batt not connecting @ tramming PBay', hours: 1.78 },
-  ];}
+  ];
 
   const getAvailabilityColor = (availability: number) => {
     if (availability >= 85) return 'bg-blue-500';
