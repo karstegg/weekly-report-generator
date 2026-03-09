@@ -103,7 +103,6 @@ export const reportData: ReportData = {
       { site: 'N3', text: 'LTI Case – Index Finger fracture' },
       { site: 'N3', text: 'Overall sustained machines availability' },
       { site: 'N3', text: 'Overall work attendance below par' },
-      { site: 'N2', text: 'Schematic diagram on SR46 is not as the actual circuit' },
       { site: 'Gloria', text: 'Experiencing CV0052 safe line breakdowns resulting to remove guard limit switch and install locks' },
       { site: 'Gloria', text: 'DTs availability was 79% - DT0174 Powelses, DT0152 Engine cut off' },
       { site: 'Gloria', text: 'FLs availability was 77% - FL0119 No turbo available, FL0064 Overheating' },
@@ -147,7 +146,7 @@ export const reportData: ReportData = {
       breakdowns: [
           { category: 'Dump Trucks (76%)', details: 'DT148 No Aircon/Mainswitch, DT131 Transmission Casing Cracked, DT118 Aircon' },
           { category: 'Front Loaders (77%)', details: 'FL103 Starting Problem, FL101 Steering problem/Fire Supp/Bucket Control' },
-          { category: 'Road Trucks (87%)', details: 'RT47 Radiator, RT51 Compressor' },
+          { category: 'Roof Bolters (87%)', details: 'RT47 Radiator, RT51 Compressor' },
           { category: 'Scalers (78%)', details: 'SR35 Engine Smoke, SR26 Boom Cylinder Broken, SR51 Fire Supp, SR38 Boom Nuts Broken' },
       ],
       footerNote: 'Combined DT availability (Diesel 72.6% + BEV 82.7%) = 78%. Combined FL (Diesel 65.2% + BEV 82.7%) = 74%. MTD Fleet Average: 82.57%',
