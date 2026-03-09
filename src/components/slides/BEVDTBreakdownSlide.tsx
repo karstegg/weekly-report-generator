@@ -24,28 +24,28 @@ const BEVDTBreakdownSlide: React.FC<BEVDTBreakdownSlideProps> = ({ footerSrc, we
   const variance = dtAvailability - target;
 
   const unitAvailability = [
-    { unit: 'DT0146', availability: 85.0 },
-    { unit: 'DT0147', availability: 36.0 },
-    { unit: 'DT0149', availability: 97.0 },
-    { unit: 'DT0150', availability: 90.0 },
-    { unit: 'DT0162', availability: 97.0 },
-    { unit: 'DT0163', availability: 100.0 },
-    { unit: 'DT0172', availability: 55.0 },
+    { unit: 'DT0146', availability: 96.3 },
+    { unit: 'DT0147', availability: 28.6 },
+    { unit: 'DT0149', availability: 90.9 },
+    { unit: 'DT0150', availability: 100.0 },
+    { unit: 'DT0162', availability: 75.2 },
+    { unit: 'DT0163', availability: 97.7 },
+    { unit: 'DT0172', availability: 90.8 },
   ];
 
   const breakdowns = [
-    { type: 'Mechanical', machine: 'DT0147', comment: 'Inverter error and Hydraulic oil leak @ battery bay', hours: 96.74 },
-    { type: 'Electrical', machine: 'DT0172', comment: 'HVIL fault', hours: 72.00 },
-    { type: 'Strata', machine: 'DT0146', comment: 'Collision avoidance warning @ battery bay', hours: 24.60 },
-    { type: 'Tyre Bay', machine: 'DT0163', comment: 'Tyre bay change rear tyre', hours: 14.17 },
-    { type: 'Electrical', machine: 'DT0150', comment: 'Battery insulation fault @ 31W/54S R5', hours: 11.25 },
-    { type: 'Tyre Bay', machine: 'DT0163', comment: 'Puncture @ 107S/13E NW', hours: 6.72 },
-    { type: 'Strata', machine: 'DT0150', comment: 'Comms error @ 13W/112S NW', hours: 3.03 },
-    { type: 'Electrical', machine: 'DT0149', comment: 'Machine powerless @ 17N/12W MW', hours: 2.63 },
-    { type: 'Strata', machine: 'DT0162', comment: 'STRATA @ old tips', hours: 3.63 },
-    { type: 'Electrical', machine: 'DT0172', comment: 'Battery not connecting @ battery bay', hours: 1.95 },
-    { type: 'Electrical', machine: 'DT0150', comment: 'Battery insulation fault @ 16W/103S MW', hours: 1.25 },
-  ];
+    { type: 'Mechanical', machine: 'DT0147', comment: 'Inverter error @ battery bay', hours: 24.38 },
+    { type: 'Operational', machine: 'DT0149', comment: 'No one to change battery', hours: 15.45 },
+    { type: 'Operational', machine: 'DT0150', comment: 'No one to change battery (battery bay)', hours: 10.22 },
+    { type: 'Electrical', machine: 'DT0172', comment: 'HVIL fault not moving @ 13N', hours: 9.50 },
+    { type: 'Auto Electrical', machine: 'DT0149', comment: 'No contact to modules (11e s2n)', hours: 8.37 },
+    { type: 'Operational', machine: 'DT0150', comment: 'Changing battery', hours: 7.42 },
+    { type: 'Mechanical', machine: 'DT0163', comment: 'Oil leak @ battery bay', hours: 4.97 },
+    { type: 'Electrical', machine: 'DT0146', comment: 'Aircon faulty @ workshop', hours: 4.45 },
+    { type: 'Electrical', machine: 'DT0150', comment: 'Battery insulation fault @ 31W/54S R5', hours: 3.37 },
+    { type: 'Operational', machine: 'DT0162', comment: 'Change battery', hours: 2.62 },
+    { type: 'Operational', machine: 'DT0146', comment: 'Charging battery, no one to change', hours: 2.00 },
+  ];}
 
   const getAvailabilityColor = (availability: number) => {
     if (availability >= 85) return 'bg-blue-500';

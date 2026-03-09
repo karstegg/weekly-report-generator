@@ -24,26 +24,26 @@ const BEVFLBreakdownSlide: React.FC<BEVFLBreakdownSlideProps> = ({ footerSrc, we
   const variance = flAvailability - target;
 
   const unitAvailability = [
-    { unit: 'FL0098', availability: 58.0 },
-    { unit: 'FL0099', availability: 100.0 },
-    { unit: 'FL0107', availability: 100.0 },
-    { unit: 'FL0108', availability: 84.0 },
-    { unit: 'FL0112', availability: 100.0 },
-    { unit: 'FL0113', availability: 91.0 },
+    { unit: 'FL0098', availability: 66.9 },
+    { unit: 'FL0099', availability: 99.7 },
+    { unit: 'FL0107', availability: 96.9 },
+    { unit: 'FL0108', availability: 92.1 },
+    { unit: 'FL0112', availability: 76.2 },
+    { unit: 'FL0113', availability: 92.9 },
   ];
 
   const breakdowns = [
-    { type: 'Electrical', machine: 'FL0098', comment: 'Batt not connecting @ S2N Wplace', hours: 44.15 },
-    { type: 'Electrical', machine: 'FL0098', comment: 'Module error F204 fuse @ S2N', hours: 11.50 },
-    { type: 'Mechanical', machine: 'FL0098', comment: 'Centre bearing @ battery bay', hours: 6.18 },
-    { type: 'Mechanical', machine: 'FL0098', comment: 'Seat not adjusting @ battery bay', hours: 0.87 },
-    { type: 'Mechanical', machine: 'FL0108', comment: 'Red stop light @ R5 67S 41W', hours: 11.72 },
-    { type: 'Strata', machine: 'FL0113', comment: 'Strata system faulty @ MW road', hours: 3.73 },
-    { type: 'Strata', machine: 'FL0113', comment: 'Machine not moving @ 15W/112S NW', hours: 3.13 },
-    { type: 'Boilermaker', machine: 'FL0113', comment: 'Repair bucket @ boilershop', hours: 1.50 },
-    { type: 'Mechanical', machine: 'FL0113', comment: 'Oil leak @ Batt Bay', hours: 0.78 },
-    { type: 'Operational', machine: 'FL0107', comment: 'Cracked window - operational delay', hours: 5.93 },
-  ];
+    { type: 'Electrical', machine: 'FL0098', comment: 'Red stop lamp @ NW', hours: 17.27 },
+    { type: 'Auto Electrical', machine: 'FL0098', comment: 'Batt not connecting @ S2N 5w Wplace', hours: 11.70 },
+    { type: 'Mechanical', machine: 'FL0112', comment: 'Oil leak @ battery bay', hours: 6.87 },
+    { type: 'Electrical', machine: 'FL0112', comment: 'Red stop lamp @ 10E/20N S2N', hours: 5.07 },
+    { type: 'Operational', machine: 'FL0107', comment: 'Charge battery', hours: 2.40 },
+    { type: 'Mechanical', machine: 'FL0108', comment: 'Replace transmission rubbers @ batt bay', hours: 2.10 },
+    { type: 'Operational', machine: 'FL0113', comment: 'Charging (battery bay)', hours: 1.72 },
+    { type: 'Auto Electrical', machine: 'FL0113', comment: 'Batt not connect @ batt bay', hours: 1.95 },
+    { type: 'Operational', machine: 'FL0107', comment: 'Change battery', hours: 1.92 },
+    { type: 'Auto Electrical', machine: 'FL0108', comment: 'Batt not connecting @ tramming PBay', hours: 1.78 },
+  ];}
 
   const getAvailabilityColor = (availability: number) => {
     if (availability >= 85) return 'bg-blue-500';
