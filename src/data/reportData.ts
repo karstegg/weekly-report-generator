@@ -210,7 +210,7 @@ export const reportData: ReportData = {
     ],
   },
   utilitySection: {
-    fleetStatus: { available: 62, unavailable: 3 },
+    fleetStatus: { available: 61, unavailable: 4 },
     areaSummary: [
       { area: 'Maverick Double cab', department: 'Operations', total: 9, unavailable: 2 },
       { area: 'Toyota Landcruiser Minespec', department: 'Operations', total: 33, unavailable: 1 },
@@ -222,7 +222,8 @@ export const reportData: ReportData = {
     breakdowns: [
       { area: 'Maverick Double cab', tmmNo: 'LD0520, LD0572', model: 'Maverick', description: 'Weekly Avg 77.8%', remarks: 'LD0520: Not Starting/Warning Signs (Tue-Wed), LD0572: Tag box damaged (Tue-Wed)' },
       { area: 'Boilermaker', tmmNo: 'LD0405', model: 'Maverick', description: 'Weekly Avg 66.7%', remarks: 'Engine commission - No communication between engine and machine (All week)' },
-      { area: 'ROROs', tmmNo: 'UV0078, UV0081, UV0116', model: 'RORO', description: 'Weekly Avg 72%', remarks: 'UV0078: Rear axle/Steering cylinder (Mon-Fri), UV0081: Not selecting gears (Wed), UV0116: Front axle (Tue-Wed)' },
+      { area: 'ROROs', tmmNo: 'UV0078, UV0081, UV0116', model: 'RORO', description: 'Weekly Avg 68%', remarks: 'UV0078: Rear axle/Steering cylinder (Mon-Fri), UV0081: Not selecting gears (Wed), UV0116: Front axle (Tue-Wed)' },
+      { area: 'Toyota Landcruiser Minespec', tmmNo: 'LD0574, LD0606, LD0622', model: 'Toyota', description: 'Weekly Avg 93.9%', remarks: 'LD0574: Not Starting (Tue-Wed), LD0606: Hub broken off (Tue-Wed), LD0622: Transfer box leaking (Tue-Wed)' },
     ],
     oemAssistanceRequired: 1,
     dailyTracking: [
@@ -242,15 +243,15 @@ export const reportData: ReportData = {
       { area: 'X Cut', mon: { available: 1, total: 1, color: 'green' }, tue: { available: 1, total: 1, color: 'green' }, wed: { available: 1, total: 1, color: 'green' }, thu: { available: 1, total: 1, color: 'green' }, fri: { available: 1, total: 1, color: 'green' }, weeklyAvg: 100.0 },
       { area: 'Utility TMM', mon: { available: 2, total: 2, color: 'green' }, tue: { available: 2, total: 2, color: 'green' }, wed: { available: 2, total: 2, color: 'green' }, thu: { available: 2, total: 2, color: 'green' }, fri: { available: 2, total: 2, color: 'green' }, weeklyAvg: 100.0 },
       { area: 'Other', mon: { available: 18, total: 18, color: 'green' }, tue: { available: 18, total: 18, color: 'green' }, wed: { available: 18, total: 18, color: 'green' }, thu: { available: 18, total: 18, color: 'green' }, fri: { available: 18, total: 18, color: 'green' }, weeklyAvg: 100.0 },
-      { area: 'TOTAL', mon: { available: 60, total: 66, color: 'green' }, tue: { available: 62, total: 66, color: 'green' }, wed: { available: 58, total: 66, color: 'yellow' }, thu: { available: 58, total: 66, color: 'yellow' }, fri: { available: 63, total: 66, color: 'green' }, weeklyAvg: 89.1 },
+      { area: 'TOTAL', mon: { available: 61, total: 65, color: 'green' }, tue: { available: 55, total: 66, color: 'yellow' }, wed: { available: 54, total: 66, color: 'yellow' }, thu: { available: 61, total: 65, color: 'green' }, fri: { available: 61, total: 65, color: 'green' }, weeklyAvg: 89.3 },
     ],
   },
   utilitySectionCurrentStatus: {
-    totalUnavailable: 3,
+    totalUnavailable: 4,
     areaStatus: [
       { area: 'Boilermaker', unavailable: 1, details: [{ unit: 'LD0405', reason: 'Engine commission (No communication between engine and machine) - No solution from Fermel (Deutz EMR4 upgrade to EMR5)' }] },
       { area: 'Plant Fitter', unavailable: 1, details: [{ unit: 'LD0620', reason: 'Strata (Surface decline & No access to the gate, its locked) - (SOS - EOS)' }] },
-      { area: 'Logistics', unavailable: 1, details: [{ unit: 'UV0078', reason: 'Rear axle - (SOS - EOS)' }] },
+      { area: 'Logistics', unavailable: 2, details: [{ unit: 'UV0078', reason: 'Rear axle - (SOS - EOS)' }] },
     ],
   },
 };
