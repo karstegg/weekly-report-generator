@@ -149,7 +149,7 @@ export const reportData: ReportData = {
           { category: 'Roof Bolters (87%)', details: 'RT47 Radiator, RT51 Compressor' },
           { category: 'Scalers (78%)', details: 'SR35 Engine Smoke, SR26 Boom Cylinder Broken, SR51 Fire Supp, SR38 Boom Nuts Broken' },
       ],
-      footerNote: 'SR0035 engine installed commissioning to be done this week. DT0148 repairs to be focused on this week. FL0103: Epiroc is assisting this week',
+      footerNote: 'SR0035 engine installed commissioning to be done this week. DT0148 repairs to be focused on this week. FL0101 fixed, FL0103: Epiroc is assisting this week',
     },
     nchwaning2: {
         name: 'Nchwaning 2',
@@ -165,10 +165,8 @@ export const reportData: ReportData = {
             { label: 'SR', percentage: 94.68, target: 85 },
         ],
         breakdowns: [
-            { category: 'Dump Trucks (80.73%)', details: 'Below 85% target - Performance impacted Wed-Thu with drops to 74-75%' },
-            { category: 'Haul Dumps (80.90%)', details: 'Below 85% target - Lowest performance on Friday at 88%' },
-            { category: 'RT Compliance (75%)', details: 'LD0591 not available, will service tomorrow' },
-            { category: 'Support Equipment (67%)', details: 'Unit 19.18.15' },
+            { category: 'Dump Trucks (80.73%)', details: 'Below 85% target - DT121 Ignition issues, DT122 OEM to attend. Performance impacted Wed-Thu with drops to 74-75%' },
+            { category: 'Haul Dumps (80.90%)', details: 'Below 85% target - HD68 Feed sling. Lowest performance on Friday at 88%' },
         ],
     },
     gloria: {
