@@ -149,7 +149,7 @@ export const reportData: ReportData = {
           { category: 'Roof Bolters (87%)', details: 'RT47 Radiator, RT51 Compressor' },
           { category: 'Scalers (78%)', details: 'SR35 Engine Smoke, SR26 Boom Cylinder Broken, SR51 Fire Supp, SR38 Boom Nuts Broken' },
       ],
-      footerNote: 'Combined DT availability (Diesel 72.6% + BEV 82.7%) = 78%. Combined FL (Diesel 65.2% + BEV 82.7%) = 74%. MTD Fleet Average: 82.57%',
+      footerNote: 'SR0035 engine installed commissioning to be done this week. DT0148 repairs to be focused on this week. FL0103 ',
     },
     nchwaning2: {
         name: 'Nchwaning 2',
@@ -165,8 +165,10 @@ export const reportData: ReportData = {
             { label: 'SR', percentage: 94.68, target: 85 },
         ],
         breakdowns: [
-            { category: 'RT (75%)', details: 'RT compliance at 75% - LD0591 not available, will service tomorrow' },
-            { category: 'Support Equipment (67%)', details: 'Support equipment compliance at 67% - Unit 19.18.15' },
+            { category: 'Dump Trucks (80.73%)', details: 'Below 85% target - Performance impacted Wed-Thu with drops to 74-75%' },
+            { category: 'Haul Dumps (80.90%)', details: 'Below 85% target - Lowest performance on Friday at 88%' },
+            { category: 'RT Compliance (75%)', details: 'LD0591 not available, will service tomorrow' },
+            { category: 'Support Equipment (67%)', details: 'Unit 19.18.15' },
         ],
     },
     gloria: {
