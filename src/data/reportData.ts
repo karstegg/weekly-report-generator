@@ -149,7 +149,7 @@ export const reportData: ReportData = {
           { category: 'Roof Bolters (87%)', details: 'RT47 Radiator, RT51 Compressor' },
           { category: 'Scalers (78%)', details: 'SR35 Engine Smoke, SR26 Boom Cylinder Broken, SR51 Fire Supp, SR38 Boom Nuts Broken' },
       ],
-      footerNote: 'SR0035 engine installed commissioning to be done this week. DT0148 repairs to be focused on this week. FL0103 ',
+      footerNote: 'SR0035 engine installed commissioning to be done this week. DT0148 repairs to be focused on this week. FL0103: Epiroc is assisting this week',
     },
     nchwaning2: {
         name: 'Nchwaning 2',
@@ -185,7 +185,7 @@ export const reportData: ReportData = {
             { label: 'SR', percentage: 96, target: 85 },
         ],
         breakdowns: [
-          { category: 'Dump Trucks (77%)', details: 'DT Diesel at 77%' },
+          { category: 'Dump Trucks (77%)', details: 'Below 85% target - DT0174 Powelses, DT0152 Engine cut off' },
           { category: 'Front Loaders (86%)', details: 'FL0093 Steering' },
         ],
         footerNote: 'MTD Fleet Average: 87%. CV0052 safe line breakdowns continue.',
