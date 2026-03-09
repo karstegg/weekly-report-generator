@@ -205,10 +205,10 @@ export const reportData: ReportData = {
         { equipment: 'FL BEV (83%)', details: ['FL0098: Red stop lamp & battery not connecting (28.97 hrs)', 'FL0112: Red stop lamp & oil leak (12.22 hrs)', 'FL0113: Battery not connecting (10.51 hrs)', 'FL0107: Gears faulty & battery issues (5.61 hrs)'] },
     ],
     batteryThemes: [
-      'DT BEV at 83% - DT0147 inverter error (24hrs), DT0149 no contact to modules (24hrs), DT0150 battery insulation fault (21hrs), DT0172 HVIL fault (10hrs).',
-      'FL BEV at 83% - FL0098 red stop lamp and battery connection issues (29hrs), FL0112 red stop lamp and oil leak (12hrs), FL0113 battery not connecting (11hrs).',
-      'Battery operational delays: Multiple units experiencing flat battery and charging delays - DT0146, DT0149, DT0150, DT0162, DT0163 all had battery change/charging delays.',
-      'Technical issues: HVIL terminology correction - use HVIL (High Voltage Interlock Loop) not HBIL. Battery connection issues remain primary concern for FL fleet.'
+      'DT BEV at 83% - DT0172 HVIL fault + TMS cable (2D21H), DT0149 traction motor overheats (20hrs), DT0150 E-stop issues (23hrs), DT0147 tyre bay (19hrs).',
+      'FL BEV at 83% - FL0098 CAN fault + battery issues (4D19H), FL0113 HVIL connector fault VPY83 (multiple), FL0112 hydraulic leak (ongoing), FL0107/FL0108 mechanical.',
+      'Battery overheating issues: VPY-00011 condenser cleaned, VPY-00051 cooling pump failed, VPY-00088 pump fuse trip. Charger DCDC campaign 95% complete.',
+      'Critical: Job cards not being filled properly on Click View - limiting root cause analysis capability. Post 3, 6, 7 charging cables replaced.'
     ],
   },
   utilitySection: {
