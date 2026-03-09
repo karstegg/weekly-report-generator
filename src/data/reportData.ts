@@ -115,7 +115,7 @@ export const reportData: ReportData = {
       { site: 'N2', text: 'DT121 and 122 indicated possible fuel dilution on Perfect Filtration report' },
     ],
     priorities: [
-      { site: 'N3', text: 'Complete GES and Forman's appointments' },
+      { site: 'N3', text: "Complete GES and Forman's appointments" },
       { site: 'N2', text: 'Enforce compliance through action plans' },
       { site: 'N2', text: 'Align the team on factors affecting production' },
       { site: 'Gloria', text: 'CV0088 and 51H Conveyor replacement' },
