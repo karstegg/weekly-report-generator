@@ -26,7 +26,7 @@ const BevPerformanceSlide: React.FC<BevPerformanceSlideProps> = ({ data, footerS
         <h2 className="text-4xl font-bold text-blue-800 mb-6 text-center">BEV Performance Overview (Nchwaning 3)</h2>
         <div className="grid grid-cols-2 gap-6 mb-6">
           <div className="bg-green-50 border-green-200 rounded-lg p-4">
-            <div className="flex items-center mb-2"><Battery className="text-green-600 mr-2" size={24} /><h3 className="text-xl font-bold text-green-800">BEV Availability (Wk 33)</h3></div>
+            <div className="flex items-center mb-2"><Battery className="text-green-600 mr-2" size={24} /><h3 className="text-xl font-bold text-green-800">BEV Availability (Wk 36)</h3></div>
             <ul className="list-disc pl-5 text-lg mt-1">
               {data.availability.map((item, i) => (
                 <li key={i} className={`${item.value >= item.target ? 'text-green-700' : 'text-yellow-700'} font-semibold`}>{item.label}: {item.value}% ({item.value >= item.target ? 'Above' : 'Below'} Target)</li>
@@ -63,19 +63,19 @@ const BevPerformanceSlide: React.FC<BevPerformanceSlideProps> = ({ data, footerS
             <div>
               <h4 className="font-semibold text-yellow-800 mb-1">Performance Summary:</h4>
               <ul className="list-disc pl-4 space-y-1">
-                <li>DT BEV at 81% - below target by 4%. Critical: DT0147 hydraulic oil leak (94hrs) and HV cable fault. DT0163 tyre issues (26hrs).</li>
-                <li>FL BEV at 89% - above target by 4%. FL0098 TCU error and mechanical breakdowns (27hrs). FL0108 mechanical breakdown (12hrs). FL0113 Strata and boilermaker work (10hrs).</li>
+                <li>DT BEV at 83% - below target by 2%. DT0147 inverter error (24hrs), DT0149 no contact to modules (24hrs), DT0150 battery insulation fault (21hrs), DT0172 HVIL fault (10hrs).</li>
+                <li>FL BEV at 87% - above target by 2%. FL0098 red stop lamp + battery not connecting (29hrs), FL0112 red stop lamp + oil leak (13hrs), FL0113 battery not connecting (11hrs).</li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold text-yellow-800 mb-1">Battery & Charger Status:</h4>
               <ul className="list-disc pl-4 space-y-1">
-                <li>B4 Batteries: 9 Working, 1 Breakdown (VPY-00076 to be replaced by VPY-00034) | B5 Batteries: 11 Working, 1 Breakdown (VPX-00016 waiting for Scania), 1 on DT-171 (out of production)</li>
+                <li>B4 Batteries: 10 Working, 1 Breakdown (VPY-00034 TMS replaced, cooling pump issues) | B5 Batteries: 11 Working, 1 Breakdown (VPX-00010 TMS fault), 1 on DT-171 (out of production)</li>
                 <li>All chargers operational. Charger 2 Module 2 faulty - other modules working. Charger 7 Module 4 switched on.</li>
-                <li>TMS hyper care underway. Coolant pump failures - new pumps ordered, arriving 07 March. Changing coolant and hoses on services.</li>
-                <li>Post 3, 6 and 7 cables replaced. Piet ordered the rest of the cables.</li>
-                <li>Auxiliary motor spline grease TSNB: Only DT147 completed. Need to schedule machines to complete campaign. Grease on site.</li>
-                <li>VCA, VCB cables and discharge resistors - parts ordered for identified machines. Update requested on machines where resistors and connectors were replaced.</li>
+                <li>TMS hyper care underway. Battery overheating: VPY-00011 condenser cleaned, VPY-00051 cooling pump failed, VPY-00088 pump fuse trip.</li>
+                <li>Post 3, 6 and 7 cables replaced. Charger DCDC campaign 95% complete.</li>
+                <li>Auxiliary motor spline grease TSNB: Only DT147 completed. Need to schedule remaining machines. Grease on site.</li>
+                <li>Critical: Job cards not being filled properly on Click View - limiting root cause analysis capability for recurring faults.</li>
               </ul>
             </div>
           </div>
