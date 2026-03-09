@@ -19,7 +19,7 @@ const slideStyle: React.CSSProperties = {
 };
 
 const BEVDTBreakdownSlide: React.FC<BEVDTBreakdownSlideProps> = ({ footerSrc, weekNumber }) => {
-  const dtAvailability = 81;
+  const dtAvailability = 83;
   const target = 85;
   const variance = dtAvailability - target;
 
