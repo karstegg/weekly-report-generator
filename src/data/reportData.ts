@@ -223,7 +223,7 @@ export const reportData: ReportData = {
       { area: 'Main West / Central', tmmNo: 'LD0520, LD0572', model: 'Maverick', description: 'Weekly Avg 77.8%', remarks: 'LD0520: Not Starting/Warning Signs (Tue-Wed), LD0572: Tag box damaged (Tue-Wed)' },
       { area: 'Boilermaker', tmmNo: 'LD0405', model: 'Maverick', description: 'Weekly Avg 66.7%', remarks: 'Engine commission - No communication between engine and machine (All week)' },
       { area: 'Logistics', tmmNo: 'UV0078, UV0081, UV0116', model: 'RORO', description: 'Weekly Avg 68%', remarks: 'UV0078: Rear axle/Steering cylinder (Mon-Fri), UV0081: Not selecting gears (Wed), UV0116: Front axle (Tue-Wed)' },
-      { area: 'Construction / Sim 2', tmmNo: 'LD0574, LD0606, LD0622', model: 'Toyota', description: 'Weekly Avg 93.9%', remarks: 'LD0574: Not Starting (Tue-Wed), LD0606: Hub broken off (Tue-Wed), LD0622: Transfer box leaking (Tue-Wed)' },
+      { area: 'Construction / Seam 2', tmmNo: 'LD0574, LD0606, LD0622', model: 'Toyota', description: 'Weekly Avg 93.9%', remarks: 'LD0574: Not Starting (Tue-Wed), LD0606: Hub broken off (Tue-Wed), LD0622: Transfer box leaking (Tue-Wed)' },
     ],
     oemAssistanceRequired: 1,
     dailyTracking: [
