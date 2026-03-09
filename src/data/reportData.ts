@@ -109,7 +109,7 @@ export const reportData: ReportData = {
       { site: 'Gloria', text: 'FLs availability was 77% - FL0119 No turbo available, FL0064 Overheating' },
     ],
     emergingIssues: [
-      { site: 'N3', text: 'CAS L9: LD's and UV's impacting productivity (Reliability of system)' },
+      { site: 'N3', text: "CAS L9: LD's and UV's impacting productivity (Reliability of system)" },
       { site: 'N3', text: 'Water management and balancing of the system at mining areas' },
       { site: 'N2', text: 'OEM companies are not consistent in keeping PP360 compliant' },
       { site: 'N2', text: 'DT121 and 122 indicated possible fuel dilution on Perfect Filtration report' },
