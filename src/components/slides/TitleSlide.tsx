@@ -1,6 +1,7 @@
 import React from 'react';
 import { ReportData } from '../../data/reportData';
 import Footer from '../shared/Footer';
+import { getImagePath } from '../../utils/imagePath';
 
 interface TitleSlideProps {
   data: ReportData['cover'];
@@ -27,8 +28,7 @@ const TitleSlide: React.FC<TitleSlideProps> = ({ data, weekNumber, dateRange, fo
       <div className="absolute top-0 left-0 right-0 bottom-32 p-12">
         <header className="flex justify-between items-start">
           <div className="text-gray-700">
-            <h1 className="text-5xl font-bold tracking-tight">Production Engineering</h1>
-            <h2 className="text-5xl font-light text-gray-600 tracking-tight">Weekly Overview Report</h2>
+            <h1 className="text-5xl font-bold tracking-tight">Weekly Engineering Report</h1>
           </div>
           <div className="text-right text-blue-600">
             <p className="text-2xl font-semibold">Week {weekNumber}</p>
@@ -39,7 +39,7 @@ const TitleSlide: React.FC<TitleSlideProps> = ({ data, weekNumber, dateRange, fo
           {data.images.map((img, index) => (
             <img
               key={index}
-              src={img.src}
+              src={getImagePath(img.src)}
               alt={img.alt}
               className={img.className}
               onError={(e) => (e.currentTarget.style.display = 'none')}

@@ -19,24 +19,34 @@ interface IndexSlideProps {
 }
 
 const IndexSlide: React.FC<IndexSlideProps> = ({ sites, footerSrc }) => {
+  const siteOrder = ['n3', 'n2', 'gloria'] as const;
+  const siteItems = siteOrder.flatMap(siteKey => {
+    const site = sites[siteKey];
+    return [
+      `${site.name} Weekly Availability Trend`,
+      `${site.name} Performance Overview`
+    ];
+  });
+
   const indexItems = [
     'Departmental Overview (HEAL)',
     'Shafts & Winders Performance',
-    ...Object.values(sites).map(site => `${site.name} Performance Overview`),
+    ...siteItems,
     'BEV Performance Overview',
+    'Utility Section Performance',
   ];
 
   return (
     <div className="bg-white shadow-md rounded-lg" style={slideStyle}>
-      <main className="flex-grow flex flex-col justify-center items-center p-8 pb-32">
-        <h2 className="text-4xl font-bold text-blue-800 mb-12 text-center">INDEX</h2>
-        <div className="space-y-8 max-w-2xl mx-auto">
+      <main className="flex-grow flex flex-col p-6 pb-24">
+        <h2 className="text-3xl font-bold text-blue-800 mb-4 text-center">INDEX</h2>
+        <div className="space-y-3 max-w-3xl mx-auto">
           {indexItems.map((item, index) => (
             <div key={index} className="flex items-center">
-              <div className="bg-blue-600 rounded-full w-12 h-12 flex items-center justify-center text-white font-bold mr-6 text-2xl">
+              <div className="bg-blue-600 rounded-full w-10 h-10 flex items-center justify-center text-white font-bold mr-4 text-lg">
                 {index + 1}
               </div>
-              <span className="text-2xl font-medium">{item}</span>
+              <span className="text-lg font-medium">{item}</span>
             </div>
           ))}
         </div>

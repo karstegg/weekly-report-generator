@@ -8,48 +8,103 @@ interface ShaftsWindersSlideProps {
   footerSrc: string;
 }
 
+interface ProgressBarProps {
+  label: string;
+  value: number;
+  target: number;
+  unit: string;
+  barHeight?: string;
+  fontSize?: string;
+}
+
 const slideStyle: React.CSSProperties = {
-    width: '960px',
-    height: '720px',
-    margin: '0 auto 32px auto',
-    overflow: 'hidden',
-    position: 'relative',
-    display: 'flex',
-    flexDirection: 'column',
-    backgroundColor: 'white'
+  width: '960px',
+  height: '720px',
+  margin: '0 auto 32px auto',
+  overflow: 'hidden',
+  position: 'relative',
+};
+
+const getBarColor = (value: number, target: number) => {
+  const percentage = (value / target) * 100;
+  if (percentage >= 95) return 'bg-green-500';
+  if (percentage >= 80) return 'bg-yellow-500';
+  return 'bg-red-500';
+};
+
+const ProgressBar: React.FC<ProgressBarProps> = ({ label, value, target, unit, barHeight = 'h-8', fontSize = 'text-xl' }) => {
+  const percentage = Math.min((value / target) * 100, 100);
+  const color = getBarColor(value, target);
+
+  return (
+    <div className="mb-2">
+      <div className="flex justify-between items-center mb-1">
+        <span className="font-semibold text-lg">{label}</span>
+        <span className="text-base text-gray-500">Target: {target}{unit}</span>
+      </div>
+      <div className={`relative w-full bg-gray-200 rounded-full ${barHeight} dark:bg-gray-700`}>
+        <div
+          className={`${color} absolute top-0 left-0 ${barHeight} rounded-full flex items-center justify-center`}
+          style={{ width: `${percentage}%` }}
+        >
+          <span className={`font-bold text-white ${fontSize}`}>{value}{unit}</span>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 const ShaftsWindersSlide: React.FC<ShaftsWindersSlideProps> = ({ data, footerSrc }) => {
-  const tonsPerHourPercentage = (data.tonsPerHour.value / data.tonsPerHour.target) * 100;
-  const rwAvailabilityPercentage = data.rwAvailability.value;
-
   return (
     <div className="bg-white shadow-md rounded-lg" style={slideStyle}>
-      <main className="flex-grow p-6 pb-32 flex flex-col">
-        <h2 className="text-4xl font-bold text-blue-800 mb-6 text-center">Shafts & Winders Performance</h2>
-        <div className="mb-6 space-y-4">
-          <div>
-            <div className="flex justify-between items-center mb-1"><span className="font-semibold text-lg">Weekly Tons/Hr</span><span className="text-base text-gray-500">Target: {data.tonsPerHour.target}</span></div>
-            <div className="w-full bg-gray-200 rounded-full h-8">
-              <div className="bg-red-500 h-8 rounded-full flex items-center justify-center" style={{ width: `${tonsPerHourPercentage}%`}}>
-                <span className="font-bold text-white text-lg">{Math.round(data.tonsPerHour.value)}</span>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="flex justify-between items-center mb-1"><span className="font-semibold text-lg">Weekly RW Availability (%)</span><span className="text-base text-gray-500">Target: {data.rwAvailability.target}%</span></div>
-            <div className="w-full bg-gray-200 rounded-full h-8">
-              <div className="bg-yellow-500 h-8 rounded-full flex items-center justify-center" style={{ width: `${rwAvailabilityPercentage}%`}}>
-                <span className="font-bold text-black text-lg">{rwAvailabilityPercentage.toFixed(1)}%</span>
-              </div>
-            </div>
-          </div>
+      <main className="flex-grow p-6 flex flex-col">
+        <h2 className="text-4xl font-bold text-blue-800 mb-4 text-center">Shafts & Winders Performance</h2>
+        
+        <div className="w-full px-12">
+          <ProgressBar label="Weekly Tons/Hr" value={data.production.tonsPerHour.value} target={data.production.tonsPerHour.target} unit="" barHeight="h-6" fontSize="text-lg" />
+          <ProgressBar label="Weekly RW Availability (%)" value={data.production.rockWinderAvailability.value} target={data.production.rockWinderAvailability.target} unit="%" barHeight="h-6" fontSize="text-lg" />
         </div>
-        <div className="grid grid-cols-2 grid-rows-2 gap-x-6 gap-y-4 flex-grow">
-          <div className="bg-green-50 border border-green-200 rounded-lg p-4 flex flex-col"><div className="flex items-center mb-2"><CheckCircle className="text-green-600 mr-2" size={22} /><h3 className="text-xl font-bold text-green-800">Highlights</h3></div><ul className="text-base list-disc pl-5 space-y-1 overflow-y-auto">{data.highlights.map((item, i) => <li key={i}>{item}</li>)}</ul></div>
-          <div className="bg-red-50 border border-red-200 rounded-lg p-4 flex flex-col"><div className="flex items-center mb-2"><AlertTriangle className="text-red-600 mr-2" size={22} /><h3 className="text-xl font-bold text-red-800">Lowlights</h3></div><ul className="text-base list-disc pl-5 overflow-y-auto">{data.lowlights.map((item, i) => <li key={i}>{item}</li>)}</ul></div>
-          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 flex flex-col"><div className="flex items-center mb-2"><Clock className="text-yellow-600 mr-2" size={22} /><h3 className="text-xl font-bold text-yellow-800">Emerging Issues</h3></div><ul className="text-base list-disc pl-5 overflow-y-auto">{data.emergingIssues.map((item, i) => <li key={i}>{item}</li>)}</ul></div>
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 flex flex-col"><div className="flex items-center mb-2"><Wrench className="text-blue-600 mr-2" size={22} /><h3 className="text-xl font-bold text-blue-800">Priorities</h3></div><ul className="text-base list-disc pl-5 space-y-1 overflow-y-auto">{data.priorities.map((item, i) => <li key={i}>{item}</li>)}</ul></div>
+
+        {/* HEAL Matrix */}
+        <div className="w-full px-12 mt-2" style={{ height: '390px' }}>
+          <div className="grid grid-cols-2 gap-4" style={{ gridTemplateRows: '160px 210px' }}>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-3 flex flex-col overflow-hidden">
+              <div className="flex items-center mb-1 flex-shrink-0">
+                <CheckCircle className="text-green-600 mr-2" size={18} />
+                <h3 className="text-base font-bold text-green-800">Highlights</h3>
+              </div>
+              <ul className="text-sm list-disc pl-5 space-y-0.5 flex-grow overflow-y-auto pr-2">
+                {data.heal.highlights.map((item, i) => <li key={i}>{item}</li>)}
+              </ul>
+            </div>
+            <div className="bg-red-50 border border-red-200 rounded-lg p-3 flex flex-col overflow-hidden">
+              <div className="flex items-center mb-1 flex-shrink-0">
+                <AlertTriangle className="text-red-600 mr-2" size={18} />
+                <h3 className="text-base font-bold text-red-800">Lowlights</h3>
+              </div>
+              <ul className="text-sm list-disc pl-5 space-y-0.5 flex-grow overflow-y-auto pr-2">
+                {data.heal.lowlights.map((item, i) => <li key={i}>{item}</li>)}
+              </ul>
+            </div>
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3 flex flex-col overflow-hidden">
+              <div className="flex items-center mb-1 flex-shrink-0">
+                <Clock className="text-yellow-600 mr-2" size={18} />
+                <h3 className="text-base font-bold text-yellow-800">Emerging Issues</h3>
+              </div>
+              <ul className="text-sm list-disc pl-5 space-y-0.5 flex-grow overflow-y-auto pr-2">
+                {data.heal.emergingIssues.map((item, i) => <li key={i}>{item}</li>)}
+              </ul>
+            </div>
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 flex flex-col overflow-hidden">
+              <div className="flex items-center mb-1 flex-shrink-0">
+                <Wrench className="text-blue-600 mr-2" size={18} />
+                <h3 className="text-base font-bold text-blue-800">Priorities</h3>
+              </div>
+              <ul className="text-sm list-disc pl-5 space-y-0.5 flex-grow overflow-y-auto pr-2">
+                {data.heal.priorities.map((item, i) => <li key={i}>{item}</li>)}
+              </ul>
+            </div>
+          </div>
         </div>
       </main>
       <Footer src={footerSrc} />

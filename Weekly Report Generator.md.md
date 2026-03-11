@@ -34,8 +34,8 @@ The entire process is predicated on the user supplying the data for a given week
   * Text-based HEAL summaries (Highlights, Lowlights, Emerging Issues, Priorities) for each site.  
   * Performance metrics (e.g., weekly average availability, service compliance percentages).  
   * Key breakdown lists and reasons for performance deviations.  
-  * Image URLs for trend charts.  
-* **Processing:** The generative model is responsible for parsing this input and synthesizing it into the required format for each slide. For instance, it must combine all individual HEAL page data into the single Departmental Overview slide, prefixing each item with its source (e.g., \[N2\]).
+  * Images for trend charts.  
+* **Process:** The application is a persistent React web app. The weekly workflow involves (1) updating the `src/data/reportData.ts` file with the new week's data, (2) reviewing the slides in the live web preview, and (3) using the built-in browser print functionality to export the final report as a PDF.
 
 ### **2.2. Component-Based Template**
 
@@ -50,7 +50,7 @@ The report is built from a pre-defined set of React components. The generator mu
   * The image-based Weekly Availability Trend slides.  
   * The detailed Site Performance slides (for N3, N2, Gloria).  
   * The dedicated BEV Performance slide.  
-* **Conditional Rendering:** The generator must be able to conditionally omit slides. If data for a section (e.g., Nchwaning 2\) is not provided, its corresponding slides (Trend and Performance) must not be included in the final output, and the Index slide must be updated to reflect this omission.
+
 
 ### **2.3. Styling and Design**
 
@@ -58,11 +58,12 @@ The visual identity of the report is critical and must be strictly adhered to.
 
 * **Styling Engine:** All styling must be implemented using **Tailwind CSS** utility classes. No other CSS methods should be used.  
 * **Iconography:** The **Lucide-React** library is the sole source for icons.  
-* **Static Assets:** Image URLs (for the title slide, trend charts, etc.) will be provided in the prompt and must be used as-is. All \<img\> tags must include an onError handler to prevent broken image links.
+* **Static Assets:** Local image paths (for the title slide, trend charts, etc.) will be provided in the prompt and must be used as-is. All images are stored in the `/public/images` directory. All \<img\> tags should ideally include an `onError` handler to prevent broken image links.
 
 ### **2.4. Final Output**
 
-The process culminates in a single, deliverable artifact:
+The process culminates in two deliverable artifacts:
 
-* **A self-contained React component (.js / .jsx file).**  
+* **A live web preview for interactive review.**
+* **A downloadable PDF report, generated via the browser's print functionality.**  
 * The code must be complete, runnable, and require no further manual editing to function, assuming a standard React environment.

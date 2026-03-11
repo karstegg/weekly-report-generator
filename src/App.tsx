@@ -7,9 +7,17 @@ import ShaftsWindersSlide from './components/slides/ShaftsWindersSlide';
 import SitePerformanceSlide from './components/slides/SitePerformanceSlide';
 import TrendChartSlide from './components/slides/TrendChartSlide';
 import BevPerformanceSlide from './components/slides/BevPerformanceSlide';
+import DtBevDetailSlide from './components/slides/DtBevDetailSlide';
+import FlBevDetailSlide from './components/slides/FlBevDetailSlide';
+import UtilitySectionSlide from './components/slides/UtilitySectionSlide';
+import UtilitySectionDetailSlide from './components/slides/UtilitySectionDetailSlide';
+import UtilitySectionCurrentStatusSlide from './components/slides/UtilitySectionCurrentStatusSlide';
+import PrintLayout from './components/shared/PrintLayout';
+import './print-styles.css';
 
 const App: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPrinting, setIsPrinting] = useState(false);
 
   const slides = [
     <TitleSlide 
@@ -22,28 +30,41 @@ const App: React.FC = () => {
     <HealSlide data={reportData.heal} footerSrc={reportData.footerSrc} />,
     <ShaftsWindersSlide data={reportData.shaftsAndWinders} footerSrc={reportData.footerSrc} />,
     <TrendChartSlide 
-      title={`${reportData.sites.nchwaning3.name} Weekly Availability Trend`}
-      src={reportData.sites.nchwaning3.trendChart.src}
+      title={`${reportData.sites.n3.name} Weekly Availability Trend`}
+      src={reportData.sites.n3.trendChart.src}
       footerSrc={reportData.footerSrc}
     />,
-    <SitePerformanceSlide data={reportData.sites.nchwaning3} footerSrc={reportData.footerSrc} />,
+    <SitePerformanceSlide data={reportData.sites.n3} footerSrc={reportData.footerSrc} />,
     <TrendChartSlide 
-      title={`${reportData.sites.nchwaning2.name} Weekly Availability Trend`}
-      src={reportData.sites.nchwaning2.trendChart.src}
+      title={`${reportData.sites.n2.name} Weekly Availability Trend`}
+      src={reportData.sites.n2.trendChart.src}
       footerSrc={reportData.footerSrc}
     />,
-    <SitePerformanceSlide data={reportData.sites.nchwaning2} footerSrc={reportData.footerSrc} />,
+    <SitePerformanceSlide data={reportData.sites.n2} footerSrc={reportData.footerSrc} />,
     <TrendChartSlide 
       title={`${reportData.sites.gloria.name} Weekly Availability Trend`}
       src={reportData.sites.gloria.trendChart.src}
       footerSrc={reportData.footerSrc}
     />,
     <SitePerformanceSlide data={reportData.sites.gloria} footerSrc={reportData.footerSrc} />,
-    <BevPerformanceSlide data={reportData.bev} footerSrc={reportData.footerSrc} />,
+    <BevPerformanceSlide data={reportData.bev} footerSrc={reportData.footerSrc} weekNumber={reportData.weekNumber} />,
+    <DtBevDetailSlide data={reportData.bevDetail!.dt} footerSrc={reportData.footerSrc} weekNumber={reportData.weekNumber} />,
+    <FlBevDetailSlide data={reportData.bevDetail!.fl} footerSrc={reportData.footerSrc} weekNumber={reportData.weekNumber} />,
+    <UtilitySectionSlide data={reportData.utilitySection!} footerSrc={reportData.footerSrc} weekNumber={reportData.weekNumber} />,
+    <UtilitySectionDetailSlide data={reportData.utilitySection!} footerSrc={reportData.footerSrc} weekNumber={reportData.weekNumber} />,
+    <UtilitySectionCurrentStatusSlide data={reportData.utilitySectionCurrentStatus!} footerSrc={reportData.footerSrc} />,
   ];
 
   const goToNextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const handlePrint = () => {
+    setIsPrinting(true);
+    setTimeout(() => {
+      window.print();
+      setIsPrinting(false);
+    }, 100); // Allow time for render
   };
 
   const goToPrevSlide = () => {
@@ -51,11 +72,11 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="font-sans bg-gray-50 p-4">
-      <div className="max-w-4xl mx-auto mb-4">
-        <div className="flex justify-between items-center">
-          <button 
-            onClick={goToPrevSlide} 
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-8">
+      <div className="w-full max-w-screen-xl bg-white shadow-lg rounded-lg p-6">
+        <div className="flex justify-between items-center mb-4">
+          <button
+            onClick={goToPrevSlide}
             className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors"
           >
             Previous
@@ -63,16 +84,22 @@ const App: React.FC = () => {
           <div className="text-center text-gray-600">
             Slide {currentSlide + 1} of {slides.length}
           </div>
-          <button 
-            onClick={goToNextSlide} 
+          <button
+            onClick={goToNextSlide}
             className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors"
           >
             Next
           </button>
+          <button
+            onClick={handlePrint}
+            className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition-colors ml-4"
+          >
+            Print to PDF
+          </button>
         </div>
-      </div>
-      <div className="w-full">
-        {slides[currentSlide]}
+        <div className="w-full">
+          {isPrinting ? <PrintLayout /> : slides[currentSlide]}
+        </div>
       </div>
     </div>
   );

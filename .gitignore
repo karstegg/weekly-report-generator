@@ -27,3 +27,12 @@ yarn-error.log*
 
 # Misc
 .DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Generated reports
+output/
+# But allow PPTX files to be committed for download
+!output/*.pptx

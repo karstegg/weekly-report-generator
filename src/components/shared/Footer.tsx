@@ -1,4 +1,5 @@
 import React from 'react';
+import { getImagePath } from '../../utils/imagePath';
 
 interface FooterProps {
   src: string;
@@ -7,12 +8,12 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ src, className }) => {
   return (
-    <footer 
+    <footer
       className={className || 'absolute bottom-0 left-0 w-full h-32'}
       style={{ zIndex: 10 }}
     >
       <img
-        src={src}
+        src={getImagePath(src)}
         alt="Slide Footer"
         className="w-full h-full object-cover"
         onError={(e) => {
